@@ -23,21 +23,6 @@
       --font-head: 'Playfair Display', serif;
       --font-body: 'Montserrat', sans-serif;
     }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    #hero-canvas {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-    }
-
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -126,14 +111,6 @@
     .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
     .stat-divider { width: 1px; background: var(--border); align-self: stretch; }
     @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    .scroll-indicator {
-      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      color: var(--muted); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
-      animation: fadeUp 1s .9s ease both;
-    }
-    .scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scrollLine 1.9s infinite; }
-    @keyframes scrollLine { 0%{transform:scaleY(0);transform-origin:top;opacity:1} 50%{transform:scaleY(1);transform-origin:top;opacity:1} 100%{transform:scaleY(1);transform-origin:bottom;opacity:0} }
 
     /* SHARED */
     section { padding: 100px 24px; }
@@ -274,7 +251,6 @@
     <div class="stat-divider"></div>
     <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfação</span></div>
   </div>
-  <div class="scroll-indicator"><span>scroll</span><div class="scroll-line"></div></div>
 </section>
 
 <section id="servicos">
