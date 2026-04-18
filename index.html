@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>MLX Mind — Agência de Marketing Digital em Ribeirão Preto</title>
-  <meta name="description" content="Agência de marketing digital em Ribeirão Preto. Tráfego pago no Meta, gestão de redes sociais, bots de atendimento e landing pages para escalar seu negócio." />
-  <meta name="keywords" content="agência marketing digital, tráfego pago, meta ads, social media, ribeirão preto, landing page, bot whatsapp" />
+  <title>MLX Mind — Marketing Digital para Corretores de Imóveis</title>
+  <meta name="description" content="Agência especializada em marketing digital para corretores e imobiliárias em Ribeirão Preto. Tráfego pago no Meta, gestão de redes sociais e landing pages para vender mais imóveis." />
+  <meta name="keywords" content="marketing digital para corretores, tráfego pago imobiliário, meta ads imobiliário, social media corretor, ribeirão preto, landing page imóveis" />
   <meta name="author" content="MLX Mind" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph / WhatsApp / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.mlxmind.com.br/" />
-  <meta property="og:title" content="MLX Mind — Marketing Experience" />
-  <meta property="og:description" content="Tráfego pago, social media, bots e landing pages integrados. Estratégia completa para escalar seu negócio." />
+  <meta property="og:title" content="MLX Mind — Marketing para Corretores de Imóveis" />
+  <meta property="og:description" content="Tráfego pago, social media e landing pages para corretores que querem vender mais e captar leads qualificados." />
   <meta property="og:image" content="https://www.mlxmind.com.br/og-image.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="MLX Mind" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MLX Mind — Marketing Experience" />
-  <meta name="twitter:description" content="Tráfego pago, social media, bots e landing pages integrados." />
+  <meta name="twitter:title" content="MLX Mind — Marketing para Corretores" />
+  <meta name="twitter:description" content="Tráfego pago, social media e landing pages para corretores de imóveis." />
   <meta name="twitter:image" content="https://www.mlxmind.com.br/og-image.jpg" />
 
-  <!-- Schema Markup — Agência Local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,7 +30,7 @@
     "alternateName": "MLX Mind Marketing Experience",
     "url": "https://www.mlxmind.com.br",
     "logo": "https://www.mlxmind.com.br/logo.png",
-    "description": "Agência de marketing digital especializada em tráfego pago, social media, bots de atendimento e landing pages.",
+    "description": "Agência de marketing digital especializada em corretores de imóveis e imobiliárias.",
     "telephone": "+55-11-5254-0490",
     "address": {
       "@type": "PostalAddress",
@@ -51,12 +48,12 @@
       "https://instagram.com/mindmlx",
       "https://wa.me/551152540490"
     ],
-    "priceRange": "R$397 - R$1697",
+    "priceRange": "R$329 - R$849",
     "areaServed": {
       "@type": "State",
       "name": "São Paulo"
     },
-    "serviceType": ["Tráfego Pago", "Social Media", "Bots de Atendimento", "Landing Pages", "SDR"]
+    "serviceType": ["Tráfego Pago", "Social Media", "Landing Pages", "Marketing Imobiliário"]
   }
   </script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%231A0028'/%3E%3Crect x='6' y='8' width='22' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='15' width='16' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='22' width='10' height='5' rx='2' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%237B2FBE'/%3E%3Cstop offset='1' stop-color='%23B266FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
@@ -79,7 +76,7 @@
       --font-head: 'Playfair Display', serif;
       --font-body: 'Montserrat', sans-serif;
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
     body {
       background: var(--bg);
       color: var(--white);
@@ -250,9 +247,7 @@
     .step-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
     .step-desc { font-size: .8rem; color: var(--muted); line-height: 1.65; }
 
-    /* ═══════════════════════════════════════
-       PLANOS — nova seção
-    ═══════════════════════════════════════ */
+    /* PLANOS */
     #planos { background: var(--bg); }
     .planos-header { text-align: center; margin-bottom: 16px; }
     .planos-header .section-sub { margin: 0 auto; }
@@ -284,8 +279,6 @@
     }
     .plano-card:hover { background: #2B0042; }
     .plano-card + .plano-card { border-left: 1px solid var(--border); }
-
-    /* Destaque no card do meio */
     .plano-card.destaque {
       background: linear-gradient(160deg, #2D0045 0%, #1E0032 100%);
       border-left: 1px solid rgba(178,102,255,0.3);
@@ -298,7 +291,6 @@
       position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, var(--primary-l), var(--accent));
     }
-
     .plano-badge {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
@@ -307,37 +299,13 @@
       margin-bottom: 24px; align-self: flex-start;
     }
     .plano-badge-placeholder { margin-bottom: 24px; height: 26px; }
-
-    .plano-name {
-      font-family: var(--font-head);
-      font-size: 1.5rem; font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .plano-desc {
-      font-size: .8rem; color: var(--muted);
-      margin-bottom: 28px; line-height: 1.6;
-    }
-    .plano-price {
-      display: flex; align-items: baseline; gap: 4px;
-      margin-bottom: 8px;
-    }
-    .plano-currency {
-      font-size: .85rem; font-weight: 700;
-      color: var(--accent-l); margin-top: 4px;
-    }
-    .plano-valor {
-      font-family: var(--font-head);
-      font-size: 3rem; font-weight: 700; line-height: 1;
-      color: var(--white);
-    }
-    .plano-period {
-      font-size: .75rem; color: var(--muted);
-      font-weight: 500; margin-bottom: 28px;
-    }
-    .plano-divider {
-      height: 1px; background: var(--border);
-      margin-bottom: 28px;
-    }
+    .plano-name { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
+    .plano-desc { font-size: .8rem; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
+    .plano-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+    .plano-currency { font-size: .85rem; font-weight: 700; color: var(--accent-l); margin-top: 4px; }
+    .plano-valor { font-family: var(--font-head); font-size: 3rem; font-weight: 700; line-height: 1; color: var(--white); }
+    .plano-period { font-size: .75rem; color: var(--muted); font-weight: 500; margin-bottom: 28px; }
+    .plano-divider { height: 1px; background: var(--border); margin-bottom: 28px; }
     .plano-features {
       list-style: none;
       display: flex; flex-direction: column; gap: 13px;
@@ -351,38 +319,26 @@
       width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
       background: rgba(178,102,255,0.12); border: 1px solid rgba(178,102,255,0.25);
       display: flex; align-items: center; justify-content: center;
-      margin-top: 1px;
-      color: var(--accent);
+      margin-top: 1px; color: var(--accent);
     }
     .plano-features li .feat-icon svg { width: 10px; height: 10px; }
     .plano-features li .feat-label { color: var(--muted); }
     .plano-features li strong { color: var(--white); font-weight: 600; }
-
     .plano-cta {
       display: block; text-align: center;
       padding: 14px 24px; border-radius: 8px;
       font-size: .8rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
       text-decoration: none; transition: all .2s;
     }
-    .plano-cta-ghost {
-      border: 1px solid var(--border-s); color: var(--white);
-      background: transparent;
-    }
+    .plano-cta-ghost { border: 1px solid var(--border-s); color: var(--white); background: transparent; }
     .plano-cta-ghost:hover { border-color: var(--accent); background: rgba(178,102,255,.06); }
     .plano-cta-primary {
       background: linear-gradient(135deg, var(--primary-l), var(--accent));
-      color: var(--white);
-      box-shadow: 0 6px 28px rgba(90,10,122,0.5);
+      color: var(--white); box-shadow: 0 6px 28px rgba(90,10,122,0.5);
     }
     .plano-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(178,102,255,0.4); }
-
-    .planos-aviso {
-      margin-top: 28px; text-align: center;
-      display: flex; flex-direction: column; gap: 8px;
-    }
-    .planos-aviso p {
-      font-size: .76rem; color: var(--muted); line-height: 1.6;
-    }
+    .planos-aviso { margin-top: 28px; text-align: center; display: flex; flex-direction: column; gap: 8px; }
+    .planos-aviso p { font-size: .76rem; color: var(--muted); line-height: 1.6; }
     .planos-aviso strong { color: var(--accent-l); }
 
     /* DEPOIMENTOS */
@@ -458,10 +414,7 @@
     .faq-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .faq-left { position: sticky; top: 100px; }
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
-    .faq-item {
-      border: 1px solid var(--border); border-radius: 10px;
-      overflow: hidden; transition: border-color .25s;
-    }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .25s; }
     .faq-item.open { border-color: var(--border-s); }
     .faq-q {
       width: 100%; background: transparent; border: none; cursor: pointer;
@@ -478,11 +431,7 @@
     }
     .faq-item.open .faq-chevron { transform: rotate(180deg); background: rgba(90,10,122,0.3); }
     .faq-chevron svg { width: 14px; height: 14px; }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s;
-      padding: 0 24px;
-    }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s; padding: 0 24px; }
     .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 22px; }
     .faq-a p { font-size: .88rem; color: var(--muted); line-height: 1.8; }
 
@@ -507,7 +456,7 @@
     @keyframes waPop { from{opacity:0;transform:scale(0.5)} to{opacity:1;transform:scale(1)} }
     @keyframes waPulse { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.9);opacity:0} }
 
-    /* MARQUEE TICKER */
+    /* MARQUEE */
     .marquee-wrap {
       width: 100%; overflow: hidden;
       background: var(--accent);
@@ -516,99 +465,24 @@
       border-top: 1px solid rgba(255,255,255,0.1);
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    .marquee-track {
-      display: flex; width: max-content;
-      animation: marquee 28s linear infinite;
-    }
+    .marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
     .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
-    .marquee-content {
-      display: flex; align-items: center; gap: 0;
-      white-space: nowrap; padding-right: 0;
-    }
-    .marquee-content span {
-      font-family: var(--font-body);
-      font-size: .82rem; font-weight: 700;
-      letter-spacing: .14em; text-transform: uppercase;
-      color: var(--bg); padding: 0 32px;
-    }
-    .marquee-dot {
-      color: rgba(26,0,40,0.4) !important;
-      font-size: .6rem !important;
-      padding: 0 !important;
-      letter-spacing: 0 !important;
-    }
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
+    .marquee-content { display: flex; align-items: center; gap: 0; white-space: nowrap; padding-right: 0; }
+    .marquee-content span { font-family: var(--font-body); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--bg); padding: 0 32px; }
+    .marquee-dot { color: rgba(26,0,40,0.4) !important; font-size: .6rem !important; padding: 0 !important; letter-spacing: 0 !important; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* ══════════════════════════════════════
-       CURSOR PERSONALIZADO
-    ══════════════════════════════════════ */
-    @media (pointer: fine) {
-      * { cursor: none !important; }
-    }
-    #cursor-dot, #cursor-ring {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 99999;
-      top: 0; left: 0;
-      will-change: transform;
-    }
-    #cursor-dot {
-      width: 8px; height: 8px;
-      background: var(--accent);
-      margin: -4px 0 0 -4px;
-    }
-    #cursor-ring {
-      width: 38px; height: 38px;
-      border: 2px solid rgba(178,102,255,0.65);
-      margin: -19px 0 0 -19px;
-      transition: width .25s ease, height .25s ease, border-color .25s ease, margin .25s ease;
-    }
-    #cursor-ring.hovering {
-      width: 56px; height: 56px;
-      border-color: var(--accent);
-      margin: -28px 0 0 -28px;
-    }
-
-    /* ══════════════════════════════════════
-       AURORA HERO
-    ══════════════════════════════════════ */
-    .aurora {
-      position: absolute; inset: 0;
-      pointer-events: none; z-index: 0; overflow: hidden;
-    }
-    .aurora span {
-      position: absolute; border-radius: 50%;
-      filter: blur(90px); opacity: 0.15;
-    }
-    .aurora span:nth-child(1) {
-      width: 55vw; height: 55vw;
-      top: -15%; left: -10%;
-      background: #7B2FBE;
-      animation: ab1 14s ease-in-out infinite alternate;
-    }
-    .aurora span:nth-child(2) {
-      width: 45vw; height: 45vw;
-      top: 15%; right: -8%;
-      background: #B266FF;
-      animation: ab2 18s ease-in-out infinite alternate;
-    }
-    .aurora span:nth-child(3) {
-      width: 38vw; height: 38vw;
-      bottom: -10%; left: 28%;
-      background: #3F005C;
-      animation: ab3 11s ease-in-out infinite alternate;
-    }
+    /* AURORA */
+    .aurora { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .aurora span { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.15; }
+    .aurora span:nth-child(1) { width: 55vw; height: 55vw; top: -15%; left: -10%; background: #7B2FBE; animation: ab1 14s ease-in-out infinite alternate; }
+    .aurora span:nth-child(2) { width: 45vw; height: 45vw; top: 15%; right: -8%; background: #B266FF; animation: ab2 18s ease-in-out infinite alternate; }
+    .aurora span:nth-child(3) { width: 38vw; height: 38vw; bottom: -10%; left: 28%; background: #3F005C; animation: ab3 11s ease-in-out infinite alternate; }
     @keyframes ab1 { to { transform: translate(60px, 50px) scale(1.1); } }
     @keyframes ab2 { to { transform: translate(-50px, 70px) scale(0.92); } }
     @keyframes ab3 { to { transform: translate(35px, -45px) scale(1.08); } }
 
-    /* ══════════════════════════════════════
-       GRAIN OVERLAY
-    ══════════════════════════════════════ */
+    /* GRAIN */
     #grain {
       position: fixed; inset: 0; z-index: 9000;
       pointer-events: none; opacity: 0.035;
@@ -625,154 +499,35 @@
      100% { background-position: -20px -55px; }
     }
 
-    /* ══════════════════════════════════════
-       GLITCH no H1
-    ══════════════════════════════════════ */
+    /* GLITCH */
     #hero h1 { position: relative; }
-    #hero h1 .glitch-layer {
-      position: absolute; inset: 0;
-      font-family: var(--font-head); font-size: inherit;
-      font-weight: inherit; line-height: inherit;
-      letter-spacing: inherit; text-align: inherit;
-      pointer-events: none;
-    }
-    #hero h1 .glitch-layer.g1 {
-      color: #ff55cc;
-      clip-path: polygon(0 20%, 100% 20%, 100% 45%, 0 45%);
-      animation: g1 7s infinite;
-    }
-    #hero h1 .glitch-layer.g2 {
-      color: #44ffee;
-      clip-path: polygon(0 55%, 100% 55%, 100% 78%, 0 78%);
-      animation: g2 7s infinite;
-    }
-    @keyframes g1 {
-      0%,89%,100% { opacity:0; transform:none; }
-      90% { opacity:.7; transform:translateX(-4px) skewX(-3deg); }
-      92% { opacity:.4; transform:translateX(4px) skewX(2deg); }
-      94% { opacity:.6; transform:translateX(-2px); }
-      96% { opacity:0; }
-    }
-    @keyframes g2 {
-      0%,86%,100% { opacity:0; transform:none; }
-      87% { opacity:.5; transform:translateX(4px) skewX(2deg); }
-      89% { opacity:.3; transform:translateX(-3px); }
-      91% { opacity:.5; transform:translateX(2px) skewX(-1deg); }
-      93% { opacity:0; }
-    }
+    #hero h1 .glitch-layer { position: absolute; inset: 0; font-family: var(--font-head); font-size: inherit; font-weight: inherit; line-height: inherit; letter-spacing: inherit; text-align: inherit; pointer-events: none; }
+    #hero h1 .glitch-layer.g1 { color: #ff55cc; clip-path: polygon(0 20%, 100% 20%, 100% 45%, 0 45%); animation: g1 7s infinite; }
+    #hero h1 .glitch-layer.g2 { color: #44ffee; clip-path: polygon(0 55%, 100% 55%, 100% 78%, 0 78%); animation: g2 7s infinite; }
+    @keyframes g1 { 0%,89%,100% { opacity:0; transform:none; } 90% { opacity:.7; transform:translateX(-4px) skewX(-3deg); } 92% { opacity:.4; transform:translateX(4px) skewX(2deg); } 94% { opacity:.6; transform:translateX(-2px); } 96% { opacity:0; } }
+    @keyframes g2 { 0%,86%,100% { opacity:0; transform:none; } 87% { opacity:.5; transform:translateX(4px) skewX(2deg); } 89% { opacity:.3; transform:translateX(-3px); } 91% { opacity:.5; transform:translateX(2px) skewX(-1deg); } 93% { opacity:0; } }
 
-    /* ══════════════════════════════════════
-       SPOTLIGHT + TILT nos cards
-    ══════════════════════════════════════ */
-    .tilt-card {
-      transform-style: preserve-3d;
-      transition: transform .06s linear;
-    }
-    .tilt-card .spotlight {
-      position: absolute; inset: 0; border-radius: inherit;
-      background: radial-gradient(circle at var(--sx,50%) var(--sy,50%), rgba(178,102,255,0.13) 0%, transparent 65%);
-      opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 1;
-    }
+    /* SPOTLIGHT + TILT */
+    .tilt-card { transform-style: preserve-3d; transition: transform .06s linear; }
+    .tilt-card .spotlight { position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle at var(--sx,50%) var(--sy,50%), rgba(178,102,255,0.13) 0%, transparent 65%); opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 1; }
     .tilt-card:hover .spotlight { opacity: 1; }
 
-    /* ══════════════════════════════════════
-       MAGNETIC BUTTONS
-    ══════════════════════════════════════ */
+    /* MAGNETIC */
     .magnetic { display: inline-flex !important; align-items: center !important; justify-content: center !important; }
 
-    /* ══════════════════════════════════════
-       LOADER
-    ══════════════════════════════════════ */
-    #loader {
-      position: fixed; inset: 0; z-index: 999999;
-      background: var(--bg);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px;
-      transition: opacity .5s ease, visibility .5s ease;
-    }
-    #loader.hidden { opacity: 0; visibility: hidden; }
-    .loader-logo {
-      display: flex; flex-direction: column; gap: 7px; width: 48px;
-      animation: loaderPulse 1s ease-in-out infinite alternate;
-    }
-    .loader-bar {
-      height: 9px; border-radius: 3px;
-      background: linear-gradient(90deg, #7B2FBE, #B266FF);
-    }
-    .loader-bar:nth-child(1) { width: 100%; }
-    .loader-bar:nth-child(2) { width: 72%; }
-    .loader-bar:nth-child(3) { width: 48%; }
-    .loader-text {
-      font-family: var(--font-body); font-size: .72rem;
-      font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
-      color: var(--muted);
-    }
-    .loader-progress {
-      width: 120px; height: 2px; background: rgba(178,102,255,0.15); border-radius: 2px; overflow: hidden;
-    }
-    .loader-progress-bar {
-      height: 100%; width: 0%;
-      background: linear-gradient(90deg, #5A0A7A, #B266FF);
-      border-radius: 2px;
-      animation: loaderBar 1.4s ease forwards;
-    }
-    @keyframes loaderPulse { from{opacity:.5;transform:scale(.96)} to{opacity:1;transform:scale(1)} }
-    @keyframes loaderBar { from{width:0%} to{width:100%} }
-
-    /* ══════════════════════════════════════
-       MENU MOBILE (HAMBURGUER)
-    ══════════════════════════════════════ */
-    .nav-hamburguer {
-      display: none; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 8px; z-index: 101;
-    }
-    .nav-hamburguer span {
-      display: block; width: 24px; height: 2px; border-radius: 2px;
-      background: var(--white);
-      transition: transform .3s ease, opacity .3s ease, width .3s ease;
-    }
+    /* MENU MOBILE */
+    .nav-hamburguer { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 101; }
+    .nav-hamburguer span { display: block; width: 24px; height: 2px; border-radius: 2px; background: var(--white); transition: transform .3s ease, opacity .3s ease, width .3s ease; }
     .nav-hamburguer.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-hamburguer.open span:nth-child(2) { opacity: 0; width: 0; }
     .nav-hamburguer.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; z-index: 99; background: rgba(26,0,40,0.98); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0; max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s; }
+    .nav-mobile-menu.open { max-height: 500px; padding: 16px 0 24px; }
+    .nav-mobile-menu a { display: block; padding: 14px 28px; color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; transition: color .2s, background .2s; border-left: 2px solid transparent; }
+    .nav-mobile-menu a:hover { color: var(--white); background: rgba(178,102,255,0.05); border-left-color: var(--accent); }
+    .nav-mobile-menu .mob-cta { margin: 16px 28px 0; display: block; text-align: center; background: linear-gradient(135deg, var(--primary-l), var(--accent)); color: var(--white) !important; border-radius: 6px; padding: 14px !important; border-left: none !important; font-weight: 700 !important; }
 
-    .nav-mobile-menu {
-      display: none;
-      position: fixed; top: 72px; left: 0; right: 0; z-index: 99;
-      background: rgba(26,0,40,0.98);
-      backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border);
-      padding: 0;
-      max-height: 0; overflow: hidden;
-      transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s;
-    }
-    .nav-mobile-menu.open {
-      max-height: 500px;
-      padding: 16px 0 24px;
-    }
-    .nav-mobile-menu a {
-      display: block; padding: 14px 28px;
-      color: var(--muted); font-size: .85rem; font-weight: 600;
-      letter-spacing: .07em; text-transform: uppercase; text-decoration: none;
-      transition: color .2s, background .2s;
-      border-left: 2px solid transparent;
-    }
-    .nav-mobile-menu a:hover {
-      color: var(--white); background: rgba(178,102,255,0.05);
-      border-left-color: var(--accent);
-    }
-    .nav-mobile-menu .mob-cta {
-      margin: 16px 28px 0;
-      display: block; text-align: center;
-      background: linear-gradient(135deg, var(--primary-l), var(--accent));
-      color: var(--white) !important; border-radius: 6px;
-      padding: 14px !important; border-left: none !important;
-      font-weight: 700 !important;
-    }
-
-    /* FIX MOBILE — overflow e scroll horizontal */
-    html, body {
-      overflow-x: hidden;
-      max-width: 100vw;
-    }
+    /* MOBILE RESPONSIVE */
     @media (max-width: 960px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
@@ -788,13 +543,12 @@
       .planos-grid { grid-template-columns: 1fr; }
       .plano-card + .plano-card { border-left: none; border-top: 1px solid var(--border); }
       .plano-card.destaque { border-left: none; border-right: none; border-top: 1px solid rgba(178,102,255,0.3); border-bottom: 1px solid rgba(178,102,255,0.3); }
-      /* desativa tilt e parallax no mobile */
       .tilt-card { transform: none !important; }
       #hero .hero-badge, #hero h1, #hero .hero-sub, #hero .hero-actions { transform: none !important; }
     }
     @media (max-width: 600px) {
       section { padding: 72px 20px; }
-      .hero-stats { gap: 28px; }
+      .hero-stats { gap: 28px; flex-direction: column; align-items: center; }
       .stat-divider { display: none; }
       .process-grid { grid-template-columns: 1fr; }
       .cta-box { padding: 48px 28px; }
@@ -802,26 +556,11 @@
       .wa-float { bottom: 20px; right: 20px; }
       .services-row.row-3, .services-row.row-2 { grid-template-columns: 1fr; max-width: 100%; }
       .plano-card { padding: 36px 24px; }
-      .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
-      .stat-divider { display: none; }
     }
   </style>
 </head>
 <body>
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
 <div id="grain"></div>
-
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-logo">
-    <div class="loader-bar"></div>
-    <div class="loader-bar"></div>
-    <div class="loader-bar"></div>
-  </div>
-  <span class="loader-text">MLX Mind</span>
-  <div class="loader-progress"><div class="loader-progress-bar"></div></div>
-</div>
 
 <nav>
   <a href="#" class="nav-logo">
@@ -846,7 +585,6 @@
   </button>
 </nav>
 
-<!-- MENU MOBILE -->
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#servicos">Serviços</a>
   <a href="#planos">Planos</a>
@@ -862,46 +600,46 @@
   <div class="aurora">
     <span></span><span></span><span></span>
   </div>
-  <span class="hero-badge"><span class="badge-dot"></span>Estratégia · Tecnologia · Resultado</span>
-  <h1>Sua marca com<br><em>autoridade real</em><br>no digital</h1>
-  <p class="hero-sub">Bots de atendimento, tráfego pago no Meta, gestão de social media e SDR integrados — estratégia completa para escalar o seu negócio.</p>
+  <span class="hero-badge"><span class="badge-dot"></span>Especialistas no Mercado Imobiliário</span>
+  <h1>Mais leads.<br><em>Mais imóveis</em><br>vendidos.</h1>
+  <p class="hero-sub">Marketing digital feito para corretores e imobiliárias que querem captar leads qualificados, construir autoridade e fechar mais negócios todo mês.</p>
   <div class="hero-actions">
-    <a href="#cta" class="btn-primary">Quero crescer agora</a>
-    <a href="#servicos" class="btn-ghost">Ver serviços</a>
+    <a href="#cta" class="btn-primary">Quero captar mais leads</a>
+    <a href="#planos" class="btn-ghost">Ver planos</a>
   </div>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">+200</span><span class="stat-label">Clientes atendidos</span></div>
     <div class="stat-divider"></div>
     <div class="stat"><span class="stat-num">4×</span><span class="stat-label">ROI médio no tráfego</span></div>
     <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Bots em operação</span></div>
+    <div class="stat"><span class="stat-num">3×</span><span class="stat-label">Mais leads por campanha</span></div>
     <div class="stat-divider"></div>
     <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfação</span></div>
   </div>
 </section>
 
-<!-- MARQUEE TICKER -->
+<!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
     <div class="marquee-content">
       <span>Tráfego Pago</span><span class="marquee-dot">✦</span>
       <span>Social Media</span><span class="marquee-dot">✦</span>
       <span>Landing Pages</span><span class="marquee-dot">✦</span>
-      <span>Automação</span><span class="marquee-dot">✦</span>
+      <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
       <span>Meta Ads</span><span class="marquee-dot">✦</span>
-      <span>SDR & Prospecção</span><span class="marquee-dot">✦</span>
-      <span>Bots de Atendimento</span><span class="marquee-dot">✦</span>
-      <span>Gestão de Leads</span><span class="marquee-dot">✦</span>
+      <span>Mercado Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Criativos com Imóveis</span><span class="marquee-dot">✦</span>
+      <span>Relatório de Corretor</span><span class="marquee-dot">✦</span>
     </div>
     <div class="marquee-content" aria-hidden="true">
       <span>Tráfego Pago</span><span class="marquee-dot">✦</span>
       <span>Social Media</span><span class="marquee-dot">✦</span>
       <span>Landing Pages</span><span class="marquee-dot">✦</span>
-      <span>Automação</span><span class="marquee-dot">✦</span>
+      <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
       <span>Meta Ads</span><span class="marquee-dot">✦</span>
-      <span>SDR & Prospecção</span><span class="marquee-dot">✦</span>
-      <span>Bots de Atendimento</span><span class="marquee-dot">✦</span>
-      <span>Gestão de Leads</span><span class="marquee-dot">✦</span>
+      <span>Mercado Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Criativos com Imóveis</span><span class="marquee-dot">✦</span>
+      <span>Relatório de Corretor</span><span class="marquee-dot">✦</span>
     </div>
   </div>
 </div>
@@ -911,83 +649,81 @@
     <div class="services-header">
       <div>
         <span class="section-tag">O que fazemos</span>
-        <h2 class="section-title">Soluções que<br><em style="font-style:italic">geram resultado</em></h2>
+        <h2 class="section-title">Soluções pensadas<br><em style="font-style:italic">para o mercado imobiliário</em></h2>
       </div>
-      <p class="section-sub">Do primeiro clique até o fechamento — cuidamos de cada etapa da jornada do seu cliente.</p>
+      <p class="section-sub">Do primeiro clique até a visita ao imóvel — cuidamos de cada etapa da jornada do seu cliente.</p>
     </div>
     <div class="services-grid">
       <div class="services-row row-3">
-      <div class="service-card">
-        <span class="service-num">01</span>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 2a3 3 0 0 1 3 3v1H9V5a3 3 0 0 1 3-3z"/><circle cx="9" cy="17" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1" fill="currentColor" stroke="none"/><path d="M8 11V8m8 3V8"/>
-          </svg>
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h3>Tráfego Pago — Meta Ads</h3>
+          <p>Campanhas no Facebook e Instagram segmentadas para compradores e investidores no seu perfil ideal. Anúncios com fotos dos seus próprios imóveis, direto para o seu WhatsApp.</p>
+          <div class="service-tags"><span class="tag">Facebook Ads</span><span class="tag">Instagram Ads</span><span class="tag">Leads Imobiliários</span></div>
         </div>
-        <h3>Bots de Atendimento</h3>
-        <p>Automação inteligente no WhatsApp e outros canais. Atenda, qualifique e direcione leads 24 horas por dia — sem aumentar sua equipe.</p>
-        <div class="service-tags"><span class="tag">WhatsApp</span><span class="tag">IA Conversacional</span><span class="tag">Automação</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-num">02</span>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-          </svg>
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </div>
+          <h3>Gestão de Social Media</h3>
+          <p>Presença profissional no Instagram e Facebook com criativos feitos a partir dos imóveis da sua carteira. Construímos autoridade, engajamento e reconhecimento de marca para você.</p>
+          <div class="service-tags"><span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">Criativos com Imóveis</span></div>
         </div>
-        <h3>Tráfego Pago — Meta Ads</h3>
-        <p>Campanhas de alta performance no Facebook e Instagram. Estratégia, criativo, segmentação e otimização contínua para maximizar o seu ROAS.</p>
-        <div class="service-tags"><span class="tag">Facebook Ads</span><span class="tag">Instagram Ads</span><span class="tag">ROAS</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-num">03</span>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/>
+            </svg>
+          </div>
+          <h3>Landing Pages de Imóveis</h3>
+          <p>Páginas de captação de alta conversão para destacar empreendimentos e imóveis específicos. Design profissional, carregamento rápido e foco em gerar contato direto.</p>
+          <div class="service-tags"><span class="tag">Alta Conversão</span><span class="tag">Web Design</span><span class="tag">Captação de Leads</span></div>
         </div>
-        <h3>Social Media</h3>
-        <p>Identidade visual, conteúdo estratégico e gestão completa das suas redes. Construímos presença, autoridade e engajamento real.</p>
-        <div class="service-tags"><span class="tag">Conteúdo</span><span class="tag">Design</span><span class="tag">Engajamento</span></div>
-      </div>
       </div>
       <div class="services-row row-2">
-      <div class="service-card">
-        <span class="service-num">04</span>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3>Onboarding da Carteira</h3>
+          <p>Na contratação, fazemos um mapeamento completo dos seus imóveis em destaque, perfil de comprador ideal e região de atuação. Sua campanha já nasce segmentada e precisa.</p>
+          <div class="service-tags"><span class="tag">Estratégia</span><span class="tag">Segmentação</span><span class="tag">Personalização</span></div>
         </div>
-        <h3>SDR — Prospecção Ativa</h3>
-        <p>Time de pré-vendas focado em prospecção outbound. Encontramos, qualificamos e agendamos reuniões com o seu cliente ideal.</p>
-        <div class="service-tags"><span class="tag">Outbound</span><span class="tag">Qualificação</span><span class="tag">Agendamento</span></div>
-      </div>
-      <div class="service-card">
-        <span class="service-num">05</span>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/>
-          </svg>
+        <div class="service-card">
+          <span class="service-num">05</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </div>
+          <h3>Relatório para Corretores</h3>
+          <p>Nada de métricas confusas. Você recebe um relatório mensal em linguagem de corretor: quantas conversas qualificadas seus anúncios geraram e por qual tipo de imóvel.</p>
+          <div class="service-tags"><span class="tag">Transparência</span><span class="tag">Resultados Claros</span><span class="tag">Mensal</span></div>
         </div>
-        <h3>Landing Pages</h3>
-        <p>Páginas de alta conversão desenvolvidas para transformar visitantes em leads. Design profissional, carregamento rápido e foco total no seu objetivo.</p>
-        <div class="service-tags"><span class="tag">Conversão</span><span class="tag">Web Design</span><span class="tag">Performance</span></div>
-      </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SEÇÃO DE PLANOS
-═══════════════════════════════════════ -->
+<!-- PLANOS -->
 <section id="planos">
   <div class="container">
     <div class="planos-header">
       <span class="section-tag">Planos & Preços</span>
-      <h2 class="section-title">Invista no que<br><em style="font-style:italic">gera retorno real</em></h2>
-      <p class="section-sub" style="margin: 0 auto 0 auto;">Planos mensais sem fidelidade longa. Você fica porque vê resultado.</p>
+      <h2 class="section-title">Planos feitos para<br><em style="font-style:italic">corretores de verdade</em></h2>
+      <p class="section-sub" style="margin: 0 auto 0 auto;">Contrato mensal sem fidelidade. Você fica porque vê resultado.</p>
     </div>
     <p class="planos-note">⚡ Verba de anúncios paga diretamente ao Meta — não inclusa nos planos</p>
 
@@ -997,33 +733,37 @@
       <div class="plano-card">
         <div class="plano-badge-placeholder"></div>
         <div class="plano-name">Essencial</div>
-        <div class="plano-desc">Para MEIs e negócios locais que estão dando os primeiros passos no digital.</div>
+        <div class="plano-desc">Para o corretor que quer dar o primeiro passo no digital com presença e anúncios ativos.</div>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
-          <span class="plano-valor">397</span>
+          <span class="plano-valor">329</span>
         </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal</div>
+        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
         <div class="plano-divider"></div>
         <ul class="plano-features">
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>8 posts/mês</strong> <span class="feat-label">— feed com legenda</span></span>
+            <span><strong>Gestão do Instagram</strong></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>1 campanha ativa</strong> <span class="feat-label">— verba até R$ 500</span></span>
+            <span><strong>12 posts/mês</strong> <span class="feat-label">— feed + stories</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Relatório mensal</strong> <span class="feat-label">— indicadores principais</span></span>
+            <span><strong>Criativos com imóveis</strong> <span class="feat-label">— da sua própria carteira</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>1 reunião/mês</strong> <span class="feat-label">— alinhamento estratégico</span></span>
+            <span><strong>Otimização do perfil</strong> <span class="feat-label">— bio, destaques e foto</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Suporte via WhatsApp</strong> <span class="feat-label">— horário comercial</span></span>
+            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 150 (gerenc. incluso)</span></span>
+          </li>
+          <li>
+            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Onboarding</strong> <span class="feat-label">— mapeamento da carteira</span></span>
           </li>
         </ul>
         <a href="https://wa.me/551152540490" class="plano-cta plano-cta-ghost" target="_blank">Começar agora</a>
@@ -1036,33 +776,41 @@
           Mais popular
         </span>
         <div class="plano-name">Profissional</div>
-        <div class="plano-desc">Para negócios que já têm movimento e querem escalar com consistência.</div>
+        <div class="plano-desc">Para o corretor que quer presença forte, anúncios ativos e relatório claro todo mês.</div>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
-          <span class="plano-valor">797</span>
+          <span class="plano-valor">549</span>
         </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal</div>
+        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
         <div class="plano-divider"></div>
         <ul class="plano-features">
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>16 posts/mês</strong> <span class="feat-label">— feed + stories semanais</span></span>
+            <span><strong>Instagram + Facebook</strong></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>2 campanhas ativas</strong> <span class="feat-label">— verba até R$ 1.500</span></span>
+            <span><strong>20 posts/mês</strong> <span class="feat-label">— feed + stories + reels</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Identidade visual</strong> <span class="feat-label">— padronização do perfil</span></span>
+            <span><strong>Criativos com imóveis</strong> <span class="feat-label">— da sua própria carteira</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Relatório quinzenal</strong> <span class="feat-label">— métricas detalhadas</span></span>
+            <span><strong>Otimização dos perfis</strong></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>2 reuniões/mês</strong> <span class="feat-label">— estratégia e resultados</span></span>
+            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 300 (gerenc. incluso)</span></span>
+          </li>
+          <li>
+            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Onboarding</strong> <span class="feat-label">— mapeamento da carteira</span></span>
+          </li>
+          <li>
+            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Relatório mensal</strong> <span class="feat-label">— em linguagem de corretor</span></span>
           </li>
         </ul>
         <a href="https://wa.me/551152540490" class="plano-cta plano-cta-primary" target="_blank">Quero este plano</a>
@@ -1072,37 +820,45 @@
       <div class="plano-card">
         <div class="plano-badge-placeholder"></div>
         <div class="plano-name">Premium</div>
-        <div class="plano-desc">Para médias empresas que querem dominar o digital e escalar de verdade.</div>
+        <div class="plano-desc">Para o corretor ou imobiliária que quer escalar com otimizações semanais e verba maior.</div>
         <div class="plano-price">
           <span class="plano-currency">R$</span>
-          <span class="plano-valor">1.697</span>
+          <span class="plano-valor">849</span>
         </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal</div>
+        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
         <div class="plano-divider"></div>
         <ul class="plano-features">
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>20 posts/mês</strong> <span class="feat-label">— feed + stories + reels</span></span>
+            <span><strong>Instagram ou Facebook</strong> <span class="feat-label">— sua escolha</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Até 3 campanhas</strong> <span class="feat-label">— verba ilimitada</span></span>
+            <span><strong>30 posts/mês</strong> <span class="feat-label">— feed + stories + reels semanais</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Identidade visual completa</strong> <span class="feat-label">— branding profissional</span></span>
+            <span><strong>Criativos com imóveis</strong> <span class="feat-label">— da sua própria carteira</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Relatório semanal</strong> <span class="feat-label">— dashboard ao vivo</span></span>
+            <span><strong>Otimização dos perfis</strong></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Reunião semanal</strong> <span class="feat-label">— acompanhamento próximo</span></span>
+            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 600 (gerenc. incluso)</span></span>
           </li>
           <li>
             <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Landing page + bot básico</strong> <span class="feat-label">— incluso no onboarding</span></span>
+            <span><strong>Onboarding</strong> <span class="feat-label">— mapeamento da carteira</span></span>
+          </li>
+          <li>
+            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Relatório mensal</strong> <span class="feat-label">— em linguagem de corretor</span></span>
+          </li>
+          <li>
+            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span><strong>Otimizações semanais</strong> <span class="feat-label">— de campanha</span></span>
           </li>
         </ul>
         <a href="https://wa.me/551152540490" class="plano-cta plano-cta-ghost" target="_blank">Começar agora</a>
@@ -1112,7 +868,7 @@
 
     <div class="planos-aviso">
       <p>📊 <strong>Verba de anúncios</strong> é paga diretamente por você ao Meta — não está inclusa em nenhum plano.</p>
-      <p>Dúvidas sobre qual plano escolher? <a href="https://wa.me/551152540490" target="_blank" style="color:var(--accent-l);text-decoration:none;font-weight:600;">Fale com a gente no WhatsApp →</a></p>
+      <p>Não sabe qual escolher? <a href="https://wa.me/551152540490" target="_blank" style="color:var(--accent-l);text-decoration:none;font-weight:600;">Fale com a gente e a gente indica o ideal para sua carteira →</a></p>
     </div>
   </div>
 </section>
@@ -1124,7 +880,7 @@
       <div class="diff-ring"></div>
       <div class="diff-ring"></div>
       <div class="diff-orbit t">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 2a3 3 0 0 1 3 3v1H9V5a3 3 0 0 1 3-3z"/><circle cx="9" cy="17" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="17" r="1" fill="currentColor" stroke="none"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </div>
       <div class="diff-orbit r">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
@@ -1133,7 +889,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/></svg>
       </div>
       <div class="diff-orbit l">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
       </div>
       <div class="diff-center">
         <span class="diff-center-brand">MLX</span>
@@ -1142,16 +898,16 @@
     </div>
     <div>
       <span class="section-tag">Por que a MLX Mind</span>
-      <h2 class="section-title">Mais do que uma agência,<br><em style="font-style:italic">um parceiro de crescimento</em></h2>
-      <p class="section-sub">Trabalhamos como extensão do seu time, com foco em métricas reais e crescimento sustentável.</p>
+      <h2 class="section-title">Não somos agência<br><em style="font-style:italic">genérica. Somos seus.</em></h2>
+      <p class="section-sub">Entendemos o mercado imobiliário. Sabemos que corretor vende relacionamento — e é isso que construímos para você online.</p>
       <div class="diff-list">
         <div class="diff-item">
           <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <div class="diff-item-text">
-            <h4>Integração total entre canais</h4>
-            <p>Bot, tráfego, social, landing page e SDR como um ecossistema conectado — jornada fluida do primeiro contato ao fechamento.</p>
+            <h4>Criativos com seus imóveis reais</h4>
+            <p>Não usamos banco de imagens genérico. Cada criativo é feito com as fotos da sua carteira, gerando muito mais identificação e conversão.</p>
           </div>
         </div>
         <div class="diff-item">
@@ -1159,17 +915,17 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <div class="diff-item-text">
-            <h4>Foco em dados e resultados</h4>
-            <p>Relatórios transparentes, metas claras e decisões baseadas em números. Você sempre sabe onde está cada real investido.</p>
+            <h4>Relatório que corretor entende</h4>
+            <p>Nada de CPM, CPC ou jargão de agência. Você recebe dados em linguagem de negócio: quantas conversas qualificadas, por tipo de imóvel.</p>
           </div>
         </div>
         <div class="diff-item">
           <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <div class="diff-item-text">
-            <h4>Tecnologia + estratégia humana</h4>
-            <p>Combinamos automação inteligente com a experiência de um time sênior em marketing e vendas.</p>
+            <h4>Campanha que nasce segmentada</h4>
+            <p>No onboarding mapeamos sua carteira, região e perfil de comprador. Seus anúncios já começam apontando para quem tem mais chance de fechar.</p>
           </div>
         </div>
         <div class="diff-item">
@@ -1177,8 +933,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
           <div class="diff-item-text">
-            <h4>Escalabilidade rápida</h4>
-            <p>Estrutura que cresce com você — do pequeno negócio ao grande, temos a solução certa para cada fase.</p>
+            <h4>Sem fidelidade, sem enrolação</h4>
+            <p>Contrato mensal renovável. Acreditamos que você fica porque vê resultado — não porque está preso num contrato anual.</p>
           </div>
         </div>
       </div>
@@ -1190,38 +946,38 @@
   <div class="container">
     <div style="text-align:center">
       <span class="section-tag">Como funciona</span>
-      <h2 class="section-title">Do diagnóstico<br><em style="font-style:italic">à escala</em></h2>
+      <h2 class="section-title">Do onboarding<br><em style="font-style:italic">aos leads</em></h2>
     </div>
     <div class="process-grid">
       <div class="process-step">
         <div class="step-num">01</div>
         <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="step-title">Diagnóstico</div>
-        <p class="step-desc">Entendemos seu negócio, mercado e objetivos em profundidade.</p>
+        <div class="step-title">Mapeamento</div>
+        <p class="step-desc">Entendemos sua carteira, região de atuação e perfil de comprador ideal.</p>
       </div>
       <div class="process-step">
         <div class="step-num">02</div>
         <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
         <div class="step-title">Estratégia</div>
-        <p class="step-desc">Montamos um plano personalizado com metas e canais definidos.</p>
+        <p class="step-desc">Planejamos conteúdo, criativos e campanhas com foco no seu nicho.</p>
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
         <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 0 21 12"/><path d="M22 12V6h-6"/></svg></div>
-        <div class="step-title">Implementação</div>
-        <p class="step-desc">Ativamos bots, campanhas, conteúdo e prospecção com agilidade.</p>
+        <div class="step-title">Ativação</div>
+        <p class="step-desc">Subimos os perfis, publicamos os primeiros conteúdos e ativamos as campanhas.</p>
       </div>
       <div class="process-step">
         <div class="step-num">04</div>
         <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
         <div class="step-title">Otimização</div>
-        <p class="step-desc">Monitoramento constante e ajustes para maximizar performance.</p>
+        <p class="step-desc">Ajustamos anúncios, criativos e segmentação com base nos dados reais.</p>
       </div>
       <div class="process-step">
         <div class="step-num">05</div>
         <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-        <div class="step-title">Escala</div>
-        <p class="step-desc">Crescimento previsível e sustentável, mês após mês.</p>
+        <div class="step-title">Resultados</div>
+        <p class="step-desc">Mais leads chegando, mais conversas no WhatsApp, mais imóveis vendidos.</p>
       </div>
     </div>
   </div>
@@ -1231,8 +987,8 @@
   <div class="container">
     <div class="dep-header">
       <span class="section-tag">O que dizem nossos clientes</span>
-      <h2 class="section-title">Resultados que<br><em style="font-style:italic">falam por si</em></h2>
-      <p class="section-sub">Empresas reais. Crescimento real.</p>
+      <h2 class="section-title">Corretores que<br><em style="font-style:italic">já estão crescendo</em></h2>
+      <p class="section-sub">Resultados reais de quem confiou na MLX Mind.</p>
     </div>
     <div class="dep-grid">
       <div class="dep-card">
@@ -1248,7 +1004,7 @@
         <p class="dep-quote">"Melhor escolha que eu fiz, ótima assessoria, ótimas postagens."</p>
         <div class="dep-author">
           <div class="dep-avatar">A</div>
-          <div><div class="dep-name">Anderson Abreu</div><div class="dep-role">Síndico Profissional</div></div>
+          <div><div class="dep-name">Anderson Abreu</div><div class="dep-role">Corretor de Imóveis</div></div>
         </div>
       </div>
       <div class="dep-card">
@@ -1267,39 +1023,39 @@
   <div class="container">
     <div class="pq-header">
       <span class="section-tag">Para quem é</span>
-      <h2 class="section-title">Feito para quem quer<br><em style="font-style:italic">crescer de verdade</em></h2>
-      <p class="section-sub">Atendemos negócios de diferentes segmentos que têm em comum um objetivo: mais clientes, mais resultado.</p>
+      <h2 class="section-title">Feito para quem vive<br><em style="font-style:italic">do mercado imobiliário</em></h2>
+      <p class="section-sub">Se você vende imóvel, a MLX Mind tem uma estratégia para o seu perfil.</p>
     </div>
     <div class="pq-grid">
       <div class="pq-card">
         <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Imobiliárias & Corretores</h3>
-        <p>Captação de leads qualificados, automação de atendimento e presença digital para fechar mais negócios.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>Profissionais de Saúde</h3>
-        <p>Médicos, psicólogos, nutricionistas e clínicas que precisam de agendamentos constantes e autoridade online.</p>
+        <h3>Corretor Autônomo</h3>
+        <p>Você trabalha sozinho e precisa de presença digital que gere autoridade e leads sem precisar de estrutura grande.</p>
       </div>
       <div class="pq-card">
         <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-        <h3>Prestadores de Serviço</h3>
-        <p>Advogados, contadores, consultores e empresas B2B que precisam de prospecção ativa e posicionamento.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h3>E-commerce & Varejo</h3>
-        <p>Lojas que querem escalar vendas com tráfego pago estratégico, remarketing e atendimento automatizado.</p>
+        <h3>Imobiliária</h3>
+        <p>Equipe de corretores que precisa de posicionamento de marca, captação de leads e gestão de anúncios em escala.</p>
       </div>
       <div class="pq-card">
         <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Educação & Infoprodutos</h3>
-        <p>Cursos, mentorias e treinamentos que precisam de funil completo para lançamentos e vendas recorrentes.</p>
+        <h3>Corretor de Lançamentos</h3>
+        <p>Precisa de landing pages e anúncios específicos por empreendimento para captar leads quentes antes e durante o lançamento.</p>
       </div>
       <div class="pq-card">
         <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>Negócios Locais</h3>
-        <p>Restaurantes, academias, salões e qualquer negócio que queira dominar a sua região e atrair mais clientes.</p>
+        <h3>Corretor de Alto Padrão</h3>
+        <p>Trabalha com imóveis de luxo e precisa de posicionamento premium, conteúdo refinado e segmentação por poder aquisitivo.</p>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Corretor de Usados</h3>
+        <p>Carteira variada e precisa de visibilidade constante para os imóveis disponíveis, com anúncios ativos o tempo todo.</p>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <h3>Corretor em Início de Carreira</h3>
+        <p>Está começando e precisa construir reputação online rápido. A gente estrutura o perfil e já começa a gerar visibilidade.</p>
       </div>
     </div>
   </div>
@@ -1311,7 +1067,7 @@
       <div class="faq-left">
         <span class="section-tag">Dúvidas frequentes</span>
         <h2 class="section-title">Respondendo antes<br><em style="font-style:italic">de você perguntar</em></h2>
-        <p class="section-sub" style="margin-top:16px">Tem mais alguma dúvida? Fale com a gente diretamente pelo WhatsApp — respondemos rápido.</p>
+        <p class="section-sub" style="margin-top:16px">Tem mais alguma dúvida? Fale com a gente — respondemos rápido no WhatsApp.</p>
         <a href="https://wa.me/551152540490" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;margin-top:36px" target="_blank">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Perguntar agora
@@ -1320,27 +1076,27 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q">Precisa assinar contrato de fidelidade?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Não exigimos fidelidade longa. Trabalhamos com contratos mensais renováveis — acreditamos que você fica porque vê resultado, não por obrigação. Projetos pontuais como landing pages têm pagamento único.</p></div>
+          <div class="faq-a"><p>Não. Trabalhamos com contratos mensais renováveis — sem fidelidade obrigatória. Acreditamos que você fica porque vê resultado, não por obrigação.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Funciona para negócio pequeno?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Sim. Atendemos desde MEIs e profissionais liberais até empresas de médio porte. Temos pacotes e estratégias calibradas para cada fase — o que importa é a disposição de crescer, não o tamanho atual.</p></div>
+          <button class="faq-q">A verba de anúncios está inclusa?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a"><p>Não. A verba de anúncios é paga diretamente por você ao Meta (Facebook/Instagram). O que está incluso no plano é o gerenciamento completo: estratégia, criação dos anúncios, segmentação e otimização.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Em quanto tempo vejo resultado?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Depende do serviço. Tráfego pago costuma gerar os primeiros leads em 7 a 14 dias após a ativação das campanhas. Social media e bots têm impacto progressivo — o crescimento mais expressivo aparece a partir do segundo ou terceiro mês.</p></div>
+          <button class="faq-q">Em quanto tempo começo a receber leads?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a"><p>As campanhas de tráfego costumam gerar os primeiros leads entre 7 e 14 dias após a ativação. O volume e a qualidade aumentam progressivamente conforme otimizamos os anúncios com os dados reais.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Como funciona a gestão do Meta Ads?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Gerenciamos as campanhas pelo nosso Business Manager, com acesso compartilhado à sua página e conta de anúncios. Você acompanha tudo em tempo real e recebe relatórios semanais com os principais indicadores.</p></div>
+          <button class="faq-q">Vocês criam os criativos com meus imóveis?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a"><p>Sim. Não usamos banco de imagens genérico. Você nos envia as fotos dos imóveis da sua carteira e a gente cria os artes personalizados. Isso gera muito mais identificação e conversão nos anúncios.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">O bot de atendimento substitui minha equipe?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Não substitui — complementa. O bot cuida do primeiro atendimento, qualifica o lead e agenda ou direciona. Os casos que precisam de atenção humana são encaminhados automaticamente para a sua equipe, com todo o histórico da conversa.</p></div>
+          <button class="faq-q">O que é o onboarding de mapeamento?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a"><p>É uma reunião que fazemos logo na contratação para entender seus imóveis em destaque, perfil de comprador ideal, região de atuação e faixa de preço. Com essas informações, as campanhas já começam segmentadas e com muito mais precisão.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">Quanto tempo leva para entregar uma landing page?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>O prazo médio é de 5 a 10 dias úteis após o alinhamento inicial e recebimento dos materiais. Projetos com escopo mais simples podem ser entregues em até 3 dias.</p></div>
+          <button class="faq-q">Funciona para imóveis de qualquer faixa de preço?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+          <div class="faq-a"><p>Sim. Trabalhamos com imóveis populares, médio padrão e alto padrão. A estratégia, os criativos e a segmentação são adaptados para cada perfil de comprador e faixa de preço do seu produto.</p></div>
         </div>
       </div>
     </div>
@@ -1354,15 +1110,15 @@
 <section id="cta">
   <div class="container">
     <div class="cta-box">
-      <span class="section-tag">Pronto para crescer?</span>
-      <h2 class="section-title">Vamos elevar sua<br><em style="font-style:italic">estratégia digital</em></h2>
-      <p class="cta-sub">Fale com nosso time agora e descubra como a MLX Mind pode acelerar seus resultados com uma estratégia personalizada.</p>
+      <span class="section-tag">Pronto para vender mais?</span>
+      <h2 class="section-title">Começa hoje,<br><em style="font-style:italic">sem complicação</em></h2>
+      <p class="cta-sub">Fale com a gente agora, a gente entende a sua carteira e já indica o melhor plano para o seu perfil de corretor.</p>
       <div class="cta-actions">
         <a href="https://wa.me/551152540490" class="cta-whatsapp" target="_blank">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Falar no WhatsApp
         </a>
-        <a href="#servicos" class="btn-ghost">Conhecer serviços</a>
+        <a href="#planos" class="btn-ghost">Ver planos</a>
       </div>
     </div>
   </div>
@@ -1426,8 +1182,6 @@
   bar.style.cssText='position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#5A0A7A,#B266FF);z-index:9999;transition:width .05s linear;pointer-events:none;';
   document.body.appendChild(bar);
 
-  const heroContent = document.querySelector('#hero');
-
   /* SCROLL REVEAL */
   document.querySelectorAll('.service-card').forEach((el,i)=>{ el.dataset.reveal='up'; el.dataset.delay=i*70; });
   document.querySelectorAll('.diff-item').forEach((el,i)=>{ el.dataset.reveal='left'; el.dataset.delay=i*80; });
@@ -1482,7 +1236,7 @@
   const statsData=[
     {el:null,target:200,suffix:'+'},
     {el:null,target:4,suffix:'×'},
-    {el:null,target:24,suffix:'/7'},
+    {el:null,target:3,suffix:'×'},
     {el:null,target:98,suffix:'%'},
   ];
   document.querySelectorAll('.stat-num').forEach((el,i)=>{ if(statsData[i]) statsData[i].el=el; });
@@ -1501,12 +1255,16 @@
 
   /* SCROLL HANDLER */
   let ticking=false, scrollY=0;
+  var isMobile = window.matchMedia('(max-width: 960px)').matches || ('ontouchstart' in window);
   function onScroll(){ scrollY=window.scrollY; if(!ticking){ requestAnimationFrame(processScroll); ticking=true; } }
   function processScroll(){
     ticking=false;
     const docH=document.documentElement.scrollHeight-window.innerHeight;
     bar.style.width=(scrollY/docH*100)+'%';
-    if(heroContent && !isMobile){ const heroChildren2=heroContent.querySelectorAll('.hero-badge, h1, .hero-sub, .hero-actions'); heroChildren2.forEach(el=>{el.style.transform=`translateY(${scrollY*0.18}px)`;}); }
+    if(!isMobile){
+      const heroChildren2=document.querySelectorAll('#hero .hero-badge, #hero h1, #hero .hero-sub, #hero .hero-actions');
+      heroChildren2.forEach(el=>{el.style.transform=`translateY(${scrollY*0.18}px)`;});
+    }
   }
   window.addEventListener('scroll',onScroll,{passive:true});
 
@@ -1565,9 +1323,8 @@
     el.style.willChange='opacity,transform';
     revealObserver.observe(el);
   });
-  /* ══════════════════════════════════════
-     GLITCH LAYERS no H1
-  ══════════════════════════════════════ */
+
+  /* GLITCH LAYERS */
   (function() {
     const h1 = document.querySelector('#hero h1');
     if (!h1) return;
@@ -1580,119 +1337,61 @@
     h1.appendChild(g2);
   })();
 
-  /* ══════════════════════════════════════
-     CURSOR PERSONALIZADO
-  ══════════════════════════════════════ */
+  /* SPOTLIGHT + TILT */
   (function() {
-    if (!window.matchMedia('(pointer: fine)').matches) return;
-    const dot  = document.getElementById('cursor-dot');
-    const ring = document.getElementById('cursor-ring');
-    if (!dot || !ring) return;
-
-    let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
-    let rx = tx, ry = ty;
-    let hovering = false;
-
-    document.addEventListener('mousemove', function(e) {
-      tx = e.clientX; ty = e.clientY;
-    }, { passive: true });
-
-    document.querySelectorAll('a, button').forEach(function(el) {
-      el.addEventListener('mouseenter', function() { ring.classList.add('hovering'); });
-      el.addEventListener('mouseleave', function() { ring.classList.remove('hovering'); });
-    });
-
-    (function loop() {
-      dot.style.transform  = 'translate(' + tx + 'px,' + ty + 'px)';
-      rx += (tx - rx) * 0.12;
-      ry += (ty - ry) * 0.12;
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
-      requestAnimationFrame(loop);
-    })();
-  })();
-
-  /* ══════════════════════════════════════
-     SPOTLIGHT + TILT nos cards
-  ══════════════════════════════════════ */
-  (function() {
-    if ('ontouchstart' in window) return; // sem tilt no touch
+    if ('ontouchstart' in window) return;
     document.querySelectorAll('.service-card, .dep-card, .plano-card, .pq-card').forEach(function(card) {
-      // adiciona classe e elemento spotlight
       card.classList.add('tilt-card');
       var sp = document.createElement('div');
       sp.className = 'spotlight';
       card.appendChild(sp);
-
       card.addEventListener('mousemove', function(e) {
         var r = card.getBoundingClientRect();
         var xp = (e.clientX - r.left) / r.width;
         var yp = (e.clientY - r.top)  / r.height;
-        // spotlight
         card.style.setProperty('--sx', (xp * 100).toFixed(1) + '%');
         card.style.setProperty('--sy', (yp * 100).toFixed(1) + '%');
-        // tilt
         var rotY =  (xp - 0.5) * 10;
         var rotX = -(yp - 0.5) * 10;
         card.style.transform = 'perspective(700px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
       });
-
       card.addEventListener('mouseleave', function() {
         card.style.transform = '';
       });
     });
   })();
 
-  /* ══════════════════════════════════════
-     MAGNETIC BUTTONS
-  ══════════════════════════════════════ */
+  /* MAGNETIC BUTTONS */
   (function() {
     if ('ontouchstart' in window) return;
     document.querySelectorAll('.btn-primary, .btn-ghost, .cta-whatsapp, .nav-cta').forEach(function(btn) {
       btn.classList.add('magnetic');
-
       btn.addEventListener('mousemove', function(e) {
         var r   = btn.getBoundingClientRect();
         var dx  = e.clientX - (r.left + r.width  / 2);
         var dy  = e.clientY - (r.top  + r.height / 2);
         btn.style.transform = 'translate(' + (dx * 0.2) + 'px,' + (dy * 0.2) + 'px)';
       });
-
       btn.addEventListener('mouseleave', function() {
         btn.style.transition = 'transform .45s cubic-bezier(.22,1,.36,1)';
         btn.style.transform  = '';
         setTimeout(function() { btn.style.transition = ''; }, 450);
       });
-
       btn.addEventListener('mouseenter', function() {
         btn.style.transition = 'transform .1s linear';
       });
     });
   })();
 
-  /* ══════════════════════════════════════
-     LOADER
-  ══════════════════════════════════════ */
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var loader = document.getElementById('loader');
-      if (loader) loader.classList.add('hidden');
-    }, 1500);
-  });
-
-  /* ══════════════════════════════════════
-     MENU MOBILE
-  ══════════════════════════════════════ */
+  /* MENU MOBILE */
   (function() {
     var btn  = document.getElementById('hamburguer');
     var menu = document.getElementById('mobileMenu');
     if (!btn || !menu) return;
-
     btn.addEventListener('click', function() {
       btn.classList.toggle('open');
       menu.classList.toggle('open');
     });
-
-    // fecha ao clicar em link
     menu.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         btn.classList.remove('open');
@@ -1700,22 +1399,6 @@
       });
     });
   })();
-
-  /* ══════════════════════════════════════
-     DESATIVA EFEITOS NO MOBILE
-  ══════════════════════════════════════ */
-  var isMobile = window.matchMedia('(max-width: 960px)').matches || ('ontouchstart' in window);
-  if (isMobile) {
-    // desativa parallax hero
-    var heroChildren = document.querySelectorAll('#hero .hero-badge, #hero h1, #hero .hero-sub, #hero .hero-actions');
-    heroChildren.forEach(function(el) { el.style.transform = 'none'; });
-    // desativa tilt
-    document.querySelectorAll('.tilt-card').forEach(function(el) {
-      el.style.transform = 'none';
-    });
-  }
-
-  /* ══ FIM DOS SCRIPTS ══ */
 </script>
 </body>
 </html>
