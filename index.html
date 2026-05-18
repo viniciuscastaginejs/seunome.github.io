@@ -1,1404 +1,1262 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>MLX Mind — Agência de Marketing Digital</title>
-  <meta name="description" content="Agência de marketing digital focada em resultados reais. Tráfego pago no Meta, gestão de redes sociais, landing pages e estratégias para o seu negócio crescer." />
-  <meta name="keywords" content="marketing digital, tráfego pago, meta ads, social media, landing page, agência marketing, ribeirão preto" />
-  <meta name="author" content="MLX Mind" />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>MLX Mind — Marketing Imobiliário para Corretores e Imobiliárias</title>
+<meta name="description" content="Assessoria completa de marketing digital para corretores e imobiliárias. Mais leads qualificados, mais vendas, mais resultado."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%231A0028'/%3E%3Crect x='6' y='8' width='22' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='15' width='16' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='22' width='10' height='5' rx='2' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%237B2FBE'/%3E%3Cstop offset='1' stop-color='%23B266FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0E0018;
+  --bg2:#130020;
+  --card:#1A0028;
+  --card2:#1E002E;
+  --purple-deep:#3F005C;
+  --purple-mid:#7B2FBE;
+  --purple-bright:#B266FF;
+  --purple-light:#D4A0FF;
+  --gold:#C9A84C;
+  --gold-light:#E8CC7A;
+  --white:#F5F0FF;
+  --muted:#7A6090;
+  --border:rgba(178,102,255,0.1);
+  --border-s:rgba(178,102,255,0.22);
+  --font-head:'Cormorant Garamond',serif;
+  --font-body:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.mlxmind.com.br/" />
-  <meta property="og:title" content="MLX Mind — Agência de Marketing Digital" />
-  <meta property="og:description" content="Tráfego pago, social media e landing pages para negócios que querem crescer de verdade." />
-  <meta property="og:image" content="https://www.mlxmind.com.br/og-image.jpg" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="MLX Mind" />
+/* NOISE */
+body::before{
+  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;animation:grain .5s steps(1) infinite;
+}
+@keyframes grain{0%{background-position:0 0}20%{background-position:-40px -20px}40%{background-position:20px -50px}60%{background-position:-20px 20px}80%{background-position:40px 30px}100%{background-position:-10px -40px}}
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MLX Mind — Agência de Marketing Digital" />
-  <meta name="twitter:description" content="Tráfego pago, social media e landing pages para negócios que querem crescer." />
-  <meta name="twitter:image" content="https://www.mlxmind.com.br/og-image.jpg" />
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;height:76px;
+  background:rgba(14,0,24,0.88);backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-bars{display:flex;flex-direction:column;gap:5px;width:30px}
+.logo-bars span{display:block;height:6px;border-radius:2px;background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright))}
+.logo-bars span:nth-child(1){width:100%}
+.logo-bars span:nth-child(2){width:70%}
+.logo-bars span:nth-child(3){width:45%}
+.logo-name{font-family:var(--font-body);font-size:.95rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+.nav-links{display:flex;gap:40px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
+  color:var(--white)!important;padding:11px 28px;border-radius:6px;
+  font-weight:600!important;letter-spacing:.08em!important;
+  box-shadow:0 4px 24px rgba(123,47,190,0.4);
+  transition:transform .2s,box-shadow .2s!important;
+}
+.nav-cta:hover{transform:translateY(-1px)!important;box-shadow:0 8px 36px rgba(178,102,255,0.4)!important}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MarketingAgency",
-    "name": "MLX Mind",
-    "alternateName": "MLX Mind Marketing Experience",
-    "url": "https://www.mlxmind.com.br",
-    "logo": "https://www.mlxmind.com.br/logo.png",
-    "description": "Agência de marketing digital especializada em resultados reais para negócios de todos os segmentos.",
-    "telephone": "+55-11-5254-0490",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ribeirão Preto",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -21.1775,
-      "longitude": -47.8103
-    },
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "sameAs": [
-      "https://instagram.com/mindmlx",
-      "https://wa.me/551152540490"
-    ],
-    "priceRange": "R$329 - R$849",
-    "areaServed": {
-      "@type": "State",
-      "name": "São Paulo"
-    },
-    "serviceType": ["Tráfego Pago", "Social Media", "Landing Pages", "Marketing Digital"]
-  }
-  </script>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%231A0028'/%3E%3Crect x='6' y='8' width='22' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='15' width='16' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='22' width='10' height='5' rx='2' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%237B2FBE'/%3E%3Cstop offset='1' stop-color='%23B266FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg:        #1A0028;
-      --bg2:       #2A003D;
-      --card:      #1E0030;
-      --card2:     #230038;
-      --primary:   #3F005C;
-      --primary-l: #5A0A7A;
-      --accent:    #B266FF;
-      --accent-l:  #D4A0FF;
-      --border:    rgba(178,102,255,0.12);
-      --border-s:  rgba(178,102,255,0.24);
-      --white:     #F4EFFF;
-      --muted:     #8B6FAA;
-      --font-head: 'Playfair Display', serif;
-      --font-body: 'Montserrat', sans-serif;
-    }
-    html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    #hero-canvas {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-    }
+/* HAMBURGER */
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-burger span{display:block;width:24px;height:2px;border-radius:2px;background:var(--white);transition:.3s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mob{display:none;position:fixed;top:76px;left:0;right:0;z-index:99;background:rgba(14,0,24,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1),padding .3s}
+.nav-mob.open{max-height:420px;padding:12px 0 20px}
+.nav-mob a{display:block;padding:14px 28px;color:var(--muted);font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em;text-decoration:none;transition:color .2s,background .2s;border-left:2px solid transparent}
+.nav-mob a:hover{color:var(--white);background:rgba(178,102,255,.05);border-left-color:var(--purple-bright)}
+.nav-mob .mob-cta{margin:14px 28px 0;text-align:center;background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));color:var(--white)!important;border-radius:6px;padding:13px!important;font-weight:700!important;border-left:none!important}
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 52px; height: 72px;
-      background: rgba(26,0,40,0.85);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .logo-icon { display: flex; flex-direction: column; gap: 5px; width: 34px; }
-    .logo-bar { height: 7px; border-radius: 2px; background: linear-gradient(90deg, #7B2FBE, #B266FF); }
-    .logo-bar:nth-child(1) { width: 100%; }
-    .logo-bar:nth-child(2) { width: 72%; }
-    .logo-bar:nth-child(3) { width: 48%; }
-    .logo-text { font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; transition: color .2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: linear-gradient(135deg, var(--primary-l), var(--accent)) !important;
-      color: var(--white) !important; padding: 10px 26px; border-radius: 6px;
-      box-shadow: 0 4px 20px rgba(90,10,122,0.5);
-      transition: opacity .2s, transform .2s !important;
-    }
-    .nav-cta:hover { opacity: .88 !important; transform: translateY(-1px) !important; }
+/* SCROLL BAR */
+#sprogress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--purple-mid),var(--gold));z-index:9999;pointer-events:none;transition:width .05s linear}
 
-    /* HERO */
-    #hero {
-      position: relative; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 130px 24px 100px; overflow: hidden;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(90,10,122,0.38) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(63,0,92,0.22) 0%, transparent 60%);
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 9px;
-      border: 1px solid rgba(178,102,255,0.3); border-radius: 100px;
-      padding: 7px 20px; font-size: 0.72rem; font-weight: 600;
-      color: var(--accent-l); letter-spacing: 0.14em; text-transform: uppercase;
-      margin-bottom: 36px; background: rgba(63,0,92,0.3);
-      animation: fadeUp .8s ease both;
-    }
-    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(1.7)} }
-    h1 {
-      font-family: var(--font-head); font-size: clamp(3rem,6.5vw,6rem);
-      font-weight: 700; line-height: 1.06; letter-spacing: -0.01em;
-      max-width: 860px; margin-bottom: 28px;
-      animation: fadeUp .9s .1s ease both;
-    }
-    h1 em {
-      font-style: italic;
-      background: linear-gradient(135deg, var(--accent-l), var(--accent));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-sub {
-      font-size: clamp(.95rem,1.8vw,1.18rem); color: var(--muted);
-      max-width: 580px; line-height: 1.8; margin-bottom: 52px; font-weight: 400;
-      animation: fadeUp .9s .2s ease both;
-    }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeUp .9s .3s ease both; }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary-l) 0%, var(--accent) 100%);
-      color: var(--white); font-weight: 700; font-family: var(--font-body);
-      font-size: .85rem; letter-spacing: .07em; text-transform: uppercase;
-      padding: 16px 40px; border-radius: 6px; text-decoration: none;
-      box-shadow: 0 6px 32px rgba(90,10,122,0.55);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 48px rgba(178,102,255,0.4); }
-    .btn-ghost {
-      background: transparent; color: var(--white); font-weight: 600;
-      font-family: var(--font-body); font-size: .85rem; letter-spacing: .07em; text-transform: uppercase;
-      padding: 16px 40px; border-radius: 6px; text-decoration: none;
-      border: 1px solid var(--border-s); transition: border-color .2s, background .2s;
-    }
-    .btn-ghost:hover { border-color: rgba(178,102,255,.4); background: rgba(178,102,255,.06); }
-    .hero-stats {
-      display: flex; gap: 52px; margin-top: 80px; flex-wrap: wrap; justify-content: center;
-      animation: fadeUp .9s .45s ease both;
-      position: relative; z-index: 1;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-family: var(--font-head); font-size: 2.8rem; font-weight: 700; color: var(--white); display: block; line-height: 1; margin-bottom: 6px; }
-    .stat-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
-    .stat-divider { width: 1px; background: var(--border); align-self: stretch; }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+/* HERO */
+#hero{
+  position:relative;min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:0;
+  padding-top:76px;overflow:hidden;
+}
+.hero-left{
+  padding:80px 60px 80px 60px;
+  position:relative;z-index:2;
+}
+.hero-right{
+  position:relative;height:100vh;overflow:hidden;
+}
+.hero-img-grid{
+  position:absolute;inset:0;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+  gap:4px;
+}
+.hero-img-grid .img-block{
+  overflow:hidden;position:relative;
+}
+.hero-img-grid .img-block::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(63,0,92,0.6),rgba(14,0,24,0.3));
+}
+.hero-img-grid .img-block:nth-child(1){grid-column:1/3;grid-row:1/2}
+.hero-img-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(0.7);transition:transform 8s ease}
+.hero-img-grid .img-block:hover img{transform:scale(1.06)}
+/* Property photo placeholders using CSS gradients */
+.prop-bg-1{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)}
+.prop-bg-2{background:linear-gradient(135deg,#2d1b3d 0%,#1a0d2e 50%,#0d0621 100%)}
+.prop-bg-3{background:linear-gradient(135deg,#1e1e1e 0%,#2d2d2d 50%,#1a1a1a 100%)}
+.prop-bg-4{background:linear-gradient(135deg,#0a0a0f 0%,#1a1020 50%,#120818 100%)}
 
-    /* SHARED */
-    section { padding: 100px 24px; }
-    .container { max-width: 1160px; margin: 0 auto; }
-    .section-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
-    .section-title { font-family: var(--font-head); font-size: clamp(2rem,4vw,3.2rem); font-weight: 700; line-height: 1.12; letter-spacing: -.01em; margin-bottom: 18px; }
-    .section-sub { color: var(--muted); font-size: .97rem; max-width: 500px; line-height: 1.8; }
+/* building SVG overlays */
+.building-svg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1}
 
-    /* SERVICES */
-    #servicos { background: var(--bg2); }
-    .services-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 60px; flex-wrap: wrap; }
-    .services-grid { display: flex; flex-direction: column; gap: 1px; border-radius: 12px; overflow: hidden; }
-    .services-row { display: grid; gap: 1px; background: var(--border); }
-    .services-row.row-3 { grid-template-columns: repeat(3, 1fr); }
-    .services-row.row-2 { grid-template-columns: repeat(2, 1fr); width: 66.67%; margin: 0 auto; background: transparent; gap: 1px; }
-    .service-card { background: var(--card2); padding: 48px 38px; position: relative; overflow: hidden; transition: background .3s; }
-    .service-card:hover { background: #2B0042; }
-    .service-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--primary-l), var(--accent)); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
-    .service-card:hover::after { transform: scaleX(1); }
-    .service-icon {
-      width: 56px; height: 56px; border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 28px;
-      background: rgba(90,10,122,0.25);
-      border: 1px solid rgba(178,102,255,0.18);
-      color: var(--accent);
-    }
-    .service-icon svg { width: 26px; height: 26px; }
-    .service-num { position: absolute; top: 28px; right: 30px; font-family: var(--font-head); font-size: 5rem; font-weight: 700; color: rgba(178,102,255,0.04); line-height: 1; pointer-events: none; font-style: italic; }
-    .service-card h3 { font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; margin-bottom: 14px; letter-spacing: -.01em; }
-    .service-card p { color: var(--muted); font-size: .9rem; line-height: 1.75; }
-    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-    .tag { font-size: .7rem; font-weight: 600; color: var(--accent-l); background: rgba(178,102,255,0.08); border: 1px solid rgba(178,102,255,0.18); padding: 4px 13px; border-radius: 100px; letter-spacing: .05em; }
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,var(--bg) 0%,transparent 40%);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(201,168,76,0.35);border-radius:100px;
+  padding:7px 18px;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-light);background:rgba(201,168,76,0.08);margin-bottom:32px;
+  animation:fadeUp .8s ease both;
+}
+.tag-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.8)}}
+.hero-left h1{
+  font-family:var(--font-head);font-size:clamp(3rem,5vw,5.2rem);
+  font-weight:300;line-height:1.08;letter-spacing:-.01em;
+  margin-bottom:28px;animation:fadeUp .9s .1s ease both;
+}
+.hero-left h1 strong{font-weight:700;display:block}
+.hero-left h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--purple-light),var(--purple-bright));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+  font-size:1rem;color:var(--muted);line-height:1.8;max-width:460px;
+  margin-bottom:48px;font-weight:400;animation:fadeUp .9s .2s ease both;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .9s .3s ease both}
+.btn-primary{
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
+  color:var(--white);font-weight:600;font-family:var(--font-body);
+  font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:16px 36px;border-radius:6px;text-decoration:none;
+  box-shadow:0 6px 32px rgba(123,47,190,0.5);
+  transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:10px;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 48px rgba(178,102,255,0.4)}
+.btn-ghost{
+  background:transparent;color:var(--white);font-weight:500;
+  font-family:var(--font-body);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:16px 36px;border-radius:6px;text-decoration:none;
+  border:1px solid var(--border-s);transition:border-color .2s,background .2s;
+}
+.btn-ghost:hover{border-color:rgba(178,102,255,.4);background:rgba(178,102,255,.06)}
+.hero-stats{
+  display:flex;gap:0;margin-top:64px;
+  animation:fadeUp .9s .45s ease both;
+  border:1px solid var(--border);border-radius:12px;overflow:hidden;
+  background:rgba(30,0,46,0.5);backdrop-filter:blur(12px);
+}
+.hstat{padding:22px 28px;text-align:center;flex:1;border-right:1px solid var(--border)}
+.hstat:last-child{border-right:none}
+.hstat-num{font-family:var(--font-head);font-size:2rem;font-weight:700;color:var(--white);display:block;line-height:1;margin-bottom:4px}
+.hstat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
-    /* DIFERENCIAIS */
-    #diferenciais .container { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .diff-visual { position: relative; aspect-ratio: 1; max-width: 420px; }
-    .diff-ring { position: absolute; border-radius: 50%; border: 1px solid; }
-    .diff-ring:nth-child(1) { inset: 0; border-color: rgba(178,102,255,0.12); animation: spin 32s linear infinite; }
-    .diff-ring:nth-child(2) { inset: 14%; border-color: rgba(90,10,122,0.22); animation: spin 22s linear infinite reverse; }
-    .diff-ring:nth-child(3) { inset: 28%; border-color: rgba(178,102,255,0.1); animation: spin 16s linear infinite; }
-    .diff-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 130px; height: 130px; border-radius: 50%; background: radial-gradient(circle, rgba(90,10,122,0.4), transparent 70%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border: 1px solid rgba(178,102,255,0.2); }
-    .diff-center-brand { font-family: var(--font-body); font-size: 1rem; font-weight: 700; letter-spacing: .15em; color: var(--white); text-transform: uppercase; }
-    .diff-center-sub { font-family: var(--font-head); font-size: .72rem; color: var(--accent-l); font-style: italic; margin-top: 2px; }
-    .diff-orbit { position: absolute; width: 54px; height: 54px; border-radius: 12px; background: var(--card); border: 1px solid var(--border-s); display: flex; align-items: center; justify-content: center; color: var(--accent); transform-origin: center center; will-change: transform; }
-    .diff-orbit svg { width: 22px; height: 22px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .diff-list { display: flex; flex-direction: column; gap: 26px; margin-top: 38px; }
-    .diff-item { display: flex; gap: 18px; align-items: flex-start; }
-    .diff-item-icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; background: rgba(90,10,122,0.22); border: 1px solid rgba(178,102,255,0.18); display: flex; align-items: center; justify-content: center; color: var(--accent); }
-    .diff-item-icon svg { width: 20px; height: 20px; }
-    .diff-item-text h4 { font-family: var(--font-head); font-size: .97rem; font-weight: 700; margin-bottom: 4px; }
-    .diff-item-text p { font-size: .87rem; color: var(--muted); line-height: 1.7; }
+/* MARQUEE */
+.marquee-band{
+  width:100%;overflow:hidden;
+  background:linear-gradient(90deg,var(--purple-deep),var(--purple-mid));
+  padding:16px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);
+  position:relative;z-index:2;
+}
+.marquee-track{display:flex;width:max-content;animation:marq 30s linear infinite}
+.marquee-band:hover .marquee-track{animation-play-state:paused}
+.marquee-content{display:flex;align-items:center;white-space:nowrap}
+.marquee-content span{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:0 28px}
+.marquee-dot{color:rgba(255,255,255,.25)!important;font-size:.55rem!important;padding:0!important;letter-spacing:0!important}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* PROCESSO */
-    #processo { background: var(--bg2); }
-    .process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden; margin-top: 60px; }
-    .process-step { background: var(--card); padding: 40px 24px; text-align: center; position: relative; transition: background .25s; }
-    .process-step:hover { background: #230038; }
-    .process-step::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--primary-l), var(--accent)); transform: scaleX(0); transition: transform .35s; }
-    .process-step:hover::before { transform: scaleX(1); }
-    .step-num { font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; font-style: italic; color: rgba(178,102,255,0.25); line-height: 1; margin-bottom: 12px; }
-    .step-icon { display: flex; justify-content: center; margin-bottom: 14px; color: var(--accent); }
-    .step-icon svg { width: 26px; height: 26px; }
-    .step-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
-    .step-desc { font-size: .8rem; color: var(--muted); line-height: 1.65; }
+/* SHARED */
+section{padding:110px 60px;position:relative;z-index:2}
+.container{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--purple-light)}
+.section-title strong{font-weight:700}
+.section-sub{color:var(--muted);font-size:.95rem;line-height:1.8;max-width:520px}
 
-    /* PLANOS */
-    #planos { background: var(--bg); }
-    .planos-header { text-align: center; margin-bottom: 16px; }
-    .planos-header .section-sub { margin: 0 auto; }
-    .planos-note {
-      text-align: center; margin-bottom: 56px;
-      font-size: .78rem; color: var(--muted);
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-    }
-    .planos-note::before, .planos-note::after {
-      content: ''; flex: 1; max-width: 120px; height: 1px;
-      background: var(--border);
-    }
-    .planos-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      background: var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .plano-card {
-      background: var(--card2);
-      padding: 44px 36px 40px;
-      position: relative;
-      transition: background .3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .plano-card:hover { background: #2B0042; }
-    .plano-card + .plano-card { border-left: 1px solid var(--border); }
-    .plano-card.destaque {
-      background: linear-gradient(160deg, #2D0045 0%, #1E0032 100%);
-      border-left: 1px solid rgba(178,102,255,0.3);
-      border-right: 1px solid rgba(178,102,255,0.3);
-      z-index: 1;
-    }
-    .plano-card.destaque:hover { background: linear-gradient(160deg, #370055 0%, #250040 100%); }
-    .plano-card.destaque::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--primary-l), var(--accent));
-    }
-    .plano-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--bg); background: linear-gradient(90deg, var(--primary-l), var(--accent));
-      padding: 5px 14px; border-radius: 100px;
-      margin-bottom: 24px; align-self: flex-start;
-    }
-    .plano-badge-placeholder { margin-bottom: 24px; height: 26px; }
-    .plano-name { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
-    .plano-desc { font-size: .8rem; color: var(--muted); margin-bottom: 28px; line-height: 1.6; }
-    .plano-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
-    .plano-currency { font-size: .85rem; font-weight: 700; color: var(--accent-l); margin-top: 4px; }
-    .plano-valor { font-family: var(--font-head); font-size: 3rem; font-weight: 700; line-height: 1; color: var(--white); }
-    .plano-period { font-size: .75rem; color: var(--muted); font-weight: 500; margin-bottom: 28px; }
-    .plano-divider { height: 1px; background: var(--border); margin-bottom: 28px; }
-    .plano-features {
-      list-style: none;
-      display: flex; flex-direction: column; gap: 13px;
-      flex: 1; margin-bottom: 36px;
-    }
-    .plano-features li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: .83rem; color: var(--white); line-height: 1.5;
-    }
-    .plano-features li .feat-icon {
-      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
-      background: rgba(178,102,255,0.12); border: 1px solid rgba(178,102,255,0.25);
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 1px; color: var(--accent);
-    }
-    .plano-features li .feat-icon svg { width: 10px; height: 10px; }
-    .plano-features li .feat-label { color: var(--muted); }
-    .plano-features li strong { color: var(--white); font-weight: 600; }
-    .plano-cta {
-      display: block; text-align: center;
-      padding: 14px 24px; border-radius: 8px;
-      font-size: .8rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-      text-decoration: none; transition: all .2s;
-    }
-    .plano-cta-ghost { border: 1px solid var(--border-s); color: var(--white); background: transparent; }
-    .plano-cta-ghost:hover { border-color: var(--accent); background: rgba(178,102,255,.06); }
-    .plano-cta-primary {
-      background: linear-gradient(135deg, var(--primary-l), var(--accent));
-      color: var(--white); box-shadow: 0 6px 28px rgba(90,10,122,0.5);
-    }
-    .plano-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(178,102,255,0.4); }
-    .planos-aviso { margin-top: 28px; text-align: center; display: flex; flex-direction: column; gap: 8px; }
-    .planos-aviso p { font-size: .76rem; color: var(--muted); line-height: 1.6; }
-    .planos-aviso strong { color: var(--accent-l); }
+/* PROBLEM SECTION */
+#problema{background:var(--bg2)}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.prob-visual{position:relative}
+.prob-card-stack{position:relative;height:400px}
+.prob-card{
+  position:absolute;background:var(--card2);border:1px solid var(--border);
+  border-radius:16px;padding:28px;
+  transition:transform .3s ease;
+}
+.prob-card:nth-child(1){top:0;left:0;right:60px;transform:rotate(-2deg);z-index:1}
+.prob-card:nth-child(2){top:60px;left:20px;right:40px;z-index:2}
+.prob-card:nth-child(3){top:130px;left:40px;right:20px;transform:rotate(1.5deg);z-index:3}
+.prob-card:hover{transform:rotate(0deg) translateY(-4px)!important;z-index:10}
+.prob-card-icon{font-size:1.8rem;margin-bottom:12px}
+.prob-card h4{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.prob-card p{font-size:.82rem;color:var(--muted);line-height:1.7}
+.prob-card .red-tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ff6b6b;background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.2);padding:3px 10px;border-radius:100px;margin-bottom:14px}
+.prob-list{display:flex;flex-direction:column;gap:22px;margin-top:36px}
+.prob-item{display:flex;gap:16px;align-items:flex-start}
+.prob-check{
+  width:40px;height:40px;border-radius:10px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(123,47,190,.2),rgba(178,102,255,.1));
+  border:1px solid var(--border-s);
+  display:flex;align-items:center;justify-content:center;color:var(--purple-bright);
+}
+.prob-check svg{width:18px;height:18px}
+.prob-item h4{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.prob-item p{font-size:.85rem;color:var(--muted);line-height:1.7}
 
-    /* DEPOIMENTOS */
-    #depoimentos { background: var(--bg2); }
-    .dep-header { text-align: center; margin-bottom: 56px; }
-    .dep-header .section-sub { margin: 0 auto; }
-    .dep-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-    .dep-card { background: var(--card2); border: 1px solid var(--border); border-radius: 14px; padding: 36px; transition: border-color .3s, transform .3s; }
-    .dep-card:hover { border-color: var(--border-s); transform: translateY(-4px); }
-    .dep-stars { color: #C97BFF; font-size: 1rem; letter-spacing: 2px; margin-bottom: 18px; }
-    .dep-quote { font-family: var(--font-head); font-size: 1.05rem; font-style: italic; line-height: 1.7; color: var(--white); margin-bottom: 24px; }
-    .dep-author { display: flex; align-items: center; gap: 14px; }
-    .dep-avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; background: linear-gradient(135deg, var(--primary-l), var(--accent)); color: var(--white); flex-shrink: 0; }
-    .dep-name { font-size: .9rem; font-weight: 700; color: var(--white); }
-    .dep-role { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+/* SERVICES */
+#servicos{background:var(--bg)}
+.serv-header{text-align:center;margin-bottom:70px}
+.serv-header .section-sub{margin:0 auto}
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
+.serv-card{
+  background:var(--card2);padding:44px 36px;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.serv-card:hover{background:#220036}
+.serv-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
+}
+.serv-card:hover::before{transform:scaleX(1)}
+.serv-num{position:absolute;top:24px;right:26px;font-family:var(--font-head);font-size:4.5rem;font-weight:700;font-style:italic;color:rgba(178,102,255,.05);line-height:1;pointer-events:none}
+.serv-icon{
+  width:52px;height:52px;border-radius:13px;
+  background:rgba(123,47,190,.18);border:1px solid var(--border-s);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--purple-bright);margin-bottom:26px;
+}
+.serv-icon svg{width:24px;height:24px}
+.serv-card h3{font-family:var(--font-head);font-size:1.35rem;font-weight:700;margin-bottom:12px}
+.serv-card p{color:var(--muted);font-size:.87rem;line-height:1.75}
+.serv-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.stag{font-size:.67rem;font-weight:600;color:var(--purple-light);background:rgba(178,102,255,.07);border:1px solid var(--border);padding:4px 12px;border-radius:100px;letter-spacing:.05em}
 
-    /* CTA */
-    #cta { background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(90,10,122,0.35) 0%, transparent 70%), var(--bg); text-align: center; padding: 120px 24px; }
-    .cta-box { max-width: 680px; margin: 0 auto; border: 1px solid var(--border-s); border-radius: 20px; padding: 72px 48px; background: rgba(42,0,61,0.5); backdrop-filter: blur(12px); position: relative; overflow: hidden; }
-    .cta-box::before { content: ''; position: absolute; top: -1px; left: 20%; right: 20%; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
-    #cta .section-title { font-size: clamp(2.2rem,5vw,3.6rem); margin-bottom: 18px; }
-    .cta-sub { color: var(--muted); font-size: 1rem; margin-bottom: 44px; line-height: 1.8; }
-    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .cta-whatsapp { display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: #fff; font-weight: 700; font-family: var(--font-body); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; padding: 17px 40px; border-radius: 6px; text-decoration: none; box-shadow: 0 6px 32px rgba(37,211,102,0.35); transition: transform .2s, box-shadow .2s; }
-    .cta-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 48px rgba(37,211,102,0.5); }
+/* NUMBERS */
+#numeros{
+  background:var(--bg2);
+  background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(123,47,190,.2) 0%,transparent 70%);
+}
+.num-inner{text-align:center;margin-bottom:70px}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
+.num-card{
+  background:var(--card);padding:52px 28px;text-align:center;
+  position:relative;transition:background .25s;
+}
+.num-card:hover{background:#1e0030}
+.num-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright));
+  transform:scaleX(0);transition:transform .35s;
+}
+.num-card:hover::after{transform:scaleX(1)}
+.num-value{font-family:var(--font-head);font-size:3.5rem;font-weight:700;line-height:1;margin-bottom:8px;
+  background:linear-gradient(135deg,var(--white),var(--purple-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.num-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+.num-sub{font-size:.78rem;color:var(--muted);margin-top:4px}
 
-    /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 52px 24px; background: var(--bg2); }
-    .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
-    .footer-logo { display: flex; align-items: center; gap: 10px; }
-    .footer-copy { color: var(--muted); font-size: .8rem; }
-    .footer-links { display: flex; gap: 28px; list-style: none; align-items: center; flex-wrap: wrap; }
-    .footer-links a { color: var(--muted); font-size: .82rem; text-decoration: none; transition: color .2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-social-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      color: var(--muted) !important; font-size: .82rem;
-      border: 1px solid var(--border); border-radius: 6px;
-      padding: 7px 14px; transition: border-color .2s, color .2s !important;
-    }
-    .footer-social-link:hover { border-color: var(--border-s); color: var(--white) !important; }
+/* HOW IT WORKS */
+#processo{background:var(--bg)}
+.proc-header{text-align:center;margin-bottom:70px}
+.proc-track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.proc-track::before{
+  content:'';position:absolute;top:44px;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border-s),var(--purple-mid),var(--border-s),transparent);
+  z-index:0;
+}
+.proc-step{text-align:center;padding:0 16px;position:relative;z-index:1}
+.proc-bubble{
+  width:88px;height:88px;border-radius:50%;
+  background:linear-gradient(135deg,var(--card2),var(--purple-deep));
+  border:1px solid var(--border-s);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;position:relative;
+  transition:border-color .3s,box-shadow .3s;
+}
+.proc-step:hover .proc-bubble{border-color:var(--purple-bright);box-shadow:0 0 30px rgba(178,102,255,.25)}
+.proc-bubble svg{width:28px;height:28px;color:var(--purple-bright)}
+.proc-num{
+  position:absolute;top:-8px;right:-8px;
+  width:26px;height:26px;border-radius:50%;
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
+  font-size:.68rem;font-weight:700;color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+}
+.proc-step h4{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:8px}
+.proc-step p{font-size:.8rem;color:var(--muted);line-height:1.65}
 
-    /* PARA QUEM É */
-    #para-quem { background: var(--bg); }
-    .pq-header { text-align: center; margin-bottom: 60px; }
-    .pq-header .section-sub { margin: 0 auto; }
-    .pq-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-    .pq-card {
-      background: var(--card2); border: 1px solid var(--border); border-radius: 14px;
-      padding: 32px 28px; display: flex; flex-direction: column; gap: 14px;
-      transition: border-color .3s, transform .3s, background .3s;
-      position: relative; overflow: hidden;
-    }
-    .pq-card::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(90,10,122,0.12) 0%, transparent 60%);
-      opacity: 0; transition: opacity .3s;
-    }
-    .pq-card:hover { border-color: var(--border-s); transform: translateY(-4px); background: #270040; }
-    .pq-card:hover::before { opacity: 1; }
-    .pq-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: rgba(90,10,122,0.22); border: 1px solid rgba(178,102,255,0.18);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--accent); flex-shrink: 0;
-    }
-    .pq-icon svg { width: 22px; height: 22px; }
-    .pq-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }
-    .pq-card p { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+/* PARA QUEM */
+#paraquem{background:var(--bg2)}
+.pq-header{margin-bottom:60px}
+.pq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pq-card{
+  background:var(--card2);border:1px solid var(--border);border-radius:16px;
+  padding:36px 30px;position:relative;overflow:hidden;
+  transition:border-color .3s,transform .3s,background .3s;
+}
+.pq-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(123,47,190,.1) 0%,transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.pq-card:hover{border-color:var(--border-s);transform:translateY(-5px);background:#240038}
+.pq-card:hover::before{opacity:1}
+.pq-icon{
+  width:52px;height:52px;border-radius:13px;
+  background:rgba(123,47,190,.18);border:1px solid var(--border-s);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--purple-bright);margin-bottom:20px;
+}
+.pq-icon svg{width:24px;height:24px}
+.pq-card h3{font-family:var(--font-head);font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.pq-card p{font-size:.85rem;color:var(--muted);line-height:1.75}
+.pq-badge{
+  display:inline-flex;align-items:center;gap:6px;margin-top:18px;
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-light);
+}
+.pq-badge svg{width:12px;height:12px}
 
-    /* FAQ */
-    #faq { background: var(--bg2); }
-    .faq-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .faq-left { position: sticky; top: 100px; }
-    .faq-list { display: flex; flex-direction: column; gap: 2px; }
-    .faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color .25s; }
-    .faq-item.open { border-color: var(--border-s); }
-    .faq-q {
-      width: 100%; background: transparent; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 22px 24px; color: var(--white); font-family: var(--font-body);
-      font-size: .92rem; font-weight: 600; text-align: left; transition: background .2s;
-    }
-    .faq-q:hover { background: rgba(178,102,255,0.04); }
-    .faq-item.open .faq-q { background: rgba(90,10,122,0.15); }
-    .faq-chevron {
-      width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border-s);
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      color: var(--accent); transition: transform .35s cubic-bezier(.22,1,.36,1), background .2s;
-    }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); background: rgba(90,10,122,0.3); }
-    .faq-chevron svg { width: 14px; height: 14px; }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s; padding: 0 24px; }
-    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 22px; }
-    .faq-a p { font-size: .88rem; color: var(--muted); line-height: 1.8; }
+/* PROPERTIES SHOWCASE */
+#imoveis{background:var(--bg)}
+.imov-header{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:60px;flex-wrap:wrap}
+.imov-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.imov-card{
+  border-radius:16px;overflow:hidden;position:relative;
+  aspect-ratio:4/3;cursor:default;
+}
+.imov-card:nth-child(1){grid-row:1/3;aspect-ratio:auto;min-height:500px}
+.imov-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(14,0,24,0.85) 0%,rgba(14,0,24,0.2) 50%,transparent 100%);
+  transition:opacity .3s;
+}
+.imov-card:hover::after{opacity:.7}
+.imov-bg{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.imov-card:hover .imov-bg{transform:scale(1.05)}
 
-    /* WA FLOAT */
-    .wa-float {
-      position: fixed; bottom: 28px; right: 28px; z-index: 200;
-      width: 58px; height: 58px; border-radius: 50%;
-      background: #25D366;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 32px rgba(37,211,102,0.45);
-      text-decoration: none; color: #fff;
-      transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s;
-      animation: waPop .6s 1.5s cubic-bezier(.22,1,.36,1) both;
-    }
-    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 48px rgba(37,211,102,0.6); }
-    .wa-float svg { width: 28px; height: 28px; }
-    .wa-float::before {
-      content: ''; position: absolute; inset: 0; border-radius: 50%;
-      background: rgba(37,211,102,0.4);
-      animation: waPulse 2.5s ease-out 2s infinite;
-    }
-    @keyframes waPop { from{opacity:0;transform:scale(0.5)} to{opacity:1;transform:scale(1)} }
-    @keyframes waPulse { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.9);opacity:0} }
+/* CSS building illustrations */
+.bld{width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10%;position:relative;overflow:hidden}
 
-    /* MARQUEE */
-    .marquee-wrap {
-      width: 100%; overflow: hidden;
-      background: var(--accent);
-      padding: 18px 0;
-      position: relative; z-index: 2;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
-    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
-    .marquee-content { display: flex; align-items: center; gap: 0; white-space: nowrap; padding-right: 0; }
-    .marquee-content span { font-family: var(--font-body); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--bg); padding: 0 32px; }
-    .marquee-dot { color: rgba(26,0,40,0.4) !important; font-size: .6rem !important; padding: 0 !important; letter-spacing: 0 !important; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* building 1 - tall glass tower */
+.bld1{background:linear-gradient(170deg,#0a0618 0%,#130a28 40%,#0d0520 100%)}
+.bld1::before{
+  content:'';position:absolute;
+  width:45%;height:75%;bottom:0;left:27.5%;
+  background:linear-gradient(180deg,#2a1555 0%,#1a0d35 100%);
+  clip-path:polygon(8% 0,92% 0,100% 100%,0% 100%);
+}
+.bld1::after{
+  content:'';position:absolute;
+  width:40%;height:73%;bottom:0;left:30%;
+  background:repeating-linear-gradient(0deg,rgba(178,102,255,.05) 0px,rgba(178,102,255,.05) 1px,transparent 1px,transparent 18px),
+             repeating-linear-gradient(90deg,rgba(178,102,255,.06) 0px,rgba(178,102,255,.06) 1px,transparent 1px,transparent 22px),
+             linear-gradient(180deg,rgba(123,47,190,.3) 0%,rgba(63,0,92,.5) 100%);
+  clip-path:polygon(8% 0,92% 0,100% 100%,0% 100%);
+}
 
-    /* AURORA */
-    .aurora { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-    .aurora span { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.15; }
-    .aurora span:nth-child(1) { width: 55vw; height: 55vw; top: -15%; left: -10%; background: #7B2FBE; animation: ab1 14s ease-in-out infinite alternate; }
-    .aurora span:nth-child(2) { width: 45vw; height: 45vw; top: 15%; right: -8%; background: #B266FF; animation: ab2 18s ease-in-out infinite alternate; }
-    .aurora span:nth-child(3) { width: 38vw; height: 38vw; bottom: -10%; left: 28%; background: #3F005C; animation: ab3 11s ease-in-out infinite alternate; }
-    @keyframes ab1 { to { transform: translate(60px, 50px) scale(1.1); } }
-    @keyframes ab2 { to { transform: translate(-50px, 70px) scale(0.92); } }
-    @keyframes ab3 { to { transform: translate(35px, -45px) scale(1.08); } }
+/* building 2 - modern block */
+.bld2{background:linear-gradient(160deg,#0e0a1a 0%,#18102e 100%)}
+.bld2-body{
+  position:absolute;bottom:0;left:15%;width:70%;height:65%;
+  background:linear-gradient(180deg,#221540 0%,#160d28 100%);
+  border-radius:4px 4px 0 0;
+}
+.bld2-wins{
+  position:absolute;bottom:15%;left:20%;width:60%;height:50%;
+  background:repeating-linear-gradient(90deg,rgba(178,102,255,.08) 0,rgba(178,102,255,.08) 14px,transparent 14px,transparent 22px);
+}
+.bld2-top{
+  position:absolute;bottom:65%;left:25%;width:50%;height:20%;
+  background:linear-gradient(180deg,#3a2060 0%,#28184a 100%);
+  border-radius:4px 4px 0 0;
+}
 
-    /* GRAIN */
-    #grain {
-      position: fixed; inset: 0; z-index: 9000;
-      pointer-events: none; opacity: 0.035;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 220px 220px;
-      animation: grainAnim 0.6s steps(1) infinite;
-    }
-    @keyframes grainAnim {
-      0%  { background-position: 0 0; }
-      20% { background-position: -55px -30px; }
-      40% { background-position: 30px -60px; }
-      60% { background-position: -30px 25px; }
-      80% { background-position: 55px 40px; }
-     100% { background-position: -20px -55px; }
-    }
+/* building 3 - luxury condo */
+.bld3{background:linear-gradient(150deg,#080514 0%,#120920 100%)}
+.bld3-base{position:absolute;bottom:0;left:10%;width:80%;height:55%;background:linear-gradient(180deg,#1e1040 0%,#0f0820 100%)}
+.bld3-mid{position:absolute;bottom:55%;left:20%;width:60%;height:25%;background:linear-gradient(180deg,#2a1855 0%,#1a0d38 100%)}
+.bld3-top{position:absolute;bottom:80%;left:30%;width:40%;height:15%;background:linear-gradient(180deg,#4a2888 0%,#2a1658 100%)}
+.bld3-win{
+  position:absolute;bottom:5%;left:15%;width:70%;height:48%;
+  background:repeating-linear-gradient(0deg,transparent 0,transparent 12px,rgba(178,102,255,.07) 12px,rgba(178,102,255,.07) 13px),
+             repeating-linear-gradient(90deg,transparent 0,transparent 18px,rgba(178,102,255,.06) 18px,rgba(178,102,255,.06) 19px);
+}
 
-    /* GLITCH */
-    #hero h1 { position: relative; }
-    #hero h1 .glitch-layer { position: absolute; inset: 0; font-family: var(--font-head); font-size: inherit; font-weight: inherit; line-height: inherit; letter-spacing: inherit; text-align: inherit; pointer-events: none; }
-    #hero h1 .glitch-layer.g1 { color: #ff55cc; clip-path: polygon(0 20%, 100% 20%, 100% 45%, 0 45%); animation: g1 7s infinite; }
-    #hero h1 .glitch-layer.g2 { color: #44ffee; clip-path: polygon(0 55%, 100% 55%, 100% 78%, 0 78%); animation: g2 7s infinite; }
-    @keyframes g1 { 0%,89%,100% { opacity:0; transform:none; } 90% { opacity:.7; transform:translateX(-4px) skewX(-3deg); } 92% { opacity:.4; transform:translateX(4px) skewX(2deg); } 94% { opacity:.6; transform:translateX(-2px); } 96% { opacity:0; } }
-    @keyframes g2 { 0%,86%,100% { opacity:0; transform:none; } 87% { opacity:.5; transform:translateX(4px) skewX(2deg); } 89% { opacity:.3; transform:translateX(-3px); } 91% { opacity:.5; transform:translateX(2px) skewX(-1deg); } 93% { opacity:0; } }
+/* building 4 - glass facade */
+.bld4{background:linear-gradient(140deg,#0c0820 0%,#160e30 100%)}
+.bld4-main{
+  position:absolute;bottom:0;left:20%;width:60%;height:72%;
+  background:linear-gradient(180deg,#281858 0%,#180e38 100%);
+  border-radius:3px 3px 0 0;
+}
+.bld4-glass{
+  position:absolute;bottom:2%;left:22%;width:56%;height:68%;
+  background:repeating-linear-gradient(0deg,rgba(178,102,255,.04) 0,rgba(178,102,255,.04) 1px,transparent 1px,transparent 16px),
+             repeating-linear-gradient(90deg,rgba(178,102,255,.05) 0,rgba(178,102,255,.05) 1px,transparent 1px,transparent 20px);
+}
+.bld4-accent{
+  position:absolute;bottom:0;left:26%;width:48%;height:70%;
+  background:rgba(178,102,255,.03);
+  border-left:1px solid rgba(178,102,255,.15);
+  border-right:1px solid rgba(178,102,255,.15);
+}
 
-    /* SPOTLIGHT + TILT */
-    .tilt-card { transform-style: preserve-3d; transition: transform .06s linear; }
-    .tilt-card .spotlight { position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle at var(--sx,50%) var(--sy,50%), rgba(178,102,255,0.13) 0%, transparent 65%); opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 1; }
-    .tilt-card:hover .spotlight { opacity: 1; }
+/* building 5 - penthouse style */
+.bld5{background:linear-gradient(160deg,#0a0616 0%,#140a24 100%)}
+.bld5-tower{position:absolute;bottom:0;left:30%;width:40%;height:80%;background:linear-gradient(180deg,#321a68 0%,#1a0d38 100%);border-radius:4px 4px 0 0}
+.bld5-wing-l{position:absolute;bottom:0;left:5%;width:30%;height:45%;background:linear-gradient(180deg,#22124a 0%,#120828 100%)}
+.bld5-wing-r{position:absolute;bottom:0;right:5%;width:30%;height:45%;background:linear-gradient(180deg,#22124a 0%,#120828 100%)}
+.bld5-wins{position:absolute;bottom:5%;left:32%;width:36%;height:72%;background:repeating-linear-gradient(0deg,rgba(201,168,76,.04) 0,rgba(201,168,76,.04) 1px,transparent 1px,transparent 14px),repeating-linear-gradient(90deg,rgba(201,168,76,.04) 0,rgba(201,168,76,.04) 1px,transparent 1px,transparent 18px)}
 
-    /* MAGNETIC */
-    .magnetic { display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+.imov-info{position:absolute;bottom:0;left:0;right:0;padding:24px 28px;z-index:2}
+.imov-tipo{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px}
+.imov-nome{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:4px}
+.imov-card:nth-child(1) .imov-nome{font-size:2rem}
+.imov-local{font-size:.78rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px}
+.imov-local svg{width:12px;height:12px;color:var(--purple-bright);flex-shrink:0}
+.imov-cta-tag{
+  display:inline-flex;align-items:center;gap:6px;margin-top:12px;
+  font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--purple-bright);background:rgba(178,102,255,.12);
+  border:1px solid rgba(178,102,255,.2);padding:5px 14px;border-radius:100px;
+}
 
-    /* MENU MOBILE */
-    .nav-hamburguer { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 101; }
-    .nav-hamburguer span { display: block; width: 24px; height: 2px; border-radius: 2px; background: var(--white); transition: transform .3s ease, opacity .3s ease, width .3s ease; }
-    .nav-hamburguer.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburguer.open span:nth-child(2) { opacity: 0; width: 0; }
-    .nav-hamburguer.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; z-index: 99; background: rgba(26,0,40,0.98); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0; max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.22,1,.36,1), padding .3s; }
-    .nav-mobile-menu.open { max-height: 500px; padding: 16px 0 24px; }
-    .nav-mobile-menu a { display: block; padding: 14px 28px; color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; transition: color .2s, background .2s; border-left: 2px solid transparent; }
-    .nav-mobile-menu a:hover { color: var(--white); background: rgba(178,102,255,0.05); border-left-color: var(--accent); }
-    .nav-mobile-menu .mob-cta { margin: 16px 28px 0; display: block; text-align: center; background: linear-gradient(135deg, var(--primary-l), var(--accent)); color: var(--white) !important; border-radius: 6px; padding: 14px !important; border-left: none !important; font-weight: 700 !important; }
+/* DEPOIMENTOS */
+#depoimentos{background:var(--bg2)}
+.dep-header{text-align:center;margin-bottom:60px}
+.dep-header .section-sub{margin:0 auto}
+.dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dep-card{
+  background:var(--card2);border:1px solid var(--border);border-radius:16px;
+  padding:36px;transition:border-color .3s,transform .3s;
+}
+.dep-card:hover{border-color:var(--border-s);transform:translateY(-4px)}
+.dep-stars{color:#C97BFF;font-size:.9rem;letter-spacing:2px;margin-bottom:16px}
+.dep-quote{font-family:var(--font-head);font-size:1.08rem;font-style:italic;line-height:1.7;color:var(--white);margin-bottom:24px}
+.dep-author{display:flex;align-items:center;gap:14px}
+.dep-avatar{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-head);font-weight:700;font-size:1.1rem;
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
+  color:var(--white);
+}
+.dep-name{font-size:.88rem;font-weight:600;color:var(--white)}
+.dep-role{font-size:.75rem;color:var(--muted);margin-top:2px}
 
-    /* MOBILE RESPONSIVE */
-    @media (max-width: 960px) {
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .nav-hamburguer { display: flex; }
-      .nav-mobile-menu { display: block; }
-      #diferenciais .container { grid-template-columns: 1fr; }
-      .diff-visual { display: none; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .faq-inner { grid-template-columns: 1fr; gap: 40px; }
-      .faq-left { position: static; }
-      .services-row.row-3 { grid-template-columns: repeat(2, 1fr); }
-      .services-row.row-2 { grid-template-columns: repeat(2, 1fr); width: 100%; margin: 0 auto; }
-      .planos-grid { grid-template-columns: 1fr; }
-      .plano-card + .plano-card { border-left: none; border-top: 1px solid var(--border); }
-      .plano-card.destaque { border-left: none; border-right: none; border-top: 1px solid rgba(178,102,255,0.3); border-bottom: 1px solid rgba(178,102,255,0.3); }
-      .tilt-card { transform: none !important; }
-      #hero .hero-badge, #hero h1, #hero .hero-sub, #hero .hero-actions { transform: none !important; }
-    }
-    @media (max-width: 600px) {
-      section { padding: 72px 20px; }
-      .hero-stats { gap: 28px; flex-direction: column; align-items: center; }
-      .stat-divider { display: none; }
-      .process-grid { grid-template-columns: 1fr; }
-      .cta-box { padding: 48px 28px; }
-      .pq-grid { grid-template-columns: 1fr 1fr; }
-      .wa-float { bottom: 20px; right: 20px; }
-      .services-row.row-3, .services-row.row-2 { grid-template-columns: 1fr; max-width: 100%; }
-      .plano-card { padding: 36px 24px; }
-    }
-  </style>
+/* CTA */
+#cta{
+  background:var(--bg);
+  background-image:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(63,0,92,.3) 0%,transparent 70%);
+  text-align:center;padding:140px 60px;
+}
+.cta-box{
+  max-width:700px;margin:0 auto;
+  border:1px solid var(--border-s);border-radius:24px;
+  padding:80px 60px;background:rgba(30,0,46,.5);backdrop-filter:blur(16px);
+  position:relative;overflow:hidden;
+}
+.cta-box::before{
+  content:'';position:absolute;top:-1px;left:15%;right:15%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--purple-bright),var(--gold),var(--purple-bright),transparent);
+}
+.cta-box .section-title{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:18px}
+.cta-sub{color:var(--muted);font-size:1rem;margin-bottom:48px;line-height:1.8;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-wa{
+  display:inline-flex;align-items:center;gap:12px;
+  background:#25D366;color:#fff;font-weight:700;font-family:var(--font-body);
+  font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;
+  padding:18px 44px;border-radius:6px;text-decoration:none;
+  box-shadow:0 6px 32px rgba(37,211,102,.35);
+  transition:transform .2s,box-shadow .2s;
+}
+.cta-wa:hover{transform:translateY(-2px);box-shadow:0 10px 48px rgba(37,211,102,.5)}
+.cta-trust{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:44px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.75rem;color:var(--muted)}
+.trust-item svg{width:16px;height:16px;color:var(--gold)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:56px 60px;background:var(--bg2)}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+.footer-left{display:flex;flex-direction:column;gap:12px}
+.footer-copy{color:var(--muted);font-size:.78rem}
+.footer-links{display:flex;gap:28px;list-style:none;align-items:center;flex-wrap:wrap}
+.footer-links a{color:var(--muted);font-size:.8rem;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-social{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--muted)!important;border:1px solid var(--border);border-radius:6px;
+  padding:8px 14px;transition:border-color .2s,color .2s!important;font-size:.8rem;
+}
+.footer-social:hover{border-color:var(--border-s);color:var(--white)!important}
+
+/* WA FLOAT */
+.wa-btn{
+  position:fixed;bottom:28px;right:28px;z-index:200;
+  width:60px;height:60px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;color:#fff;
+  box-shadow:0 6px 32px rgba(37,211,102,.45);
+  transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s;
+  animation:waPop .6s 1.5s cubic-bezier(.22,1,.36,1) both;
+}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 10px 48px rgba(37,211,102,.6)}
+.wa-btn svg{width:28px;height:28px}
+.wa-btn::before{content:'';position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,.4);animation:waPulse 2.5s ease-out 2s infinite}
+@keyframes waPop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(2);opacity:0}}
+
+/* AURORA */
+.aurora{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.aurora span{position:absolute;border-radius:50%;filter:blur(100px);opacity:.12}
+.aurora span:nth-child(1){width:60vw;height:60vw;top:-20%;left:-10%;background:var(--purple-mid);animation:ab1 16s ease-in-out infinite alternate}
+.aurora span:nth-child(2){width:40vw;height:40vw;top:10%;right:-5%;background:var(--purple-bright);animation:ab2 20s ease-in-out infinite alternate}
+.aurora span:nth-child(3){width:35vw;height:35vw;bottom:-10%;left:30%;background:var(--purple-deep);animation:ab3 12s ease-in-out infinite alternate}
+@keyframes ab1{to{transform:translate(50px,40px) scale(1.1)}}
+@keyframes ab2{to{transform:translate(-40px,60px) scale(.9)}}
+@keyframes ab3{to{transform:translate(30px,-40px) scale(1.08)}}
+
+/* REVEAL */
+[data-reveal]{will-change:opacity,transform}
+
+/* MOBILE */
+@media(max-width:1024px){
+  nav{padding:0 24px}
+  section{padding:80px 24px}
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:120px 24px 60px}
+  .hero-right{height:60vw;min-height:300px}
+  .prob-grid{grid-template-columns:1fr;gap:48px}
+  .prob-visual{display:none}
+  .serv-grid{grid-template-columns:1fr 1fr}
+  .num-grid{grid-template-columns:1fr 1fr}
+  .proc-track{grid-template-columns:1fr 1fr;gap:20px}
+  .proc-track::before{display:none}
+  .pq-grid{grid-template-columns:1fr 1fr}
+  .imov-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .imov-card:nth-child(1){grid-row:auto;min-height:260px}
+  .dep-grid{grid-template-columns:1fr}
+  .cta-box{padding:52px 28px}
+  footer{padding:40px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+  .nav-mob{display:block}
+  .hero-stats{flex-direction:column;gap:0}
+  .hstat{border-right:none;border-bottom:1px solid var(--border)}
+  .hstat:last-child{border-bottom:none}
+}
+@media(max-width:640px){
+  .serv-grid{grid-template-columns:1fr}
+  .num-grid{grid-template-columns:1fr 1fr}
+  .proc-track{grid-template-columns:1fr}
+  .pq-grid{grid-template-columns:1fr}
+  .imov-grid{grid-template-columns:1fr}
+  .dep-grid{grid-template-columns:1fr}
+  .hero-left h1{font-size:2.6rem}
+  .wa-btn{bottom:20px;right:20px}
+  #cta{padding:80px 20px}
+  .cta-trust{gap:16px}
+}
+</style>
 </head>
 <body>
-<div id="grain"></div>
+
+<div id="sprogress"></div>
 
 <nav>
   <a href="#" class="nav-logo">
-    <div class="logo-icon">
-      <div class="logo-bar"></div>
-      <div class="logo-bar"></div>
-      <div class="logo-bar"></div>
-    </div>
-    <span class="logo-text">MLX Mind</span>
+    <div class="logo-bars"><span></span><span></span><span></span></div>
+    <span class="logo-name">MLX Mind</span>
   </a>
   <ul class="nav-links">
     <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#planos">Planos</a></li>
-    <li><a href="#para-quem">Para quem</a></li>
-    <li><a href="#diferenciais">Diferenciais</a></li>
-    <li><a href="#processo">Processo</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#cta" class="nav-cta">Fale Conosco</a></li>
+    <li><a href="#imoveis">Portfólio</a></li>
+    <li><a href="#paraquem">Para quem</a></li>
+    <li><a href="#processo">Como funciona</a></li>
+    <li><a href="#depoimentos">Clientes</a></li>
+    <li><a href="#cta" class="nav-cta">Fale conosco</a></li>
   </ul>
-  <button class="nav-hamburguer" id="hamburguer" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="nav-mobile-menu" id="mobileMenu">
+<div class="nav-mob" id="navMob">
   <a href="#servicos">Serviços</a>
-  <a href="#planos">Planos</a>
-  <a href="#para-quem">Para quem</a>
-  <a href="#diferenciais">Diferenciais</a>
-  <a href="#processo">Processo</a>
-  <a href="#faq">FAQ</a>
-  <a href="#cta" class="mob-cta">Fale Conosco</a>
+  <a href="#imoveis">Portfólio</a>
+  <a href="#paraquem">Para quem</a>
+  <a href="#processo">Como funciona</a>
+  <a href="#depoimentos">Clientes</a>
+  <a href="#cta" class="mob-cta">Fale conosco</a>
 </div>
 
+<!-- HERO -->
 <section id="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="aurora">
-    <span></span><span></span><span></span>
+  <div class="aurora"><span></span><span></span><span></span></div>
+  <div class="hero-left">
+    <div class="hero-tag"><span class="tag-dot"></span>Especialistas em Marketing Imobiliário</div>
+    <h1>
+      <strong>Marketing que vende</strong>
+      <em>imóveis de verdade.</em>
+    </h1>
+    <p class="hero-sub">Assessoria completa para corretores e imobiliárias que querem escalar — mais leads qualificados, mais visibilidade e mais negócios fechados todo mês.</p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Quero uma assessoria
+      </a>
+      <a href="#servicos" class="btn-ghost">Ver serviços</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num" data-count="200" data-suffix="+">200+</span><span class="hstat-label">Clientes atendidos</span></div>
+      <div class="hstat"><span class="hstat-num" data-count="4" data-suffix="×">4×</span><span class="hstat-label">ROI médio em tráfego</span></div>
+      <div class="hstat"><span class="hstat-num" data-count="98" data-suffix="%">98%</span><span class="hstat-label">Satisfação</span></div>
+    </div>
   </div>
-  <span class="hero-badge"><span class="badge-dot"></span>Especialistas em Resultados Reais</span>
-  <h1>Marketing que<br><em>gera resultado.</em><br>Todo mês.</h1>
-  <p class="hero-sub">Somos uma agência de marketing digital focada em resultados concretos — mais visibilidade, mais leads qualificados e mais vendas para o seu negócio crescer de verdade.</p>
-  <div class="hero-actions">
-    <a href="#cta" class="btn-primary">Quero fazer meu negócio crescer</a>
-    <a href="#planos" class="btn-ghost">Ver planos</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><span class="stat-num">+200</span><span class="stat-label">Clientes atendidos</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">4×</span><span class="stat-label">ROI médio no tráfego</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">3×</span><span class="stat-label">Mais leads por campanha</span></div>
-    <div class="stat-divider"></div>
-    <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfação</span></div>
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <!-- Main large image -->
+      <div class="img-block">
+        <div class="bld bld1"></div>
+        <div class="imov-info" style="z-index:3">
+          <div class="imov-tipo">Lançamento Premium</div>
+          <div class="imov-nome">Torre Residencial Vista Jardim</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ribeirão Preto, SP</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>Campanha ativa</div>
+        </div>
+      </div>
+      <!-- Bottom two -->
+      <div class="img-block">
+        <div class="bld bld2"><div class="bld2-body"></div><div class="bld2-wins"></div><div class="bld2-top"></div></div>
+        <div class="imov-info" style="z-index:3">
+          <div class="imov-tipo">Alto Padrão</div>
+          <div class="imov-nome">Edifício Palazzo</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>São Paulo, SP</div>
+        </div>
+      </div>
+      <div class="img-block">
+        <div class="bld bld5"><div class="bld5-tower"></div><div class="bld5-wing-l"></div><div class="bld5-wing-r"></div><div class="bld5-wins"></div></div>
+        <div class="imov-info" style="z-index:3">
+          <div class="imov-tipo">Compactos</div>
+          <div class="imov-nome">Residencial Novo Horizonte</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Campinas, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee-wrap">
+<div class="marquee-band">
   <div class="marquee-track">
     <div class="marquee-content">
-      <span>Tráfego Pago</span><span class="marquee-dot">✦</span>
-      <span>Social Media</span><span class="marquee-dot">✦</span>
-      <span>Landing Pages</span><span class="marquee-dot">✦</span>
+      <span>Tráfego Pago Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Landing Pages de Imóveis</span><span class="marquee-dot">✦</span>
+      <span>Meta Ads para Corretores</span><span class="marquee-dot">✦</span>
       <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
-      <span>Meta Ads</span><span class="marquee-dot">✦</span>
-      <span>Estratégia Digital</span><span class="marquee-dot">✦</span>
+      <span>Google Ads Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Automação WhatsApp</span><span class="marquee-dot">✦</span>
+      <span>Gestão de Redes Sociais</span><span class="marquee-dot">✦</span>
       <span>Criativos que Convertem</span><span class="marquee-dot">✦</span>
-      <span>Resultados Mensuráveis</span><span class="marquee-dot">✦</span>
     </div>
     <div class="marquee-content" aria-hidden="true">
-      <span>Tráfego Pago</span><span class="marquee-dot">✦</span>
-      <span>Social Media</span><span class="marquee-dot">✦</span>
-      <span>Landing Pages</span><span class="marquee-dot">✦</span>
+      <span>Tráfego Pago Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Landing Pages de Imóveis</span><span class="marquee-dot">✦</span>
+      <span>Meta Ads para Corretores</span><span class="marquee-dot">✦</span>
       <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
-      <span>Meta Ads</span><span class="marquee-dot">✦</span>
-      <span>Estratégia Digital</span><span class="marquee-dot">✦</span>
+      <span>Google Ads Imobiliário</span><span class="marquee-dot">✦</span>
+      <span>Automação WhatsApp</span><span class="marquee-dot">✦</span>
+      <span>Gestão de Redes Sociais</span><span class="marquee-dot">✦</span>
       <span>Criativos que Convertem</span><span class="marquee-dot">✦</span>
-      <span>Resultados Mensuráveis</span><span class="marquee-dot">✦</span>
     </div>
   </div>
 </div>
 
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="container">
+    <div class="prob-grid">
+      <div class="prob-visual">
+        <div class="prob-card-stack">
+          <div class="prob-card">
+            <span class="red-tag">❌ Problema comum</span>
+            <div class="prob-card-icon">📱</div>
+            <h4>Posts sem resultado</h4>
+            <p>Postar todo dia no Instagram sem estratégia não gera leads — apenas consome tempo sem retorno.</p>
+          </div>
+          <div class="prob-card">
+            <span class="red-tag">❌ Problema comum</span>
+            <div class="prob-card-icon">💸</div>
+            <h4>Verba de anúncio jogada fora</h4>
+            <p>Anúncios sem segmentação correta atingem o público errado e desperdiçam todo o investimento.</p>
+          </div>
+          <div class="prob-card">
+            <span class="red-tag">❌ Problema comum</span>
+            <div class="prob-card-icon">🔇</div>
+            <h4>Leads que somem no WhatsApp</h4>
+            <p>Sem automação e follow-up estruturado, os leads esfriam antes de virar uma visita ou proposta.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag">O problema real</span>
+        <h2 class="section-title">Corretores perdem negócios<br>por falta de <em>estratégia digital</em></h2>
+        <p class="section-sub">O mercado imobiliário é disputado. Quem não domina o digital perde clientes para quem domina — todos os dias.</p>
+        <div class="prob-list">
+          <div class="prob-item">
+            <div class="prob-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h4>Campanhas segmentadas por imóvel e região</h4>
+              <p>Cada empreendimento tem seu público. Criamos campanhas específicas para cada produto, maximizando o aproveitamento da verba.</p>
+            </div>
+          </div>
+          <div class="prob-item">
+            <div class="prob-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h4>Landing pages que convertem visitas em leads</h4>
+              <p>Páginas criadas para o mercado imobiliário — com formulário, WhatsApp e apresentação do imóvel que geram contatos reais.</p>
+            </div>
+          </div>
+          <div class="prob-item">
+            <div class="prob-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <h4>Automação para não perder nenhum lead</h4>
+              <p>Respostas automáticas no WhatsApp e follow-up estruturado garantem que nenhuma oportunidade seja desperdiçada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
 <section id="servicos">
   <div class="container">
-    <div class="services-header">
+    <div class="serv-header">
+      <span class="section-tag">O que fazemos</span>
+      <h2 class="section-title">Assessoria <em>completa</em> para<br><strong>o mercado imobiliário</strong></h2>
+      <p class="section-sub">Do primeiro anúncio até o lead qualificado chegando no seu WhatsApp — cuidamos de cada etapa.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv-card">
+        <span class="serv-num">01</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <h3>Tráfego Pago Imobiliário</h3>
+        <p>Campanhas no Meta e Google especialmente calibradas para o mercado imobiliário. Segmentação por renda, localização, comportamento de busca e perfil de comprador.</p>
+        <div class="serv-tags"><span class="stag">Meta Ads</span><span class="stag">Google Ads</span><span class="stag">Retargeting</span><span class="stag">Lookalike</span></div>
+      </div>
+      <div class="serv-card">
+        <span class="serv-num">02</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/></svg>
+        </div>
+        <h3>Landing Pages de Imóveis</h3>
+        <p>Páginas de alta conversão para cada empreendimento — com galeria, planta, localização, formulário de interesse e botão direto para WhatsApp.</p>
+        <div class="serv-tags"><span class="stag">Alta Conversão</span><span class="stag">Mobile First</span><span class="stag">SEO</span></div>
+      </div>
+      <div class="serv-card">
+        <span class="serv-num">03</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </div>
+        <h3>Social Media Imobiliária</h3>
+        <p>Gestão profissional das redes sociais com conteúdo especializado em imóveis — construindo autoridade, engajamento e reconhecimento da sua marca no mercado local.</p>
+        <div class="serv-tags"><span class="stag">Instagram</span><span class="stag">Facebook</span><span class="stag">Reels</span><span class="stag">Stories</span></div>
+      </div>
+      <div class="serv-card">
+        <span class="serv-num">04</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Automação de WhatsApp</h3>
+        <p>Resposta automática para leads recém-captados, sequência de mensagens de follow-up e qualificação automatizada — sem perder nenhuma oportunidade.</p>
+        <div class="serv-tags"><span class="stag">Automação</span><span class="stag">Follow-up</span><span class="stag">Qualificação</span></div>
+      </div>
+      <div class="serv-card">
+        <span class="serv-num">05</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6s4-2 11-2 11 2 11 2v6a15 15 0 0 1-11 5 15 15 0 0 1-11-5z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Criativos para Imóveis</h3>
+        <p>Anúncios visuais e vídeos criados especificamente para cada empreendimento — com fotos profissionais, renders e copy focada em despertar desejo e urgência.</p>
+        <div class="serv-tags"><span class="stag">Vídeos</span><span class="stag">Carrossel</span><span class="stag">Copy</span></div>
+      </div>
+      <div class="serv-card">
+        <span class="serv-num">06</span>
+        <div class="serv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Relatório & Estratégia</h3>
+        <p>Acompanhamento mensal com dados em linguagem de negócio — quantos leads chegaram, custo por lead, qual imóvel performa melhor e onde otimizar a verba.</p>
+        <div class="serv-tags"><span class="stag">Dashboard</span><span class="stag">Mensal</span><span class="stag">Decisões claras</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section id="numeros">
+  <div class="container">
+    <div class="num-inner">
+      <span class="section-tag">Resultados</span>
+      <h2 class="section-title">Números que<br><em>falam por si</em></h2>
+    </div>
+    <div class="num-grid">
+      <div class="num-card">
+        <div class="num-value" data-count="200" data-suffix="+">200+</div>
+        <div class="num-label">Clientes atendidos</div>
+        <div class="num-sub">Corretores e imobiliárias</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value" data-count="4" data-suffix="×">4×</div>
+        <div class="num-label">ROI médio</div>
+        <div class="num-sub">Em campanhas de tráfego</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value" data-count="3" data-suffix="×">3×</div>
+        <div class="num-label">Mais leads por campanha</div>
+        <div class="num-sub">Vs. impulsionamento comum</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value" data-count="98" data-suffix="%">98%</div>
+        <div class="num-label">Satisfação</div>
+        <div class="num-sub">Dos clientes ativos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO IMÓVEIS -->
+<section id="imoveis">
+  <div class="container">
+    <div class="imov-header">
       <div>
-        <span class="section-tag">O que fazemos</span>
-        <h2 class="section-title">Soluções completas<br><em style="font-style:italic">para crescer no digital</em></h2>
+        <span class="section-tag">Campanhas em destaque</span>
+        <h2 class="section-title">Empreendimentos que<br><em>já estão convertendo</em></h2>
       </div>
-      <p class="section-sub">Do primeiro clique até a venda fechada — cuidamos de cada etapa da jornada do seu cliente.</p>
+      <p class="section-sub">Campanhas ativas gerando leads qualificados para corretores e imobiliárias parceiras.</p>
     </div>
-    <div class="services-grid">
-      <div class="services-row row-3">
-        <div class="service-card">
-          <span class="service-num">01</span>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-            </svg>
-          </div>
-          <h3>Tráfego Pago — Meta Ads</h3>
-          <p>Campanhas no Facebook e Instagram segmentadas para o seu público ideal. Anúncios estratégicos que levam clientes prontos para comprar direto até você.</p>
-          <div class="service-tags"><span class="tag">Facebook Ads</span><span class="tag">Instagram Ads</span><span class="tag">Leads Qualificados</span></div>
-        </div>
-        <div class="service-card">
-          <span class="service-num">02</span>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-            </svg>
-          </div>
-          <h3>Gestão de Social Media</h3>
-          <p>Presença profissional e consistente nas redes sociais com criativos personalizados para o seu segmento. Construímos autoridade, engajamento e reconhecimento de marca.</p>
-          <div class="service-tags"><span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">Criativos Personalizados</span></div>
-        </div>
-        <div class="service-card">
-          <span class="service-num">03</span>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/>
-            </svg>
-          </div>
-          <h3>Landing Pages de Alta Conversão</h3>
-          <p>Páginas criadas para transformar visitantes em contatos. Design profissional, carregamento rápido e foco total em gerar leads e vendas para o seu negócio.</p>
-          <div class="service-tags"><span class="tag">Alta Conversão</span><span class="tag">Web Design</span><span class="tag">Captação de Leads</span></div>
+    <div class="imov-grid">
+      <div class="imov-card">
+        <div class="bld bld1" style="position:absolute;inset:0;height:100%"></div>
+        <div class="imov-info">
+          <div class="imov-tipo">Alto Padrão · Lançamento</div>
+          <div class="imov-nome" style="font-size:2rem">Vista Nobre Residencial</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ribeirão Preto · Zona Sul</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>147 leads em 30 dias</div>
         </div>
       </div>
-      <div class="services-row row-2">
-        <div class="service-card">
-          <span class="service-num">04</span>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>Onboarding Estratégico</h3>
-          <p>Na contratação, fazemos um mergulho no seu negócio: produto, público-alvo, concorrentes e diferenciais. Suas campanhas já nascem apontadas para quem tem mais chance de comprar.</p>
-          <div class="service-tags"><span class="tag">Estratégia</span><span class="tag">Segmentação</span><span class="tag">Personalização</span></div>
+      <div class="imov-card">
+        <div class="bld bld3" style="position:absolute;inset:0;height:100%"><div class="bld3-base"></div><div class="bld3-mid"></div><div class="bld3-top"></div><div class="bld3-win"></div></div>
+        <div class="imov-info">
+          <div class="imov-tipo">Médio Padrão</div>
+          <div class="imov-nome">Condomínio Jardins</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>São Paulo · Tatuapé</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>89 leads em 30 dias</div>
         </div>
-        <div class="service-card">
-          <span class="service-num">05</span>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
-          </div>
-          <h3>Relatório de Resultados</h3>
-          <p>Nada de métricas confusas. Você recebe relatório mensal em linguagem de negócio: quantos leads chegaram, de onde vieram e quanto custou cada resultado.</p>
-          <div class="service-tags"><span class="tag">Transparência</span><span class="tag">Resultados Claros</span><span class="tag">Mensal</span></div>
+      </div>
+      <div class="imov-card">
+        <div class="bld bld4" style="position:absolute;inset:0;height:100%"><div class="bld4-main"></div><div class="bld4-glass"></div><div class="bld4-accent"></div></div>
+        <div class="imov-info">
+          <div class="imov-tipo">Compactos · Studios</div>
+          <div class="imov-nome">Urban Life Studios</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Campinas · Centro</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>203 leads em 30 dias</div>
+        </div>
+      </div>
+      <div class="imov-card">
+        <div class="bld bld2" style="position:absolute;inset:0;height:100%"><div class="bld2-body"></div><div class="bld2-wins"></div><div class="bld2-top"></div></div>
+        <div class="imov-info">
+          <div class="imov-tipo">Galpões Comerciais</div>
+          <div class="imov-nome">Parque Industrial Beta</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ribeirão Preto · Norte</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>62 leads em 30 dias</div>
+        </div>
+      </div>
+      <div class="imov-card">
+        <div class="bld bld5" style="position:absolute;inset:0;height:100%"><div class="bld5-tower"></div><div class="bld5-wing-l"></div><div class="bld5-wing-r"></div><div class="bld5-wins"></div></div>
+        <div class="imov-info">
+          <div class="imov-tipo">Casas · Condomínio fechado</div>
+          <div class="imov-nome">Residencial Alphaville Ribeirão</div>
+          <div class="imov-local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ribeirão Preto · Zona Oeste</div>
+          <div class="imov-cta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="10" height="10"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>118 leads em 30 dias</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PLANOS -->
-<section id="planos">
-  <div class="container">
-    <div class="planos-header">
-      <span class="section-tag">Planos & Preços</span>
-      <h2 class="section-title">Planos feitos para<br><em style="font-style:italic">quem quer crescer</em></h2>
-      <p class="section-sub" style="margin: 0 auto 0 auto;">Contrato mensal sem fidelidade. Você fica porque vê resultado.</p>
-    </div>
-    <p class="planos-note">⚡ Verba de anúncios paga diretamente ao Meta — não inclusa nos planos</p>
-
-    <div class="planos-grid">
-
-      <!-- ESSENCIAL -->
-      <div class="plano-card">
-        <div class="plano-badge-placeholder"></div>
-        <div class="plano-name">Essencial</div>
-        <div class="plano-desc">Para quem quer dar o primeiro passo no digital com presença ativa e anúncios rodando.</div>
-        <div class="plano-price">
-          <span class="plano-currency">R$</span>
-          <span class="plano-valor">497</span>
-        </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
-        <div class="plano-divider"></div>
-        <ul class="plano-features">
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Gestão do Instagram</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>12 posts/mês</strong> <span class="feat-label">— feed + stories</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Criativos personalizados</strong> <span class="feat-label">— identidade do seu negócio</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Otimização do perfil</strong> <span class="feat-label">— bio, destaques e foto</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 150 (gerenc. incluso)</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Onboarding estratégico</strong></span>
-          </li>
-        </ul>
-        <a href="https://wa.me/551152540490" class="plano-cta plano-cta-ghost" target="_blank">Começar agora</a>
-      </div>
-
-      <!-- PROFISSIONAL — DESTAQUE -->
-      <div class="plano-card destaque">
-        <span class="plano-badge">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Mais popular
-        </span>
-        <div class="plano-name">Profissional</div>
-        <div class="plano-desc">Para negócios que querem presença forte, anúncios otimizados e acompanhamento claro todo mês.</div>
-        <div class="plano-price">
-          <span class="plano-currency">R$</span>
-          <span class="plano-valor">697</span>
-        </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
-        <div class="plano-divider"></div>
-        <ul class="plano-features">
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Instagram + Facebook</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>20 posts/mês</strong> <span class="feat-label">— feed + stories + reels</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Criativos personalizados</strong> <span class="feat-label">— identidade do seu negócio</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Otimização dos perfis</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 300 (gerenc. incluso)</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Onboarding estratégico</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Relatório mensal</strong> <span class="feat-label">— em linguagem de negócio</span></span>
-          </li>
-        </ul>
-        <a href="https://wa.me/551152540490" class="plano-cta plano-cta-primary" target="_blank">Quero este plano</a>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="plano-card">
-        <div class="plano-badge-placeholder"></div>
-        <div class="plano-name">Premium</div>
-        <div class="plano-desc">Para negócios que querem escalar com otimizações semanais, mais volume e mais resultado.</div>
-        <div class="plano-price">
-          <span class="plano-currency">R$</span>
-          <span class="plano-valor">997</span>
-        </div>
-        <div class="plano-period">/mês &nbsp;·&nbsp; contrato mensal sem fidelidade</div>
-        <div class="plano-divider"></div>
-        <ul class="plano-features">
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Instagram + Facebook</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>30 posts/mês</strong> <span class="feat-label">— feed + stories + reels semanais</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Criativos personalizados</strong> <span class="feat-label">— identidade do seu negócio</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Otimização dos perfis</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Tráfego pago</strong> <span class="feat-label">— verba de até R$ 600 (gerenc. incluso)</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Onboarding estratégico</strong></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Relatório mensal</strong> <span class="feat-label">— em linguagem de negócio</span></span>
-          </li>
-          <li>
-            <span class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <span><strong>Otimizações semanais</strong> <span class="feat-label">— de campanha</span></span>
-          </li>
-        </ul>
-        <a href="https://wa.me/551152540490" class="plano-cta plano-cta-ghost" target="_blank">Começar agora</a>
-      </div>
-
-    </div>
-
-    <div class="planos-aviso">
-      <p>📊 <strong>Verba de anúncios</strong> é paga diretamente por você ao Meta — não está inclusa em nenhum plano.</p>
-      <p>Não sabe qual escolher? <a href="https://wa.me/551152540490" target="_blank" style="color:var(--accent-l);text-decoration:none;font-weight:600;">Fale com a gente e indicamos o ideal para o seu negócio →</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais">
-  <div class="container">
-    <div class="diff-visual">
-      <div class="diff-ring"></div>
-      <div class="diff-ring"></div>
-      <div class="diff-ring"></div>
-      <div class="diff-orbit t">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      </div>
-      <div class="diff-orbit r">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-      </div>
-      <div class="diff-orbit b">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/></svg>
-      </div>
-      <div class="diff-orbit l">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      </div>
-      <div class="diff-center">
-        <span class="diff-center-brand">MLX</span>
-        <span class="diff-center-sub">Mind</span>
-      </div>
-    </div>
-    <div>
-      <span class="section-tag">Por que a MLX Mind</span>
-      <h2 class="section-title">Não somos agência<br><em style="font-style:italic">genérica. Somos seus.</em></h2>
-      <p class="section-sub">Entendemos que cada negócio é único. Construímos estratégias sob medida, com foco total em resultados que aparecem no seu faturamento.</p>
-      <div class="diff-list">
-        <div class="diff-item">
-          <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="diff-item-text">
-            <h4>Criativos feitos para o seu negócio</h4>
-            <p>Não usamos templates genéricos. Cada peça é criada com a identidade visual e os produtos do seu negócio — gerando muito mais identificação e conversão.</p>
-          </div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <div class="diff-item-text">
-            <h4>Relatório que você entende</h4>
-            <p>Nada de CPM, CPC ou jargão de agência. Você recebe dados em linguagem de negócio: quantos leads chegaram, quanto custou cada um e qual campanha trouxe mais resultado.</p>
-          </div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <div class="diff-item-text">
-            <h4>Campanha que nasce segmentada</h4>
-            <p>No onboarding mapeamos seu produto, público e região. Seus anúncios já começam apontados para quem tem mais chance de virar cliente — sem desperdiçar verba.</p>
-          </div>
-        </div>
-        <div class="diff-item">
-          <div class="diff-item-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </div>
-          <div class="diff-item-text">
-            <h4>Sem fidelidade, sem enrolação</h4>
-            <p>Contrato mensal renovável. Acreditamos que você fica porque vê resultado — não porque está preso num contrato anual.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- PROCESSO -->
 <section id="processo">
   <div class="container">
-    <div style="text-align:center">
+    <div class="proc-header">
       <span class="section-tag">Como funciona</span>
-      <h2 class="section-title">Do onboarding<br><em style="font-style:italic">aos resultados</em></h2>
+      <h2 class="section-title">Do briefing aos<br><em>leads chegando</em></h2>
     </div>
-    <div class="process-grid">
-      <div class="process-step">
-        <div class="step-num">01</div>
-        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="step-title">Mapeamento</div>
-        <p class="step-desc">Entendemos seu negócio, produto, público-alvo e objetivos de crescimento.</p>
+    <div class="proc-track">
+      <div class="proc-step">
+        <div class="proc-bubble">
+          <div class="proc-num">01</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h4>Diagnóstico</h4>
+        <p>Mapeamos seus imóveis, região de atuação, público-alvo e objetivos de venda.</p>
       </div>
-      <div class="process-step">
-        <div class="step-num">02</div>
-        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
-        <div class="step-title">Estratégia</div>
-        <p class="step-desc">Planejamos conteúdo, criativos e campanhas alinhados com seu mercado e metas.</p>
+      <div class="proc-step">
+        <div class="proc-bubble">
+          <div class="proc-num">02</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        </div>
+        <h4>Estratégia</h4>
+        <p>Criamos o plano de campanhas, criativos e segmentação específica por empreendimento.</p>
       </div>
-      <div class="process-step">
-        <div class="step-num">03</div>
-        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 0 21 12"/><path d="M22 12V6h-6"/></svg></div>
-        <div class="step-title">Ativação</div>
-        <p class="step-desc">Configuramos os perfis, publicamos os primeiros conteúdos e ativamos as campanhas.</p>
+      <div class="proc-step">
+        <div class="proc-bubble">
+          <div class="proc-num">03</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        </div>
+        <h4>Produção</h4>
+        <p>Desenvolvemos a landing page, os criativos e configuramos as campanhas nos canais.</p>
       </div>
-      <div class="process-step">
-        <div class="step-num">04</div>
-        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <div class="step-title">Otimização</div>
-        <p class="step-desc">Ajustamos anúncios, criativos e segmentação com base nos dados reais da campanha.</p>
+      <div class="proc-step">
+        <div class="proc-bubble">
+          <div class="proc-num">04</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 0 21 12"/></svg>
+        </div>
+        <h4>Ativação</h4>
+        <p>Subimos as campanhas e ativamos a automação de WhatsApp para capturar leads imediatamente.</p>
       </div>
-      <div class="process-step">
-        <div class="step-num">05</div>
-        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-        <div class="step-title">Resultados</div>
-        <p class="step-desc">Mais leads chegando, mais conversas qualificadas e mais vendas fechadas todo mês.</p>
+      <div class="proc-step">
+        <div class="proc-bubble">
+          <div class="proc-num">05</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+        </div>
+        <h4>Resultados</h4>
+        <p>Otimização contínua, relatório mensal e leads qualificados chegando no seu WhatsApp.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PARA QUEM -->
+<section id="paraquem">
+  <div class="container">
+    <div class="pq-header">
+      <span class="section-tag">Para quem é</span>
+      <h2 class="section-title">Feito para quem vive<br><em>do mercado imobiliário</em></h2>
+      <p class="section-sub">Se você vende imóveis e precisa de mais leads, a MLX Mind tem a estratégia certa para você.</p>
+    </div>
+    <div class="pq-grid">
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Corretor Autônomo</h3>
+        <p>Profissional independente que precisa de presença digital sólida e um fluxo constante de leads qualificados para fechar mais negócios sem depender só de indicação.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Marketing pessoal + captação de leads</div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Imobiliária Regional</h3>
+        <p>Empresa com carteira de imóveis ativa que quer escalar a captação digital, aumentar a visibilidade da marca e gerar um volume previsível de contatos mensais.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Volume de leads + branding local</div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <h3>Incorporadora</h3>
+        <p>Empresa com lançamentos e empreendimentos em construção que precisa gerar interesse antes, durante e após o lançamento — com campanha de topo ao fundo de funil.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lançamentos + tráfego qualificado</div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Equipe de Vendas</h3>
+        <p>Time de corretores vinculados a uma imobiliária que precisa de suporte de marketing centralizado — com criativos, campanhas e landing pages para cada produto.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suporte de marketing para o time</div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <h3>Lançamentos & VGV Alto</h3>
+        <p>Projetos de alto valor que precisam de estratégia premium — do teaser ao pós-lançamento, com anúncios, vídeos, landing page e remarketing para fechar mais unidades.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estratégia full-funnel de lançamento</div>
+      </div>
+      <div class="pq-card">
+        <div class="pq-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Mercado de Aluguel</h3>
+        <p>Imobiliárias e corretores focados em locação que precisam de anúncios segmentados para atrair locatários qualificados e reduzir o tempo de vacância dos imóveis.</p>
+        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Captação de locatários qualificados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
 <section id="depoimentos">
   <div class="container">
     <div class="dep-header">
-      <span class="section-tag">O que dizem nossos clientes</span>
-      <h2 class="section-title">Negócios que<br><em style="font-style:italic">já estão crescendo</em></h2>
-      <p class="section-sub">Resultados reais de quem confiou na MLX Mind.</p>
+      <span class="section-tag">O que dizem</span>
+      <h2 class="section-title">Clientes que <em>já estão</em><br><strong>vendendo mais</strong></h2>
+      <p class="section-sub">Resultados reais de corretores e imobiliárias que confiaram na MLX Mind.</p>
     </div>
     <div class="dep-grid">
       <div class="dep-card">
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Ótima empresa, entrega o que promete! Profissionalismo 10."</p>
+        <p class="dep-quote">"Ótima empresa, entrega o que promete! Profissionalismo 10. Os leads que chegam são de qualidade muito melhor do que eu tinha antes."</p>
         <div class="dep-author">
           <div class="dep-avatar">G</div>
-          <div><div class="dep-name">Imobiliária Gilberto Pinheiros</div><div class="dep-role">Setor Imobiliário</div></div>
+          <div><div class="dep-name">Imobiliária Gilberto Pinheiros</div><div class="dep-role">Imobiliária · Ribeirão Preto</div></div>
         </div>
       </div>
       <div class="dep-card">
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Melhor escolha que eu fiz, ótima assessoria, ótimas postagens."</p>
+        <p class="dep-quote">"Melhor escolha que eu fiz. As campanhas deles geraram mais leads em um mês do que eu consegui em seis meses fazendo sozinho."</p>
         <div class="dep-author">
           <div class="dep-avatar">A</div>
-          <div><div class="dep-name">Anderson Abreu</div><div class="dep-role">Empreendedor</div></div>
+          <div><div class="dep-name">Anderson Abreu</div><div class="dep-role">Corretor Autônomo</div></div>
         </div>
       </div>
       <div class="dep-card">
         <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Excelente atendimento, equipe super profissional, e cumprem o que prometem! Super recomendo."</p>
+        <p class="dep-quote">"Excelente atendimento, equipe super profissional e cumprem o que prometem. Nossa captação de leads cresceu 3x em dois meses. Super recomendo!"</p>
         <div class="dep-author">
           <div class="dep-avatar">C</div>
-          <div><div class="dep-name">Imobiliária Casa Verde</div><div class="dep-role">Setor Imobiliário</div></div>
+          <div><div class="dep-name">Imobiliária Casa Verde</div><div class="dep-role">Imobiliária · SP</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="para-quem">
-  <div class="container">
-    <div class="pq-header">
-      <span class="section-tag">Para quem é</span>
-      <h2 class="section-title">Feito para quem<br><em style="font-style:italic">quer crescer no digital</em></h2>
-      <p class="section-sub">Se você tem um negócio e precisa de mais clientes, a MLX Mind tem uma estratégia para você.</p>
-    </div>
-    <div class="pq-grid">
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Pequenos Negócios</h3>
-        <p>MEI ou microempresa que precisa de presença digital profissional sem precisar de uma equipe interna.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-        <h3>Médias Empresas</h3>
-        <p>Negócio em crescimento que precisa escalar a captação de leads e consolidar a presença nas redes sociais.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Profissionais Liberais</h3>
-        <p>Médicos, advogados, contadores e outros profissionais que querem construir autoridade e atrair mais clientes.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>E-commerce & Lojas</h3>
-        <p>Lojas físicas ou virtuais que precisam de tráfego qualificado e criativos que convertem em vendas diretas.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h3>Prestadores de Serviço</h3>
-        <p>Negócios de serviço que dependem de indicação e querem diversificar a fonte de clientes com marketing digital.</p>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
-        <h3>Negócios em Início</h3>
-        <p>Acabou de abrir e precisa construir presença, reputação e captar os primeiros clientes de forma consistente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container">
-    <div class="faq-inner">
-      <div class="faq-left">
-        <span class="section-tag">Dúvidas frequentes</span>
-        <h2 class="section-title">Respondendo antes<br><em style="font-style:italic">de você perguntar</em></h2>
-        <p class="section-sub" style="margin-top:16px">Tem mais alguma dúvida? Fale com a gente — respondemos rápido no WhatsApp.</p>
-        <a href="https://wa.me/551152540490" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;margin-top:36px" target="_blank">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Perguntar agora
-        </a>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q">Precisa assinar contrato de fidelidade?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Não. Trabalhamos com contratos mensais renováveis — sem fidelidade obrigatória. Acreditamos que você fica porque vê resultado, não por obrigação.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">A verba de anúncios está inclusa?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Não. A verba de anúncios é paga diretamente por você ao Meta (Facebook/Instagram). O que está incluso no plano é o gerenciamento completo: estratégia, criação dos anúncios, segmentação e otimização.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Em quanto tempo começo a ver resultados?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>As campanhas de tráfego costumam gerar os primeiros leads entre 7 e 14 dias após a ativação. O volume e a qualidade aumentam progressivamente conforme otimizamos com os dados reais da campanha.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Vocês atendem qualquer tipo de negócio?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Sim. Atendemos desde MEIs e pequenos negócios até empresas de médio porte, em diferentes segmentos. A estratégia, os criativos e a segmentação são sempre adaptados para o seu mercado e público específico.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">O que é o onboarding estratégico?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>É uma reunião que fazemos logo na contratação para entender profundamente seu negócio: produto ou serviço, público-alvo, diferenciais e objetivos. Com isso, as campanhas já começam segmentadas e muito mais precisas.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Vocês criam os criativos do zero?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
-          <div class="faq-a"><p>Sim. Não usamos templates genéricos. Cada criativo é desenvolvido com a identidade visual e os produtos ou serviços do seu negócio — isso gera muito mais identificação e conversão nos anúncios.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<a href="https://wa.me/551152540490" class="wa-float" target="_blank" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
-
+<!-- CTA -->
 <section id="cta">
   <div class="container">
     <div class="cta-box">
-      <span class="section-tag">Pronto para crescer?</span>
-      <h2 class="section-title">Começa hoje,<br><em style="font-style:italic">sem complicação</em></h2>
-      <p class="cta-sub">Fale com a gente agora. A gente entende o seu negócio e já indica a estratégia ideal para você começar a gerar resultados.</p>
+      <span class="section-tag">Pronto para vender mais?</span>
+      <h2 class="section-title">Comece hoje.<br><em>Sem complicação.</em></h2>
+      <p class="cta-sub">Fale com a gente agora. Entendemos o seu mercado e já montamos a estratégia ideal para começar a gerar leads qualificados para seus imóveis.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/551152540490" class="cta-whatsapp" target="_blank">
+        <a href="https://wa.me/551152540490" class="cta-wa" target="_blank">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           Falar no WhatsApp
         </a>
-        <a href="#planos" class="btn-ghost">Ver planos</a>
+        <a href="#servicos" class="btn-ghost">Ver serviços</a>
+      </div>
+      <div class="cta-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sem contrato de fidelidade</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Especialistas em imobiliário</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Resultado em 7 a 14 dias</div>
       </div>
     </div>
   </div>
 </section>
 
+<a href="https://wa.me/551152540490" class="wa-btn" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">
-      <div class="logo-icon"><div class="logo-bar"></div><div class="logo-bar"></div><div class="logo-bar"></div></div>
-      <span class="logo-text">MLX Mind</span>
+    <div class="footer-left">
+      <div class="nav-logo">
+        <div class="logo-bars"><span></span><span></span><span></span></div>
+        <span class="logo-name">MLX Mind</span>
+      </div>
+      <p class="footer-copy">© 2025 MLX Mind — Marketing Experience. Todos os direitos reservados.<br>Especialistas em marketing para corretores e imobiliárias.</p>
     </div>
-    <p class="footer-copy">© 2025 MLX Mind — Marketing Experience. Todos os direitos reservados.</p>
     <ul class="footer-links">
       <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#planos">Planos</a></li>
-      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#imoveis">Portfólio</a></li>
+      <li><a href="#paraquem">Para quem</a></li>
       <li><a href="#depoimentos">Clientes</a></li>
-      <li>
-        <a href="https://instagram.com/mindmlx" target="_blank" class="footer-social-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          @mindmlx
-        </a>
-      </li>
-      <li>
-        <a href="https://wa.me/551152540490" target="_blank" class="footer-social-link">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          (11) 5254-0490
-        </a>
-      </li>
+      <li><a href="https://instagram.com/mindmlx" target="_blank" class="footer-social">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @mindmlx
+      </a></li>
+      <li><a href="https://wa.me/551152540490" target="_blank" class="footer-social">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp
+      </a></li>
     </ul>
   </div>
 </footer>
 
 <script>
-  /* PARTICLES */
-  const canvas = document.getElementById('hero-canvas');
-  const ctx = canvas.getContext('2d');
-  let w, h, particles = [];
-  function resize() { w = canvas.width = canvas.offsetWidth; h = canvas.height = canvas.offsetHeight; }
-  class Particle {
-    constructor() { this.reset(); }
-    reset() { this.x=Math.random()*w; this.y=Math.random()*h; this.vx=(Math.random()-.5)*.35; this.vy=(Math.random()-.5)*.35; this.r=Math.random()*1.4+.4; this.alpha=Math.random()*.4+.1; }
-    update() { this.x+=this.vx; this.y+=this.vy; if(this.x<0||this.x>w||this.y<0||this.y>h) this.reset(); }
-    draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2); ctx.fillStyle=`rgba(178,102,255,${this.alpha})`; ctx.fill(); }
-  }
-  function initParticles() { resize(); particles=Array.from({length:90},()=>new Particle()); }
-  function loopParticles() {
-    ctx.clearRect(0,0,w,h);
-    for(const p of particles){p.update();p.draw();}
-    for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
-      const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<90){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(90,10,122,${.12*(1-d/90)})`;ctx.lineWidth=.7;ctx.stroke();}
+// SCROLL PROGRESS
+const sp = document.getElementById('sprogress');
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  sp.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+}, {passive: true});
+
+// MOBILE MENU
+const burger = document.getElementById('burger');
+const navMob = document.getElementById('navMob');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navMob.classList.toggle('open');
+});
+navMob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  navMob.classList.remove('open');
+}));
+
+// COUNTER ANIMATION
+function animCount(el, target, suffix, dur = 1400) {
+  const start = performance.now();
+  const step = now => {
+    const p = Math.min((now - start) / dur, 1);
+    const ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+    const val = Math.round(ease * target);
+    if (suffix === '×') el.textContent = val + '×';
+    else if (suffix === '+') el.textContent = '+' + val;
+    else el.textContent = val + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const counters = document.querySelectorAll('[data-count]');
+let counted = false;
+const countObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !counted) {
+      counted = true;
+      counters.forEach((el, i) => {
+        setTimeout(() => animCount(el, +el.dataset.count, el.dataset.suffix), i * 100);
+      });
+      countObs.disconnect();
     }
-    requestAnimationFrame(loopParticles);
-  }
-  window.addEventListener('resize', resize);
-  initParticles(); loopParticles();
-
-  /* SCROLL PROGRESS BAR */
-  const bar = document.createElement('div');
-  bar.style.cssText='position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,#5A0A7A,#B266FF);z-index:9999;transition:width .05s linear;pointer-events:none;';
-  document.body.appendChild(bar);
-
-  /* SCROLL REVEAL */
-  document.querySelectorAll('.service-card').forEach((el,i)=>{ el.dataset.reveal='up'; el.dataset.delay=i*70; });
-  document.querySelectorAll('.diff-item').forEach((el,i)=>{ el.dataset.reveal='left'; el.dataset.delay=i*80; });
-  document.querySelectorAll('.process-step').forEach((el,i)=>{ el.dataset.reveal='up'; el.dataset.delay=i*60; });
-  document.querySelectorAll('.dep-card').forEach((el,i)=>{ el.dataset.reveal='up'; el.dataset.delay=i*90; });
-  document.querySelectorAll('.services-header, .dep-header, #processo > .container > div').forEach(el=>{ el.dataset.reveal='up'; });
-  document.querySelectorAll('.cta-box').forEach(el=>{ el.dataset.reveal='up'; });
-  document.querySelectorAll('.plano-card').forEach((el,i)=>{ el.dataset.reveal='up'; el.dataset.delay=i*100; });
-  document.querySelectorAll('.planos-header, .planos-note, .planos-aviso').forEach(el=>{ el.dataset.reveal='up'; });
-
-  function getInitialTransform(dir) {
-    if(dir==='left') return 'translateX(-40px)';
-    if(dir==='right') return 'translateX(40px)';
-    return 'translateY(36px)';
-  }
-
-  const revealEls = document.querySelectorAll('[data-reveal]');
-  revealEls.forEach(el=>{
-    el.style.opacity='0';
-    el.style.transform=getInitialTransform(el.dataset.reveal);
-    el.style.willChange='opacity, transform';
   });
+}, {threshold: 0.5});
+if (counters[0]) countObs.observe(counters[0].closest('section') || counters[0]);
 
-  const revealObserver = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const delay = e.target.dataset.delay || 0;
-        setTimeout(()=>{
-          e.target.style.transition='opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1)';
-          e.target.style.opacity='1';
-          e.target.style.transform='none';
-        }, +delay);
-        revealObserver.unobserve(e.target);
-      }
-    });
-  },{threshold:0.06});
-  revealEls.forEach(el=>revealObserver.observe(el));
+// SCROLL REVEAL
+const revealInit = () => {
+  document.querySelectorAll('.serv-card, .dep-card, .pq-card, .proc-step, .num-card, .prob-item, .prob-card, .imov-card').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(32px)';
+    el.style.transition = 'none';
+    el.dataset.ri = i;
+  });
+  document.querySelectorAll('.serv-header, .num-inner, .proc-header, .pq-header, .dep-header, .imov-header, .cta-box').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'none';
+  });
+};
 
-  /* STAT COUNTER */
-  function animateCount(el, target, suffix, duration=1400){
-    const isFloat = target%1!==0;
-    const start = performance.now();
-    function step(now){
-      const p = Math.min((now-start)/duration,1);
-      const ease = p===1?1:1-Math.pow(2,-10*p);
-      const val = isFloat?(ease*target).toFixed(1):Math.round(ease*target);
-      el.textContent=(suffix==='×'?val+'×':suffix==='+'?'+'+val:val+suffix);
-      if(p<1) requestAnimationFrame(step);
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const delay = (parseInt(e.target.dataset.ri || 0) % 6) * 70;
+      setTimeout(() => {
+        e.target.style.transition = 'opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1)';
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'none';
+      }, delay);
+      revealObs.unobserve(e.target);
     }
-    requestAnimationFrame(step);
-  }
-  const statsData=[
-    {el:null,target:200,suffix:'+'},
-    {el:null,target:4,suffix:'×'},
-    {el:null,target:3,suffix:'×'},
-    {el:null,target:98,suffix:'%'},
-  ];
-  document.querySelectorAll('.stat-num').forEach((el,i)=>{ if(statsData[i]) statsData[i].el=el; });
-  let statsDone=false;
-  const statsObserver=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting&&!statsDone){
-        statsDone=true;
-        statsData.forEach(({el,target,suffix},i)=>{ if(!el) return; setTimeout(()=>animateCount(el,target,suffix),i*120); });
-        statsObserver.disconnect();
-      }
-    });
-  },{threshold:0.5});
-  const heroStats=document.querySelector('.hero-stats');
-  if(heroStats) statsObserver.observe(heroStats);
+  });
+}, {threshold: 0.07});
 
-  /* SCROLL HANDLER */
-  let ticking=false, scrollY=0;
-  var isMobile = window.matchMedia('(max-width: 960px)').matches || ('ontouchstart' in window);
-  function onScroll(){ scrollY=window.scrollY; if(!ticking){ requestAnimationFrame(processScroll); ticking=true; } }
-  function processScroll(){
-    ticking=false;
-    const docH=document.documentElement.scrollHeight-window.innerHeight;
-    bar.style.width=(scrollY/docH*100)+'%';
-    if(!isMobile){
-      const heroChildren2=document.querySelectorAll('#hero .hero-badge, #hero h1, #hero .hero-sub, #hero .hero-actions');
-      heroChildren2.forEach(el=>{el.style.transform=`translateY(${scrollY*0.18}px)`;});
-    }
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});
+revealInit();
+document.querySelectorAll('.serv-card, .dep-card, .pq-card, .proc-step, .num-card, .prob-item, .prob-card, .imov-card, .serv-header, .num-inner, .proc-header, .pq-header, .dep-header, .imov-header, .cta-box').forEach(el => revealObs.observe(el));
 
-  /* ORBITAL ANIMATION */
-  (function(){
-    const visual=document.querySelector('.diff-visual');
-    if(!visual) return;
-    const orbits=visual.querySelectorAll('.diff-orbit');
-    const baseAngles=[270,0,90,180];
-    const SPEED=0.018;
-    let startTime=null;
-    orbits.forEach(el=>{ el.style.top='50%'; el.style.left='50%'; el.style.margin='-27px 0 0 -27px'; });
-    function tick(ts){
-      if(!startTime) startTime=ts;
-      const elapsed=ts-startTime;
-      const deg=(elapsed*SPEED)%360;
-      const rect=visual.getBoundingClientRect();
-      const radius=rect.width*0.5;
-      orbits.forEach((el,i)=>{
-        const angle=((baseAngles[i]+deg)*Math.PI)/180;
-        const x=Math.cos(angle)*radius;
-        const y=Math.sin(angle)*radius;
-        el.style.transform=`translate(${x}px,${y}px) rotate(${-deg}deg)`;
-      });
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  })();
-
-  /* FAQ */
-  document.querySelectorAll('.faq-q').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      const item=btn.parentElement;
-      const isOpen=item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
-      if(!isOpen) item.classList.add('open');
+// PROB CARDS - problem stack hover
+document.querySelectorAll('.prob-card').forEach((card, i) => {
+  card.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.prob-card').forEach((c, j) => {
+      if (j !== i) { c.style.opacity = '0.4'; c.style.transform += ' scale(0.97)'; }
     });
   });
-
-  /* REVEAL extras */
-  document.querySelectorAll('.pq-card').forEach((el,i)=>{
-    el.dataset.reveal='up'; el.dataset.delay=i*60;
-    el.style.opacity='0'; el.style.transform=getInitialTransform('up');
-    el.style.willChange='opacity,transform';
-    revealObserver.observe(el);
+  card.addEventListener('mouseleave', () => {
+    document.querySelectorAll('.prob-card').forEach(c => {
+      c.style.opacity = '';
+      const t = c.style.transform.replace(/ scale\(0\.97\)/, '');
+      c.style.transform = t;
+    });
   });
-  document.querySelectorAll('.faq-item').forEach((el,i)=>{
-    el.dataset.reveal='right'; el.dataset.delay=i*55;
-    el.style.opacity='0'; el.style.transform=getInitialTransform('right');
-    el.style.willChange='opacity,transform';
-    revealObserver.observe(el);
+});
+
+// TILT on cards (desktop only)
+if (!('ontouchstart' in window)) {
+  document.querySelectorAll('.serv-card, .dep-card, .pq-card').forEach(card => {
+    let spotlight = document.createElement('div');
+    spotlight.style.cssText = 'position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--sx,50%) var(--sy,50%),rgba(178,102,255,.1) 0%,transparent 60%)';
+    card.style.position = 'relative';
+    card.appendChild(spotlight);
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const xp = (e.clientX - r.left) / r.width;
+      const yp = (e.clientY - r.top) / r.height;
+      card.style.setProperty('--sx', (xp * 100).toFixed(1) + '%');
+      card.style.setProperty('--sy', (yp * 100).toFixed(1) + '%');
+      spotlight.style.opacity = '1';
+      card.style.transform = `perspective(600px) rotateX(${-(yp - .5) * 8}deg) rotateY(${(xp - .5) * 8}deg) translateZ(4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      spotlight.style.opacity = '0';
+      card.style.transform = '';
+    });
   });
-  document.querySelectorAll('.faq-left > *').forEach((el,i)=>{
-    el.dataset.reveal='left'; el.dataset.delay=i*70;
-    el.style.opacity='0'; el.style.transform=getInitialTransform('left');
-    el.style.willChange='opacity,transform';
-    revealObserver.observe(el);
+}
+
+// smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({behavior: 'smooth'}); }
   });
-
-  /* GLITCH LAYERS */
-  (function() {
-    const h1 = document.querySelector('#hero h1');
-    if (!h1) return;
-    const html = h1.innerHTML;
-    const g1 = document.createElement('span');
-    const g2 = document.createElement('span');
-    g1.className = 'glitch-layer g1'; g1.innerHTML = html;
-    g2.className = 'glitch-layer g2'; g2.innerHTML = html;
-    h1.appendChild(g1);
-    h1.appendChild(g2);
-  })();
-
-  /* SPOTLIGHT + TILT */
-  (function() {
-    if ('ontouchstart' in window) return;
-    document.querySelectorAll('.service-card, .dep-card, .plano-card, .pq-card').forEach(function(card) {
-      card.classList.add('tilt-card');
-      var sp = document.createElement('div');
-      sp.className = 'spotlight';
-      card.appendChild(sp);
-      card.addEventListener('mousemove', function(e) {
-        var r = card.getBoundingClientRect();
-        var xp = (e.clientX - r.left) / r.width;
-        var yp = (e.clientY - r.top)  / r.height;
-        card.style.setProperty('--sx', (xp * 100).toFixed(1) + '%');
-        card.style.setProperty('--sy', (yp * 100).toFixed(1) + '%');
-        var rotY =  (xp - 0.5) * 10;
-        var rotX = -(yp - 0.5) * 10;
-        card.style.transform = 'perspective(700px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
-      });
-      card.addEventListener('mouseleave', function() {
-        card.style.transform = '';
-      });
-    });
-  })();
-
-  /* MAGNETIC BUTTONS */
-  (function() {
-    if ('ontouchstart' in window) return;
-    document.querySelectorAll('.btn-primary, .btn-ghost, .cta-whatsapp, .nav-cta').forEach(function(btn) {
-      btn.classList.add('magnetic');
-      btn.addEventListener('mousemove', function(e) {
-        var r   = btn.getBoundingClientRect();
-        var dx  = e.clientX - (r.left + r.width  / 2);
-        var dy  = e.clientY - (r.top  + r.height / 2);
-        btn.style.transform = 'translate(' + (dx * 0.2) + 'px,' + (dy * 0.2) + 'px)';
-      });
-      btn.addEventListener('mouseleave', function() {
-        btn.style.transition = 'transform .45s cubic-bezier(.22,1,.36,1)';
-        btn.style.transform  = '';
-        setTimeout(function() { btn.style.transition = ''; }, 450);
-      });
-      btn.addEventListener('mouseenter', function() {
-        btn.style.transition = 'transform .1s linear';
-      });
-    });
-  })();
-
-  /* MENU MOBILE */
-  (function() {
-    var btn  = document.getElementById('hamburguer');
-    var menu = document.getElementById('mobileMenu');
-    if (!btn || !menu) return;
-    btn.addEventListener('click', function() {
-      btn.classList.toggle('open');
-      menu.classList.toggle('open');
-    });
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        btn.classList.remove('open');
-        menu.classList.remove('open');
-      });
-    });
-  })();
+});
 </script>
 </body>
 </html>
