@@ -808,6 +808,179 @@ margin:auto;
 
 }
 
+  #mapa-leads{
+  background:var(--bg2);
+  padding:120px 60px;
+  position:relative;
+  overflow:hidden;
+}
+
+#mapa-leads::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(circle at 30% 40%, rgba(178,102,255,.18), transparent 35%),
+  radial-gradient(circle at 75% 60%, rgba(201,168,76,.10), transparent 30%);
+  pointer-events:none;
+}
+
+.mapa-header{
+  text-align:center;
+  margin-bottom:60px;
+  position:relative;
+  z-index:2;
+}
+
+.mapa-header .section-sub{
+  margin:0 auto;
+}
+
+.mapa-wrap{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:28px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+
+.mapa-card{
+  min-height:520px;
+  border:1px solid rgba(178,102,255,.18);
+  border-radius:28px;
+  background:rgba(30,0,46,.42);
+  backdrop-filter:blur(18px);
+  box-shadow:0 30px 100px rgba(123,47,190,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.mapa-brasil{
+  position:relative;
+  width:min(520px, 90%);
+  aspect-ratio:1/1.08;
+  background:
+  linear-gradient(145deg, rgba(178,102,255,.12), rgba(14,0,24,.8)),
+  radial-gradient(circle at 50% 45%, rgba(178,102,255,.18), transparent 48%);
+  clip-path:polygon(47% 3%,62% 8%,70% 20%,83% 24%,78% 39%,87% 51%,75% 62%,70% 78%,58% 88%,47% 97%,37% 84%,27% 75%,18% 63%,24% 49%,14% 37%,28% 25%,35% 12%);
+  border:1px solid rgba(178,102,255,.3);
+  box-shadow:
+  inset 0 0 60px rgba(178,102,255,.15),
+  0 0 80px rgba(178,102,255,.18);
+}
+
+.estado{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid rgba(178,102,255,.6);
+  background:rgba(14,0,24,.88);
+  color:var(--white);
+  font-weight:800;
+  font-size:.78rem;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(178,102,255,.25);
+  transition:.25s ease;
+  z-index:3;
+}
+
+.estado::before{
+  content:'';
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+  border:1px solid rgba(178,102,255,.25);
+  animation:pulseEstado 2s infinite;
+}
+
+.estado:hover,
+.estado.ativo{
+  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
+  transform:translate(-50%,-50%) scale(1.15);
+  box-shadow:0 0 42px rgba(178,102,255,.7);
+}
+
+@keyframes pulseEstado{
+  0%{opacity:.8; transform:scale(.8)}
+  100%{opacity:0; transform:scale(1.8)}
+}
+
+.mapa-glow-line{
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(115deg, transparent 35%, rgba(201,168,76,.18), transparent 60%);
+  animation:mapaScan 4s linear infinite;
+}
+
+@keyframes mapaScan{
+  from{transform:translateX(-80%)}
+  to{transform:translateX(80%)}
+}
+
+.mapa-info{
+  border:1px solid rgba(178,102,255,.22);
+  border-radius:24px;
+  padding:42px;
+  background:linear-gradient(180deg,rgba(30,0,46,.75),rgba(14,0,24,.75));
+  box-shadow:0 25px 90px rgba(123,47,190,.18);
+}
+
+.mapa-label{
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:800;
+}
+
+.mapa-info h3{
+  font-family:var(--font-head);
+  font-size:2.6rem;
+  margin:14px 0 10px;
+}
+
+.mapa-info strong{
+  display:block;
+  font-family:var(--font-head);
+  font-size:2.2rem;
+  color:var(--purple-light);
+  margin-bottom:18px;
+}
+
+.mapa-info p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  #mapa-leads{
+    padding:90px 24px;
+  }
+
+  .mapa-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .mapa-card{
+    min-height:430px;
+  }
+
+  .mapa-info{
+    text-align:center;
+    padding:30px 22px;
+  }
+
+  .estado{
+    width:44px;
+    height:44px;
+  }
+}
 
 </style>
 
@@ -1100,38 +1273,37 @@ margin:auto;
   </div>
 </section>
 
-<!-- NÚMEROS -->
-<section id="numeros">
+<!-- Mapa -->
+<section id="mapa-leads">
   <div class="container">
-    <div class="num-inner">
-      <span class="section-tag">Resultados</span>
-      <h2 class="section-title">Números que<br><em>falam por si</em></h2>
+    <div class="mapa-header">
+      <span class="section-tag">Atuação MLX</span>
+      <h2 class="section-title">Leads gerados<br><em>por região</em></h2>
+      <p class="section-sub">Passe o mouse ou toque nos estados para visualizar o volume de oportunidades geradas.</p>
     </div>
-    <div class="num-grid">
-      <div class="num-card">
-        <div class="num-value" data-count="200" data-suffix="+">200+</div>
-        <div class="num-label">Clientes atendidos</div>
-        <div class="num-sub">Corretores e imobiliárias</div>
+
+    <div class="mapa-wrap">
+      <div class="mapa-card">
+        <div class="mapa-brasil">
+          <button class="estado ativo" style="top:58%; left:58%;" data-estado="São Paulo" data-leads="+420" data-desc="Corretores, imobiliárias e campanhas para lançamentos.">SP</button>
+          <button class="estado" style="top:67%; left:55%;" data-estado="Santa Catarina" data-leads="+260" data-desc="Campanhas para imóveis de praia e alto interesse.">SC</button>
+          <button class="estado" style="top:62%; left:52%;" data-estado="Paraná" data-leads="+190" data-desc="Captação regional para corretores e imobiliárias.">PR</button>
+          <button class="estado" style="top:55%; left:64%;" data-estado="Rio de Janeiro" data-leads="+145" data-desc="Geração de leads para imóveis urbanos e alto padrão.">RJ</button>
+          <button class="estado" style="top:45%; left:56%;" data-estado="Minas Gerais" data-leads="+210" data-desc="Campanhas locais com foco em procura qualificada.">MG</button>
+
+          <div class="mapa-glow-line"></div>
+        </div>
       </div>
-      <div class="num-card">
-        <div class="num-value" data-count="4" data-suffix="×">4×</div>
-        <div class="num-label">ROI médio</div>
-        <div class="num-sub">Em campanhas de tráfego</div>
-      </div>
-      <div class="num-card">
-        <div class="num-value" data-count="3" data-suffix="×">3×</div>
-        <div class="num-label">Mais leads por campanha</div>
-        <div class="num-sub">Vs. impulsionamento comum</div>
-      </div>
-      <div class="num-card">
-        <div class="num-value" data-count="98" data-suffix="%">98%</div>
-        <div class="num-label">Satisfação</div>
-        <div class="num-sub">Dos clientes ativos</div>
+
+      <div class="mapa-info">
+        <span class="mapa-label">Estado selecionado</span>
+        <h3 id="estadoNome">São Paulo</h3>
+        <strong id="estadoLeads">+420 leads gerados</strong>
+        <p id="estadoDesc">Corretores, imobiliárias e campanhas para lançamentos.</p>
       </div>
     </div>
   </div>
 </section>
-
 <!-- PROCESSO -->
 <section id="processo">
   <div class="container">
@@ -1481,6 +1653,28 @@ el.style.transform="translateY(50px)";
 el.style.transition="all .8s ease";
 
 observer.observe(el);
+});
+</script>
+
+  <script>
+const estados = document.querySelectorAll('.estado');
+const estadoNome = document.getElementById('estadoNome');
+const estadoLeads = document.getElementById('estadoLeads');
+const estadoDesc = document.getElementById('estadoDesc');
+
+estados.forEach((estado)=>{
+  const ativarEstado = () => {
+    estados.forEach(e => e.classList.remove('ativo'));
+    estado.classList.add('ativo');
+
+    estadoNome.textContent = estado.dataset.estado;
+    estadoLeads.textContent = estado.dataset.leads + ' leads gerados';
+    estadoDesc.textContent = estado.dataset.desc;
+  };
+
+  estado.addEventListener('mouseenter', ativarEstado);
+  estado.addEventListener('click', ativarEstado);
+  estado.addEventListener('touchstart', ativarEstado);
 });
 </script>
 </body>
