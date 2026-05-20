@@ -808,119 +808,66 @@ margin:auto;
 
 }
 
-  #mapa-leads{
+  #dashboard-mlx{
   background:var(--bg2);
   padding:120px 60px;
   position:relative;
   overflow:hidden;
 }
 
-#mapa-leads::before{
+#dashboard-mlx::before{
   content:'';
   position:absolute;
   inset:0;
   background:
-  radial-gradient(circle at 30% 40%, rgba(178,102,255,.18), transparent 35%),
-  radial-gradient(circle at 75% 60%, rgba(201,168,76,.10), transparent 30%);
+  radial-gradient(circle at 25% 30%, rgba(178,102,255,.20), transparent 35%),
+  radial-gradient(circle at 80% 70%, rgba(201,168,76,.10), transparent 32%);
   pointer-events:none;
 }
 
-.mapa-header{
+.dash-header{
   text-align:center;
   margin-bottom:60px;
   position:relative;
   z-index:2;
 }
 
-.mapa-header .section-sub{
+.dash-header .section-sub{
   margin:0 auto;
 }
 
-.mapa-wrap{
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:28px;
-  align-items:center;
+.dash-wrap{
   position:relative;
   z-index:2;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:28px;
+  align-items:stretch;
 }
 
-.mapa-card{
-  min-height:560px;
+.dash-main,
+.dash-feed{
   border:1px solid rgba(178,102,255,.18);
   border-radius:28px;
-  background:rgba(30,0,46,.42);
+  background:rgba(30,0,46,.48);
   backdrop-filter:blur(18px);
   box-shadow:0 30px 100px rgba(123,47,190,.18);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+}
+
+.dash-main{
+  padding:34px;
   overflow:hidden;
 }
 
-.mapa-brasil-real{
-  position:relative;
-  width:min(620px, 96%);
-  aspect-ratio:1/1;
+.dash-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:28px;
 }
 
-.brasil-img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  opacity:.32;
-  filter:drop-shadow(0 0 45px rgba(178,102,255,.35));
-}
-
-.estado-pin{
-  position:absolute;
-  transform:translate(-50%,-50%);
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  border:1px solid rgba(178,102,255,.65);
-  background:rgba(14,0,24,.9);
-  color:var(--white);
-  font-size:.62rem;
-  font-weight:900;
-  cursor:pointer;
-  z-index:5;
-  box-shadow:0 0 24px rgba(178,102,255,.35);
-  transition:.25s ease;
-}
-
-.estado-pin::before{
-  content:'';
-  position:absolute;
-  inset:-6px;
-  border-radius:50%;
-  border:1px solid rgba(178,102,255,.28);
-  animation:pulseEstado 2s infinite;
-}
-
-.estado-pin:hover,
-.estado-pin.ativo{
-  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  transform:translate(-50%,-50%) scale(1.18);
-  box-shadow:0 0 46px rgba(178,102,255,.85);
-}
-
-@keyframes pulseEstado{
-  0%{opacity:.8; transform:scale(.8)}
-  100%{opacity:0; transform:scale(1.8)}
-}
-
-.mapa-info{
-  border:1px solid rgba(178,102,255,.22);
-  border-radius:24px;
-  padding:42px;
-  background:linear-gradient(180deg,rgba(30,0,46,.75),rgba(14,0,24,.75));
-  box-shadow:0 25px 90px rgba(123,47,190,.18);
-}
-
-.mapa-label{
+.dash-top span{
   font-size:.68rem;
   letter-spacing:.18em;
   text-transform:uppercase;
@@ -928,51 +875,195 @@ margin:auto;
   font-weight:800;
 }
 
-.mapa-info h3{
-  font-family:var(--font-head);
-  font-size:2.6rem;
-  margin:14px 0 10px;
-}
-
-.mapa-info strong{
-  display:block;
+.dash-top h3{
   font-family:var(--font-head);
   font-size:2.2rem;
-  color:var(--purple-light);
-  margin-bottom:18px;
+  margin-top:6px;
 }
 
-.mapa-info p{
+.dash-live{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border-radius:100px;
+  border:1px solid rgba(37,211,102,.3);
+  color:#6dff9f;
+  font-size:.72rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.dash-live span{
+  width:8px;
+  height:8px;
+  background:#25D366;
+  border-radius:50%;
+  animation:dashPulse 1.4s infinite;
+}
+
+@keyframes dashPulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.35;transform:scale(1.8)}
+}
+
+.dash-metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-bottom:34px;
+}
+
+.dash-metric{
+  padding:20px 16px;
+  border-radius:18px;
+  background:rgba(14,0,24,.65);
+  border:1px solid rgba(178,102,255,.14);
+}
+
+.dash-metric small{
+  display:block;
   color:var(--muted);
-  line-height:1.8;
+  font-size:.72rem;
+  margin-bottom:8px;
+}
+
+.dash-metric strong{
+  font-family:var(--font-head);
+  font-size:2rem;
+  color:var(--white);
+}
+
+.dash-chart{
+  height:230px;
+  display:flex;
+  align-items:end;
+  gap:14px;
+  padding:24px;
+  border-radius:22px;
+  background:
+  linear-gradient(180deg,rgba(14,0,24,.35),rgba(14,0,24,.7));
+  border:1px solid rgba(178,102,255,.14);
+  overflow:hidden;
+}
+
+.bar{
+  flex:1;
+  border-radius:12px 12px 0 0;
+  background:linear-gradient(180deg,var(--purple-bright),var(--purple-mid));
+  box-shadow:0 0 28px rgba(178,102,255,.35);
+  animation:barGrow 1.8s ease both;
+}
+
+.bar:nth-child(2){animation-delay:.1s}
+.bar:nth-child(3){animation-delay:.2s}
+.bar:nth-child(4){animation-delay:.3s}
+.bar:nth-child(5){animation-delay:.4s}
+.bar:nth-child(6){animation-delay:.5s}
+.bar:nth-child(7){animation-delay:.6s}
+
+@keyframes barGrow{
+  from{height:0;opacity:.3}
+}
+
+.dash-bottom{
+  margin-top:24px;
+  padding:18px 20px;
+  border-radius:18px;
+  background:rgba(178,102,255,.08);
+  border:1px solid rgba(178,102,255,.14);
+}
+
+.dash-bottom span{
+  display:block;
+  color:var(--gold-light);
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.dash-bottom strong{
+  font-size:.95rem;
+}
+
+.dash-feed{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.lead-card{
+  padding:22px;
+  border-radius:20px;
+  background:rgba(14,0,24,.65);
+  border:1px solid rgba(178,102,255,.14);
+  transition:.3s ease;
+}
+
+.lead-card.active,
+.lead-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(178,102,255,.45);
+  box-shadow:0 0 45px rgba(178,102,255,.18);
+}
+
+.lead-card span{
+  display:block;
+  color:var(--gold-light);
+  font-size:.72rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:10px;
+}
+
+.lead-card h4{
+  font-family:var(--font-head);
+  font-size:1.35rem;
+  margin-bottom:4px;
+}
+
+.lead-card p{
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.6;
+  margin-bottom:12px;
+}
+
+.lead-card small{
+  color:var(--purple-light);
+  font-size:.75rem;
 }
 
 @media(max-width:900px){
-  #mapa-leads{
+  #dashboard-mlx{
     padding:90px 24px;
   }
 
-  .mapa-wrap{
+  .dash-wrap{
     grid-template-columns:1fr;
   }
 
-  .mapa-card{
-    min-height:470px;
+  .dash-metrics{
+    grid-template-columns:1fr 1fr;
   }
 
-  .mapa-info{
-    text-align:center;
-    padding:30px 22px;
+  .dash-chart{
+    height:190px;
+    gap:9px;
+    padding:18px;
   }
 
-  .estado-pin{
-    width:31px;
-    height:31px;
-    font-size:.52rem;
+  .dash-main{
+    padding:24px;
   }
 
-  .mapa-brasil-real{
-    width:100%;
+  .dash-top{
+    flex-direction:column;
   }
 }
 
@@ -1267,59 +1358,86 @@ margin:auto;
   </div>
 </section>
 
-<!-- MAPA BRASIL -->
-<section id="mapa-leads">
+  <!-- DASHBOARD MLX -->
+<section id="dashboard-mlx">
   <div class="container">
-    <div class="mapa-header">
-      <span class="section-tag">Atuação MLX</span>
-      <h2 class="section-title">Leads gerados<br><em>por região</em></h2>
-      <p class="section-sub">Passe o mouse ou toque em um estado para visualizar o volume de oportunidades geradas.</p>
+    <div class="dash-header">
+      <span class="section-tag">Performance em tempo real</span>
+      <h2 class="section-title">O que acontece quando<br><em>a estratégia entra em ação</em></h2>
+      <p class="section-sub">Um painel visual para mostrar o que todo corretor quer ver: leads chegando, campanhas rodando e oportunidades sendo geradas.</p>
     </div>
 
-    <div class="mapa-wrap">
-      <div class="mapa-card">
-        <div class="mapa-brasil-real">
-          <img src="./images/brasil.svg" alt="Mapa do Brasil" class="brasil-img">
+    <div class="dash-wrap">
+      <div class="dash-main">
+        <div class="dash-top">
+          <div>
+            <span>Dashboard MLX</span>
+            <h3>Campanhas imobiliárias</h3>
+          </div>
+          <div class="dash-live"><span></span> Ao vivo</div>
+        </div>
 
-          <button class="estado-pin" style="top:18%;left:43%;" data-estado="Acre" data-leads="+42" data-desc="Campanhas regionais e captação local.">AC</button>
-          <button class="estado-pin" style="top:34%;left:66%;" data-estado="Alagoas" data-leads="+76" data-desc="Leads para corretores e imóveis residenciais.">AL</button>
-          <button class="estado-pin" style="top:8%;left:48%;" data-estado="Amapá" data-leads="+38" data-desc="Captação digital em mercados locais.">AP</button>
-          <button class="estado-pin" style="top:17%;left:50%;" data-estado="Amazonas" data-leads="+95" data-desc="Campanhas amplas para geração de demanda.">AM</button>
-          <button class="estado-pin" style="top:38%;left:63%;" data-estado="Bahia" data-leads="+180" data-desc="Campanhas para imóveis urbanos e lançamentos.">BA</button>
-          <button class="estado-pin" style="top:27%;left:66%;" data-estado="Ceará" data-leads="+132" data-desc="Leads qualificados para corretores e imobiliárias.">CE</button>
-          <button class="estado-pin" style="top:48%;left:56%;" data-estado="Distrito Federal" data-leads="+155" data-desc="Campanhas para imóveis de alto interesse.">DF</button>
-          <button class="estado-pin" style="top:57%;left:65%;" data-estado="Espírito Santo" data-leads="+118" data-desc="Captação imobiliária regional com foco em conversão.">ES</button>
-          <button class="estado-pin" style="top:52%;left:55%;" data-estado="Goiás" data-leads="+170" data-desc="Geração de leads para corretores e lançamentos.">GO</button>
-          <button class="estado-pin" style="top:27%;left:60%;" data-estado="Maranhão" data-leads="+88" data-desc="Campanhas locais para procura qualificada.">MA</button>
-          <button class="estado-pin" style="top:51%;left:50%;" data-estado="Mato Grosso" data-leads="+125" data-desc="Captação para imóveis e oportunidades regionais.">MT</button>
-          <button class="estado-pin" style="top:62%;left:52%;" data-estado="Mato Grosso do Sul" data-leads="+110" data-desc="Leads para imóveis residenciais e comerciais.">MS</button>
-          <button class="estado-pin" style="top:55%;left:61%;" data-estado="Minas Gerais" data-leads="+210" data-desc="Campanhas imobiliárias regionais.">MG</button>
-          <button class="estado-pin" style="top:22%;left:53%;" data-estado="Pará" data-leads="+140" data-desc="Campanhas digitais para mercados em expansão.">PA</button>
-          <button class="estado-pin" style="top:30%;left:69%;" data-estado="Paraíba" data-leads="+82" data-desc="Geração de contatos qualificados.">PB</button>
-          <button class="estado-pin" style="top:70%;left:56%;" data-estado="Paraná" data-leads="+190" data-desc="Captação regional para corretores e imobiliárias.">PR</button>
-          <button class="estado-pin" style="top:32%;left:68%;" data-estado="Pernambuco" data-leads="+120" data-desc="Campanhas para imóveis urbanos e praia.">PE</button>
-          <button class="estado-pin" style="top:31%;left:62%;" data-estado="Piauí" data-leads="+74" data-desc="Captação imobiliária com foco local.">PI</button>
-          <button class="estado-pin" style="top:60%;left:66%;" data-estado="Rio de Janeiro" data-leads="+145" data-desc="Geração de leads para imóveis urbanos e alto padrão.">RJ</button>
-          <button class="estado-pin" style="top:28%;left:70%;" data-estado="Rio Grande do Norte" data-leads="+68" data-desc="Leads para imóveis residenciais e turísticos.">RN</button>
-          <button class="estado-pin" style="top:80%;left:55%;" data-estado="Rio Grande do Sul" data-leads="+165" data-desc="Campanhas para corretores e imobiliárias locais.">RS</button>
-          <button class="estado-pin" style="top:38%;left:46%;" data-estado="Rondônia" data-leads="+70" data-desc="Captação digital para oportunidades regionais.">RO</button>
-          <button class="estado-pin" style="top:7%;left:44%;" data-estado="Roraima" data-leads="+35" data-desc="Campanhas locais de presença e captação.">RR</button>
-          <button class="estado-pin" style="top:75%;left:57%;" data-estado="Santa Catarina" data-leads="+260" data-desc="Campanhas para imóveis de praia e alto interesse.">SC</button>
-          <button class="estado-pin ativo" style="top:64%;left:60%;" data-estado="São Paulo" data-leads="+420" data-desc="Corretores, imobiliárias e campanhas para lançamentos.">SP</button>
-          <button class="estado-pin" style="top:36%;left:68%;" data-estado="Sergipe" data-leads="+62" data-desc="Leads para imóveis residenciais e campanhas locais.">SE</button>
-          <button class="estado-pin" style="top:40%;left:55%;" data-estado="Tocantins" data-leads="+90" data-desc="Campanhas imobiliárias em regiões estratégicas.">TO</button>
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <small>Leads hoje</small>
+            <strong>+24</strong>
+          </div>
+          <div class="dash-metric">
+            <small>CPL médio</small>
+            <strong>R$6,32</strong>
+          </div>
+          <div class="dash-metric">
+            <small>Conversão</small>
+            <strong>18%</strong>
+          </div>
+          <div class="dash-metric">
+            <small>ROI médio</small>
+            <strong>4.2x</strong>
+          </div>
+        </div>
+
+        <div class="dash-chart">
+          <div class="bar" style="height:38%"></div>
+          <div class="bar" style="height:52%"></div>
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:68%"></div>
+          <div class="bar" style="height:76%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:88%"></div>
+        </div>
+
+        <div class="dash-bottom">
+          <span>Campanha ativa</span>
+          <strong>Apartamentos em lançamento • Ribeirão Preto/SP</strong>
         </div>
       </div>
 
-      <div class="mapa-info">
-        <span class="mapa-label">Estado selecionado</span>
-        <h3 id="estadoNome">São Paulo</h3>
-        <strong id="estadoLeads">+420 leads gerados</strong>
-        <p id="estadoDesc">Corretores, imobiliárias e campanhas para lançamentos.</p>
+      <div class="dash-feed">
+        <div class="lead-card active">
+          <span>🔔 Novo lead recebido</span>
+          <h4>Maria Silva</h4>
+          <p>Apartamento 2 quartos • Ribeirão Preto/SP</p>
+          <small>há 12 segundos</small>
+        </div>
+
+        <div class="lead-card">
+          <span>🔔 Novo lead recebido</span>
+          <h4>Pedro Oliveira</h4>
+          <p>Casa em condomínio • Florianópolis/SC</p>
+          <small>há 38 segundos</small>
+        </div>
+
+        <div class="lead-card">
+          <span>🔔 Novo lead recebido</span>
+          <h4>Ana Martins</h4>
+          <p>Cobertura frente mar • Ingleses/SC</p>
+          <small>há 1 minuto</small>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- PROCESSO -->
 <section id="processo">
   <div class="container">
