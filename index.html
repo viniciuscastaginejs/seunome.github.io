@@ -1810,6 +1810,74 @@ estados.forEach((estado)=>{
   estado.addEventListener('touchstart', ativarEstado);
 });
 </script>
+
+  <script>
+const leads = [
+
+{
+nome:"João Pedro",
+imovel:"Apartamento 2 quartos • Ribeirão Preto/SP",
+tempo:"há 4 segundos"
+},
+
+{
+nome:"Maria Oliveira",
+imovel:"Cobertura • Florianópolis/SC",
+tempo:"há 11 segundos"
+},
+
+{
+nome:"Carlos Silva",
+imovel:"Casa em condomínio • São Paulo/SP",
+tempo:"há 23 segundos"
+},
+
+{
+nome:"Ana Martins",
+imovel:"Apartamento frente mar • SC",
+tempo:"há 39 segundos"
+},
+
+{
+nome:"Ricardo Souza",
+imovel:"Lançamento MRV • Ribeirão Preto/SP",
+tempo:"há 52 segundos"
+}
+
+];
+
+const cards=document.querySelectorAll(".lead-card");
+
+function atualizarLead(){
+
+cards.forEach(card=>{
+
+const lead=
+leads[
+Math.floor(
+Math.random()*leads.length
+)
+];
+
+card.querySelector("h4").textContent=
+lead.nome;
+
+card.querySelector("p").textContent=
+lead.imovel;
+
+card.querySelector("small").textContent=
+lead.tempo;
+
+});
+
+}
+
+setInterval(
+atualizarLead,
+3000
+);
+
+</script>
  
 </body>
 </html>
