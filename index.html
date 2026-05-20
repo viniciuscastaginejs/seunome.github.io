@@ -846,7 +846,7 @@ margin:auto;
 }
 
 .mapa-card{
-  min-height:520px;
+  min-height:560px;
   border:1px solid rgba(178,102,255,.18);
   border-radius:28px;
   background:rgba(30,0,46,.42);
@@ -858,69 +858,58 @@ margin:auto;
   overflow:hidden;
 }
 
-.mapa-brasil{
+.mapa-brasil-real{
   position:relative;
-  width:min(520px, 90%);
-  aspect-ratio:1/1.08;
-  background:
-  linear-gradient(145deg, rgba(178,102,255,.12), rgba(14,0,24,.8)),
-  radial-gradient(circle at 50% 45%, rgba(178,102,255,.18), transparent 48%);
-  clip-path:polygon(47% 3%,62% 8%,70% 20%,83% 24%,78% 39%,87% 51%,75% 62%,70% 78%,58% 88%,47% 97%,37% 84%,27% 75%,18% 63%,24% 49%,14% 37%,28% 25%,35% 12%);
-  border:1px solid rgba(178,102,255,.3);
-  box-shadow:
-  inset 0 0 60px rgba(178,102,255,.15),
-  0 0 80px rgba(178,102,255,.18);
+  width:min(620px, 96%);
+  aspect-ratio:1/1;
 }
 
-.estado{
+.brasil-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  opacity:.32;
+  filter:drop-shadow(0 0 45px rgba(178,102,255,.35));
+}
+
+.estado-pin{
   position:absolute;
   transform:translate(-50%,-50%);
-  width:48px;
-  height:48px;
+  width:38px;
+  height:38px;
   border-radius:50%;
-  border:1px solid rgba(178,102,255,.6);
-  background:rgba(14,0,24,.88);
+  border:1px solid rgba(178,102,255,.65);
+  background:rgba(14,0,24,.9);
   color:var(--white);
-  font-weight:800;
-  font-size:.78rem;
+  font-size:.62rem;
+  font-weight:900;
   cursor:pointer;
-  box-shadow:0 0 25px rgba(178,102,255,.25);
+  z-index:5;
+  box-shadow:0 0 24px rgba(178,102,255,.35);
   transition:.25s ease;
-  z-index:3;
 }
 
-.estado::before{
+.estado-pin::before{
   content:'';
   position:absolute;
-  inset:-8px;
+  inset:-6px;
   border-radius:50%;
-  border:1px solid rgba(178,102,255,.25);
+  border:1px solid rgba(178,102,255,.28);
   animation:pulseEstado 2s infinite;
 }
 
-.estado:hover,
-.estado.ativo{
+.estado-pin:hover,
+.estado-pin.ativo{
   background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  transform:translate(-50%,-50%) scale(1.15);
-  box-shadow:0 0 42px rgba(178,102,255,.7);
+  transform:translate(-50%,-50%) scale(1.18);
+  box-shadow:0 0 46px rgba(178,102,255,.85);
 }
 
 @keyframes pulseEstado{
   0%{opacity:.8; transform:scale(.8)}
   100%{opacity:0; transform:scale(1.8)}
-}
-
-.mapa-glow-line{
-  position:absolute;
-  inset:0;
-  background:
-  linear-gradient(115deg, transparent 35%, rgba(201,168,76,.18), transparent 60%);
-  animation:mapaScan 4s linear infinite;
-}
-
-@keyframes mapaScan{
-  from{transform:translateX(-80%)}
-  to{transform:translateX(80%)}
 }
 
 .mapa-info{
@@ -968,7 +957,7 @@ margin:auto;
   }
 
   .mapa-card{
-    min-height:430px;
+    min-height:470px;
   }
 
   .mapa-info{
@@ -976,9 +965,14 @@ margin:auto;
     padding:30px 22px;
   }
 
-  .estado{
-    width:44px;
-    height:44px;
+  .estado-pin{
+    width:31px;
+    height:31px;
+    font-size:.52rem;
+  }
+
+  .mapa-brasil-real{
+    width:100%;
   }
 }
 
@@ -1273,25 +1267,47 @@ margin:auto;
   </div>
 </section>
 
-<!-- Mapa -->
+<!-- MAPA BRASIL -->
 <section id="mapa-leads">
   <div class="container">
     <div class="mapa-header">
       <span class="section-tag">Atuação MLX</span>
       <h2 class="section-title">Leads gerados<br><em>por região</em></h2>
-      <p class="section-sub">Passe o mouse ou toque nos estados para visualizar o volume de oportunidades geradas.</p>
+      <p class="section-sub">Passe o mouse ou toque em um estado para visualizar o volume de oportunidades geradas.</p>
     </div>
 
     <div class="mapa-wrap">
       <div class="mapa-card">
-        <div class="mapa-brasil">
-          <button class="estado ativo" style="top:58%; left:58%;" data-estado="São Paulo" data-leads="+420" data-desc="Corretores, imobiliárias e campanhas para lançamentos.">SP</button>
-          <button class="estado" style="top:67%; left:55%;" data-estado="Santa Catarina" data-leads="+260" data-desc="Campanhas para imóveis de praia e alto interesse.">SC</button>
-          <button class="estado" style="top:62%; left:52%;" data-estado="Paraná" data-leads="+190" data-desc="Captação regional para corretores e imobiliárias.">PR</button>
-          <button class="estado" style="top:55%; left:64%;" data-estado="Rio de Janeiro" data-leads="+145" data-desc="Geração de leads para imóveis urbanos e alto padrão.">RJ</button>
-          <button class="estado" style="top:45%; left:56%;" data-estado="Minas Gerais" data-leads="+210" data-desc="Campanhas locais com foco em procura qualificada.">MG</button>
+        <div class="mapa-brasil-real">
+          <img src="./images/brasil.svg" alt="Mapa do Brasil" class="brasil-img">
 
-          <div class="mapa-glow-line"></div>
+          <button class="estado-pin" style="top:18%;left:43%;" data-estado="Acre" data-leads="+42" data-desc="Campanhas regionais e captação local.">AC</button>
+          <button class="estado-pin" style="top:34%;left:66%;" data-estado="Alagoas" data-leads="+76" data-desc="Leads para corretores e imóveis residenciais.">AL</button>
+          <button class="estado-pin" style="top:8%;left:48%;" data-estado="Amapá" data-leads="+38" data-desc="Captação digital em mercados locais.">AP</button>
+          <button class="estado-pin" style="top:17%;left:50%;" data-estado="Amazonas" data-leads="+95" data-desc="Campanhas amplas para geração de demanda.">AM</button>
+          <button class="estado-pin" style="top:38%;left:63%;" data-estado="Bahia" data-leads="+180" data-desc="Campanhas para imóveis urbanos e lançamentos.">BA</button>
+          <button class="estado-pin" style="top:27%;left:66%;" data-estado="Ceará" data-leads="+132" data-desc="Leads qualificados para corretores e imobiliárias.">CE</button>
+          <button class="estado-pin" style="top:48%;left:56%;" data-estado="Distrito Federal" data-leads="+155" data-desc="Campanhas para imóveis de alto interesse.">DF</button>
+          <button class="estado-pin" style="top:57%;left:65%;" data-estado="Espírito Santo" data-leads="+118" data-desc="Captação imobiliária regional com foco em conversão.">ES</button>
+          <button class="estado-pin" style="top:52%;left:55%;" data-estado="Goiás" data-leads="+170" data-desc="Geração de leads para corretores e lançamentos.">GO</button>
+          <button class="estado-pin" style="top:27%;left:60%;" data-estado="Maranhão" data-leads="+88" data-desc="Campanhas locais para procura qualificada.">MA</button>
+          <button class="estado-pin" style="top:51%;left:50%;" data-estado="Mato Grosso" data-leads="+125" data-desc="Captação para imóveis e oportunidades regionais.">MT</button>
+          <button class="estado-pin" style="top:62%;left:52%;" data-estado="Mato Grosso do Sul" data-leads="+110" data-desc="Leads para imóveis residenciais e comerciais.">MS</button>
+          <button class="estado-pin" style="top:55%;left:61%;" data-estado="Minas Gerais" data-leads="+210" data-desc="Campanhas imobiliárias regionais.">MG</button>
+          <button class="estado-pin" style="top:22%;left:53%;" data-estado="Pará" data-leads="+140" data-desc="Campanhas digitais para mercados em expansão.">PA</button>
+          <button class="estado-pin" style="top:30%;left:69%;" data-estado="Paraíba" data-leads="+82" data-desc="Geração de contatos qualificados.">PB</button>
+          <button class="estado-pin" style="top:70%;left:56%;" data-estado="Paraná" data-leads="+190" data-desc="Captação regional para corretores e imobiliárias.">PR</button>
+          <button class="estado-pin" style="top:32%;left:68%;" data-estado="Pernambuco" data-leads="+120" data-desc="Campanhas para imóveis urbanos e praia.">PE</button>
+          <button class="estado-pin" style="top:31%;left:62%;" data-estado="Piauí" data-leads="+74" data-desc="Captação imobiliária com foco local.">PI</button>
+          <button class="estado-pin" style="top:60%;left:66%;" data-estado="Rio de Janeiro" data-leads="+145" data-desc="Geração de leads para imóveis urbanos e alto padrão.">RJ</button>
+          <button class="estado-pin" style="top:28%;left:70%;" data-estado="Rio Grande do Norte" data-leads="+68" data-desc="Leads para imóveis residenciais e turísticos.">RN</button>
+          <button class="estado-pin" style="top:80%;left:55%;" data-estado="Rio Grande do Sul" data-leads="+165" data-desc="Campanhas para corretores e imobiliárias locais.">RS</button>
+          <button class="estado-pin" style="top:38%;left:46%;" data-estado="Rondônia" data-leads="+70" data-desc="Captação digital para oportunidades regionais.">RO</button>
+          <button class="estado-pin" style="top:7%;left:44%;" data-estado="Roraima" data-leads="+35" data-desc="Campanhas locais de presença e captação.">RR</button>
+          <button class="estado-pin" style="top:75%;left:57%;" data-estado="Santa Catarina" data-leads="+260" data-desc="Campanhas para imóveis de praia e alto interesse.">SC</button>
+          <button class="estado-pin ativo" style="top:64%;left:60%;" data-estado="São Paulo" data-leads="+420" data-desc="Corretores, imobiliárias e campanhas para lançamentos.">SP</button>
+          <button class="estado-pin" style="top:36%;left:68%;" data-estado="Sergipe" data-leads="+62" data-desc="Leads para imóveis residenciais e campanhas locais.">SE</button>
+          <button class="estado-pin" style="top:40%;left:55%;" data-estado="Tocantins" data-leads="+90" data-desc="Campanhas imobiliárias em regiões estratégicas.">TO</button>
         </div>
       </div>
 
@@ -1655,9 +1671,8 @@ el.style.transition="all .8s ease";
 observer.observe(el);
 });
 </script>
-
-  <script>
-const estados = document.querySelectorAll('.estado');
+<script>
+const estados = document.querySelectorAll('.estado-pin');
 const estadoNome = document.getElementById('estadoNome');
 const estadoLeads = document.getElementById('estadoLeads');
 const estadoDesc = document.getElementById('estadoDesc');
@@ -1677,5 +1692,6 @@ estados.forEach((estado)=>{
   estado.addEventListener('touchstart', ativarEstado);
 });
 </script>
+ 
 </body>
 </html>
