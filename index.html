@@ -1,1883 +1,1319 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<title>MLX Mind — Marketing Imobiliário para Corretores e Imobiliárias</title>
-<meta name="description" content="Assessoria completa de marketing digital para corretores e imobiliárias. Mais leads qualificados, mais vendas, mais resultado."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='8' fill='%231A0028'/%3E%3Crect x='6' y='8' width='22' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='15' width='16' height='5' rx='2' fill='url(%23g)'/%3E%3Crect x='6' y='22' width='10' height='5' rx='2' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%237B2FBE'/%3E%3Cstop offset='1' stop-color='%23B266FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="MLX Mind — Agência de performance digital para todos os nichos. Especialidade comprovada no mercado imobiliário: +R$15M em VGV gerado.">
+<title>MLX Mind — Performance Digital para Todos os Nichos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cabinet+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23060612' width='100' height='100' rx='16'/%3E%3Cpolygon fill='%239b30ff' points='18,22 82,22 74,36 10,36'/%3E%3Cpolygon fill='%239b30ff' points='22,44 86,44 78,58 14,58'/%3E%3Cpolygon fill='%239b30ff' points='18,66 82,66 74,80 10,80'/%3E%3C/svg%3E">
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0E0018;
-  --bg2:#130020;
-  --card:#1A0028;
-  --card2:#1E002E;
-  --purple-deep:#3F005C;
-  --purple-mid:#7B2FBE;
-  --purple-bright:#B266FF;
-  --purple-light:#D4A0FF;
-  --gold:#C9A84C;
-  --gold-light:#E8CC7A;
-  --white:#F5F0FF;
-  --muted:#7A6090;
-  --border:rgba(178,102,255,0.1);
-  --border-s:rgba(178,102,255,0.22);
-  --font-head:'Cormorant Garamond',serif;
-  --font-body:'DM Sans',sans-serif;
-}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:var(--bg);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
-
-/* NOISE */
-body::before{
-  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.04;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:180px;animation:grain .5s steps(1) infinite;
-}
-@keyframes grain{0%{background-position:0 0}20%{background-position:-40px -20px}40%{background-position:20px -50px}60%{background-position:-20px 20px}80%{background-position:40px 30px}100%{background-position:-10px -40px}}
-
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 60px;height:76px;
-  background:rgba(14,0,24,0.88);backdrop-filter:blur(24px);
-  border-bottom:1px solid var(--border);
-}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-bars{display:flex;flex-direction:column;gap:5px;width:30px}
-.logo-bars span{display:block;height:6px;border-radius:2px;background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright))}
-.logo-bars span:nth-child(1){width:100%}
-.logo-bars span:nth-child(2){width:70%}
-.logo-bars span:nth-child(3){width:45%}
-.logo-name{font-family:var(--font-body);font-size:.95rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
-.nav-links{display:flex;gap:40px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover{color:var(--white)}
-.nav-cta{
-  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  color:var(--white)!important;padding:11px 28px;border-radius:6px;
-  font-weight:600!important;letter-spacing:.08em!important;
-  box-shadow:0 4px 24px rgba(123,47,190,0.4);
-  transition:transform .2s,box-shadow .2s!important;
-}
-.nav-cta:hover{transform:translateY(-1px)!important;box-shadow:0 8px 36px rgba(178,102,255,0.4)!important}
-
-/* HAMBURGER */
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
-.nav-burger span{display:block;width:24px;height:2px;border-radius:2px;background:var(--white);transition:.3s}
-.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.nav-burger.open span:nth-child(2){opacity:0}
-.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.nav-mob{display:none;position:fixed;top:76px;left:0;right:0;z-index:99;background:rgba(14,0,24,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1),padding .3s}
-.nav-mob.open{max-height:420px;padding:12px 0 20px}
-.nav-mob a{display:block;padding:14px 28px;color:var(--muted);font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em;text-decoration:none;transition:color .2s,background .2s;border-left:2px solid transparent}
-.nav-mob a:hover{color:var(--white);background:rgba(178,102,255,.05);border-left-color:var(--purple-bright)}
-.nav-mob .mob-cta{margin:14px 28px 0;text-align:center;background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));color:var(--white)!important;border-radius:6px;padding:13px!important;font-weight:700!important;border-left:none!important}
-
-/* SCROLL BAR */
-#sprogress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--purple-mid),var(--gold));z-index:9999;pointer-events:none;transition:width .05s linear}
-
-/* HERO */
-#hero{
-  position:relative;min-height:100vh;
-  display:grid;grid-template-columns:1fr 1fr;
-  align-items:center;gap:0;
-  padding-top:76px;overflow:hidden;
-}
-.hero-left{
-  padding:80px 60px 80px 60px;
-  position:relative;z-index:2;
-}
-.hero-right{
-  position:relative;height:100vh;overflow:hidden;
-}
-.hero-img-grid{
-  position:absolute;inset:0;
-  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
-  gap:4px;
-}
-.hero-img-grid .img-block{
-  overflow:hidden;position:relative;
-}
-.hero-img-grid .img-block::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(63,0,92,0.6),rgba(14,0,24,0.3));
-}
-.hero-img-grid .img-block:nth-child(1){grid-column:1/3;grid-row:1/2}
-.hero-img-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(0.7);transition:transform 8s ease}
-.hero-img-grid .img-block:hover img{transform:scale(1.06)}
-/* Property photo placeholders using CSS gradients */
-.prop-bg-1{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)}
-.prop-bg-2{background:linear-gradient(135deg,#2d1b3d 0%,#1a0d2e 50%,#0d0621 100%)}
-.prop-bg-3{background:linear-gradient(135deg,#1e1e1e 0%,#2d2d2d 50%,#1a1a1a 100%)}
-.prop-bg-4{background:linear-gradient(135deg,#0a0a0f 0%,#1a1020 50%,#120818 100%)}
-
-/* building SVG overlays */
-.building-svg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1}
-
-.hero-overlay{
-  position:absolute;inset:0;z-index:1;
-  background:linear-gradient(90deg,var(--bg) 0%,transparent 40%);
-}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:9px;
-  border:1px solid rgba(201,168,76,0.35);border-radius:100px;
-  padding:7px 18px;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--gold-light);background:rgba(201,168,76,0.08);margin-bottom:32px;
-  animation:fadeUp .8s ease both;
-}
-.tag-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.8)}}
-.hero-left h1{
-  font-family:var(--font-head);font-size:clamp(3rem,5vw,5.2rem);
-  font-weight:300;line-height:1.08;letter-spacing:-.01em;
-  margin-bottom:28px;animation:fadeUp .9s .1s ease both;
-}
-.hero-left h1 strong{font-weight:700;display:block}
-.hero-left h1 em{
-  font-style:italic;
-  background:linear-gradient(135deg,var(--purple-light),var(--purple-bright));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.hero-sub{
-  font-size:1rem;color:var(--muted);line-height:1.8;max-width:460px;
-  margin-bottom:48px;font-weight:400;animation:fadeUp .9s .2s ease both;
-}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .9s .3s ease both}
-.btn-primary{
-  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  color:var(--white);font-weight:600;font-family:var(--font-body);
-  font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:16px 36px;border-radius:6px;text-decoration:none;
-  box-shadow:0 6px 32px rgba(123,47,190,0.5);
-  transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:10px;
-}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 48px rgba(178,102,255,0.4)}
-.btn-ghost{
-  background:transparent;color:var(--white);font-weight:500;
-  font-family:var(--font-body);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:16px 36px;border-radius:6px;text-decoration:none;
-  border:1px solid var(--border-s);transition:border-color .2s,background .2s;
-}
-.btn-ghost:hover{border-color:rgba(178,102,255,.4);background:rgba(178,102,255,.06)}
-.hero-stats{
-  display:flex;gap:0;margin-top:64px;
-  animation:fadeUp .9s .45s ease both;
-  border:1px solid var(--border);border-radius:12px;overflow:hidden;
-  background:rgba(30,0,46,0.5);backdrop-filter:blur(12px);
-}
-.hstat{padding:22px 28px;text-align:center;flex:1;border-right:1px solid var(--border)}
-.hstat:last-child{border-right:none}
-.hstat-num{font-family:var(--font-head);font-size:2rem;font-weight:700;color:var(--white);display:block;line-height:1;margin-bottom:4px}
-.hstat-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-
-/* MARQUEE */
-.marquee-band{
-  width:100%;overflow:hidden;
-  background:linear-gradient(90deg,var(--purple-deep),var(--purple-mid));
-  padding:16px 0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);
-  position:relative;z-index:2;
-}
-.marquee-track{display:flex;width:max-content;animation:marq 30s linear infinite}
-.marquee-band:hover .marquee-track{animation-play-state:paused}
-.marquee-content{display:flex;align-items:center;white-space:nowrap}
-.marquee-content span{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:0 28px}
-.marquee-dot{color:rgba(255,255,255,.25)!important;font-size:.55rem!important;padding:0!important;letter-spacing:0!important}
-@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* SHARED */
-section{padding:110px 60px;position:relative;z-index:2}
-.container{max-width:1200px;margin:0 auto}
-.section-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.section-title{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
-.section-title em{font-style:italic;color:var(--purple-light)}
-.section-title strong{font-weight:700}
-.section-sub{color:var(--muted);font-size:.95rem;line-height:1.8;max-width:520px}
-
-/* PROBLEM SECTION */
-#problema{background:var(--bg2)}
-.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.prob-visual{position:relative}
-.prob-card-stack{position:relative;height:400px}
-.prob-card{
-  position:absolute;background:var(--card2);border:1px solid var(--border);
-  border-radius:16px;padding:28px;
-  transition:transform .3s ease;
-}
-.prob-card:nth-child(1){top:0;left:0;right:60px;transform:rotate(-2deg);z-index:1}
-.prob-card:nth-child(2){top:60px;left:20px;right:40px;z-index:2}
-.prob-card:nth-child(3){top:130px;left:40px;right:20px;transform:rotate(1.5deg);z-index:3}
-.prob-card:hover{transform:rotate(0deg) translateY(-4px)!important;z-index:10}
-.prob-card-icon{font-size:1.8rem;margin-bottom:12px}
-.prob-card h4{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:8px}
-.prob-card p{font-size:.82rem;color:var(--muted);line-height:1.7}
-.prob-card .red-tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ff6b6b;background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.2);padding:3px 10px;border-radius:100px;margin-bottom:14px}
-.prob-list{display:flex;flex-direction:column;gap:22px;margin-top:36px}
-.prob-item{display:flex;gap:16px;align-items:flex-start}
-.prob-check{
-  width:40px;height:40px;border-radius:10px;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(123,47,190,.2),rgba(178,102,255,.1));
-  border:1px solid var(--border-s);
-  display:flex;align-items:center;justify-content:center;color:var(--purple-bright);
-}
-.prob-check svg{width:18px;height:18px}
-.prob-item h4{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:4px}
-.prob-item p{font-size:.85rem;color:var(--muted);line-height:1.7}
-
-/* SERVICES */
-#servicos{background:var(--bg)}
-.serv-header{text-align:center;margin-bottom:70px}
-.serv-header .section-sub{margin:0 auto}
-.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
-.serv-card{
-  background:var(--card2);padding:44px 36px;
-  position:relative;overflow:hidden;
-  transition:background .3s;
-}
-.serv-card:hover{background:#220036}
-.serv-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright));
-  transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
-}
-.serv-card:hover::before{transform:scaleX(1)}
-.serv-num{position:absolute;top:24px;right:26px;font-family:var(--font-head);font-size:4.5rem;font-weight:700;font-style:italic;color:rgba(178,102,255,.05);line-height:1;pointer-events:none}
-.serv-icon{
-  width:52px;height:52px;border-radius:13px;
-  background:rgba(123,47,190,.18);border:1px solid var(--border-s);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--purple-bright);margin-bottom:26px;
-}
-.serv-icon svg{width:24px;height:24px}
-.serv-card h3{font-family:var(--font-head);font-size:1.35rem;font-weight:700;margin-bottom:12px}
-.serv-card p{color:var(--muted);font-size:.87rem;line-height:1.75}
-.serv-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
-.stag{font-size:.67rem;font-weight:600;color:var(--purple-light);background:rgba(178,102,255,.07);border:1px solid var(--border);padding:4px 12px;border-radius:100px;letter-spacing:.05em}
-
-/* NUMBERS */
-#numeros{
-  background:var(--bg2);
-  background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(123,47,190,.2) 0%,transparent 70%);
-}
-.num-inner{text-align:center;margin-bottom:70px}
-.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:16px;overflow:hidden}
-.num-card{
-  background:var(--card);padding:52px 28px;text-align:center;
-  position:relative;transition:background .25s;
-}
-.num-card:hover{background:#1e0030}
-.num-card::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--purple-mid),var(--purple-bright));
-  transform:scaleX(0);transition:transform .35s;
-}
-.num-card:hover::after{transform:scaleX(1)}
-.num-value{font-family:var(--font-head);font-size:3.5rem;font-weight:700;line-height:1;margin-bottom:8px;
-  background:linear-gradient(135deg,var(--white),var(--purple-light));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.num-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
-.num-sub{font-size:.78rem;color:var(--muted);margin-top:4px}
-
-/* HOW IT WORKS */
-#processo{background:var(--bg)}
-.proc-header{text-align:center;margin-bottom:70px}
-.proc-track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
-.proc-track::before{
-  content:'';position:absolute;top:44px;left:10%;right:10%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border-s),var(--purple-mid),var(--border-s),transparent);
-  z-index:0;
-}
-.proc-step{text-align:center;padding:0 16px;position:relative;z-index:1}
-.proc-bubble{
-  width:88px;height:88px;border-radius:50%;
-  background:linear-gradient(135deg,var(--card2),var(--purple-deep));
-  border:1px solid var(--border-s);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;position:relative;
-  transition:border-color .3s,box-shadow .3s;
-}
-.proc-step:hover .proc-bubble{border-color:var(--purple-bright);box-shadow:0 0 30px rgba(178,102,255,.25)}
-.proc-bubble svg{width:28px;height:28px;color:var(--purple-bright)}
-.proc-num{
-  position:absolute;top:-8px;right:-8px;
-  width:26px;height:26px;border-radius:50%;
-  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  font-size:.68rem;font-weight:700;color:var(--white);
-  display:flex;align-items:center;justify-content:center;
-}
-.proc-step h4{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:8px}
-.proc-step p{font-size:.8rem;color:var(--muted);line-height:1.65}
-
-/* PARA QUEM */
-#paraquem{background:var(--bg2)}
-.pq-header{margin-bottom:60px}
-.pq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pq-card{
-  background:var(--card2);border:1px solid var(--border);border-radius:16px;
-  padding:36px 30px;position:relative;overflow:hidden;
-  transition:border-color .3s,transform .3s,background .3s;
-}
-.pq-card::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(123,47,190,.1) 0%,transparent 60%);
-  opacity:0;transition:opacity .3s;
-}
-.pq-card:hover{border-color:var(--border-s);transform:translateY(-5px);background:#240038}
-.pq-card:hover::before{opacity:1}
-.pq-icon{
-  width:52px;height:52px;border-radius:13px;
-  background:rgba(123,47,190,.18);border:1px solid var(--border-s);
-  display:flex;align-items:center;justify-content:center;
-  color:var(--purple-bright);margin-bottom:20px;
-}
-.pq-icon svg{width:24px;height:24px}
-.pq-card h3{font-family:var(--font-head);font-size:1.2rem;font-weight:700;margin-bottom:10px}
-.pq-card p{font-size:.85rem;color:var(--muted);line-height:1.75}
-.pq-badge{
-  display:inline-flex;align-items:center;gap:6px;margin-top:18px;
-  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--gold-light);
-}
-.pq-badge svg{width:12px;height:12px}
-
-/* PROPERTIES SHOWCASE */
-#imoveis{background:var(--bg)}
-.imov-header{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:60px;flex-wrap:wrap}
-.imov-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
-.imov-card{
-  border-radius:16px;overflow:hidden;position:relative;
-  aspect-ratio:4/3;cursor:default;
-}
-.imov-card:nth-child(1){grid-row:1/3;aspect-ratio:auto;min-height:500px}
-.imov-card::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(0deg,rgba(14,0,24,0.85) 0%,rgba(14,0,24,0.2) 50%,transparent 100%);
-  transition:opacity .3s;
-}
-.imov-card:hover::after{opacity:.7}
-.imov-bg{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.imov-card:hover .imov-bg{transform:scale(1.05)}
-
-/* CSS building illustrations */
-.bld{width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10%;position:relative;overflow:hidden}
-
-/* building 1 - tall glass tower */
-.bld1{background:linear-gradient(170deg,#0a0618 0%,#130a28 40%,#0d0520 100%)}
-.bld1::before{
-  content:'';position:absolute;
-  width:45%;height:75%;bottom:0;left:27.5%;
-  background:linear-gradient(180deg,#2a1555 0%,#1a0d35 100%);
-  clip-path:polygon(8% 0,92% 0,100% 100%,0% 100%);
-}
-.bld1::after{
-  content:'';position:absolute;
-  width:40%;height:73%;bottom:0;left:30%;
-  background:repeating-linear-gradient(0deg,rgba(178,102,255,.05) 0px,rgba(178,102,255,.05) 1px,transparent 1px,transparent 18px),
-             repeating-linear-gradient(90deg,rgba(178,102,255,.06) 0px,rgba(178,102,255,.06) 1px,transparent 1px,transparent 22px),
-             linear-gradient(180deg,rgba(123,47,190,.3) 0%,rgba(63,0,92,.5) 100%);
-  clip-path:polygon(8% 0,92% 0,100% 100%,0% 100%);
-}
-
-/* building 2 - modern block */
-.bld2{background:linear-gradient(160deg,#0e0a1a 0%,#18102e 100%)}
-.bld2-body{
-  position:absolute;bottom:0;left:15%;width:70%;height:65%;
-  background:linear-gradient(180deg,#221540 0%,#160d28 100%);
-  border-radius:4px 4px 0 0;
-}
-.bld2-wins{
-  position:absolute;bottom:15%;left:20%;width:60%;height:50%;
-  background:repeating-linear-gradient(90deg,rgba(178,102,255,.08) 0,rgba(178,102,255,.08) 14px,transparent 14px,transparent 22px);
-}
-.bld2-top{
-  position:absolute;bottom:65%;left:25%;width:50%;height:20%;
-  background:linear-gradient(180deg,#3a2060 0%,#28184a 100%);
-  border-radius:4px 4px 0 0;
-}
-
-/* building 3 - luxury condo */
-.bld3{background:linear-gradient(150deg,#080514 0%,#120920 100%)}
-.bld3-base{position:absolute;bottom:0;left:10%;width:80%;height:55%;background:linear-gradient(180deg,#1e1040 0%,#0f0820 100%)}
-.bld3-mid{position:absolute;bottom:55%;left:20%;width:60%;height:25%;background:linear-gradient(180deg,#2a1855 0%,#1a0d38 100%)}
-.bld3-top{position:absolute;bottom:80%;left:30%;width:40%;height:15%;background:linear-gradient(180deg,#4a2888 0%,#2a1658 100%)}
-.bld3-win{
-  position:absolute;bottom:5%;left:15%;width:70%;height:48%;
-  background:repeating-linear-gradient(0deg,transparent 0,transparent 12px,rgba(178,102,255,.07) 12px,rgba(178,102,255,.07) 13px),
-             repeating-linear-gradient(90deg,transparent 0,transparent 18px,rgba(178,102,255,.06) 18px,rgba(178,102,255,.06) 19px);
-}
-
-/* building 4 - glass facade */
-.bld4{background:linear-gradient(140deg,#0c0820 0%,#160e30 100%)}
-.bld4-main{
-  position:absolute;bottom:0;left:20%;width:60%;height:72%;
-  background:linear-gradient(180deg,#281858 0%,#180e38 100%);
-  border-radius:3px 3px 0 0;
-}
-.bld4-glass{
-  position:absolute;bottom:2%;left:22%;width:56%;height:68%;
-  background:repeating-linear-gradient(0deg,rgba(178,102,255,.04) 0,rgba(178,102,255,.04) 1px,transparent 1px,transparent 16px),
-             repeating-linear-gradient(90deg,rgba(178,102,255,.05) 0,rgba(178,102,255,.05) 1px,transparent 1px,transparent 20px);
-}
-.bld4-accent{
-  position:absolute;bottom:0;left:26%;width:48%;height:70%;
-  background:rgba(178,102,255,.03);
-  border-left:1px solid rgba(178,102,255,.15);
-  border-right:1px solid rgba(178,102,255,.15);
-}
-
-/* building 5 - penthouse style */
-.bld5{background:linear-gradient(160deg,#0a0616 0%,#140a24 100%)}
-.bld5-tower{position:absolute;bottom:0;left:30%;width:40%;height:80%;background:linear-gradient(180deg,#321a68 0%,#1a0d38 100%);border-radius:4px 4px 0 0}
-.bld5-wing-l{position:absolute;bottom:0;left:5%;width:30%;height:45%;background:linear-gradient(180deg,#22124a 0%,#120828 100%)}
-.bld5-wing-r{position:absolute;bottom:0;right:5%;width:30%;height:45%;background:linear-gradient(180deg,#22124a 0%,#120828 100%)}
-.bld5-wins{position:absolute;bottom:5%;left:32%;width:36%;height:72%;background:repeating-linear-gradient(0deg,rgba(201,168,76,.04) 0,rgba(201,168,76,.04) 1px,transparent 1px,transparent 14px),repeating-linear-gradient(90deg,rgba(201,168,76,.04) 0,rgba(201,168,76,.04) 1px,transparent 1px,transparent 18px)}
-
-.imov-info{position:absolute;bottom:0;left:0;right:0;padding:24px 28px;z-index:2}
-.imov-tipo{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px}
-.imov-nome{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--white);line-height:1.2;margin-bottom:4px}
-.imov-card:nth-child(1) .imov-nome{font-size:2rem}
-.imov-local{font-size:.78rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px}
-.imov-local svg{width:12px;height:12px;color:var(--purple-bright);flex-shrink:0}
-.imov-cta-tag{
-  display:inline-flex;align-items:center;gap:6px;margin-top:12px;
-  font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--purple-bright);background:rgba(178,102,255,.12);
-  border:1px solid rgba(178,102,255,.2);padding:5px 14px;border-radius:100px;
-}
-
-/* DEPOIMENTOS */
-#depoimentos{background:var(--bg2)}
-.dep-header{text-align:center;margin-bottom:60px}
-.dep-header .section-sub{margin:0 auto}
-.dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.dep-card{
-  background:var(--card2);border:1px solid var(--border);border-radius:16px;
-  padding:36px;transition:border-color .3s,transform .3s;
-}
-.dep-card:hover{border-color:var(--border-s);transform:translateY(-4px)}
-.dep-stars{color:#C97BFF;font-size:.9rem;letter-spacing:2px;margin-bottom:16px}
-.dep-quote{font-family:var(--font-head);font-size:1.08rem;font-style:italic;line-height:1.7;color:var(--white);margin-bottom:24px}
-.dep-author{display:flex;align-items:center;gap:14px}
-.dep-avatar{
-  width:46px;height:46px;border-radius:50%;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-head);font-weight:700;font-size:1.1rem;
-  background:linear-gradient(135deg,var(--purple-mid),var(--purple-bright));
-  color:var(--white);
-}
-.dep-name{font-size:.88rem;font-weight:600;color:var(--white)}
-.dep-role{font-size:.75rem;color:var(--muted);margin-top:2px}
-
-/* CTA */
-#cta{
-  background:var(--bg);
-  background-image:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(63,0,92,.3) 0%,transparent 70%);
-  text-align:center;padding:140px 60px;
-}
-.cta-box{
-  max-width:700px;margin:0 auto;
-  border:1px solid var(--border-s);border-radius:24px;
-  padding:80px 60px;background:rgba(30,0,46,.5);backdrop-filter:blur(16px);
-  position:relative;overflow:hidden;
-}
-.cta-box::before{
-  content:'';position:absolute;top:-1px;left:15%;right:15%;height:2px;
-  background:linear-gradient(90deg,transparent,var(--purple-bright),var(--gold),var(--purple-bright),transparent);
-}
-.cta-box .section-title{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:18px}
-.cta-sub{color:var(--muted);font-size:1rem;margin-bottom:48px;line-height:1.8;max-width:520px;margin-left:auto;margin-right:auto}
-.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-wa{
-  display:inline-flex;align-items:center;gap:12px;
-  background:#25D366;color:#fff;font-weight:700;font-family:var(--font-body);
-  font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;
-  padding:18px 44px;border-radius:6px;text-decoration:none;
-  box-shadow:0 6px 32px rgba(37,211,102,.35);
-  transition:transform .2s,box-shadow .2s;
-}
-.cta-wa:hover{transform:translateY(-2px);box-shadow:0 10px 48px rgba(37,211,102,.5)}
-.cta-trust{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:44px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:8px;font-size:.75rem;color:var(--muted)}
-.trust-item svg{width:16px;height:16px;color:var(--gold)}
-
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:56px 60px;background:var(--bg2)}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
-.footer-left{display:flex;flex-direction:column;gap:12px}
-.footer-copy{color:var(--muted);font-size:.78rem}
-.footer-links{display:flex;gap:28px;list-style:none;align-items:center;flex-wrap:wrap}
-.footer-links a{color:var(--muted);font-size:.8rem;text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--white)}
-.footer-social{
-  display:inline-flex;align-items:center;gap:8px;
-  color:var(--muted)!important;border:1px solid var(--border);border-radius:6px;
-  padding:8px 14px;transition:border-color .2s,color .2s!important;font-size:.8rem;
-}
-.footer-social:hover{border-color:var(--border-s);color:var(--white)!important}
-
-/* WA FLOAT */
-.wa-btn{
-  position:fixed;bottom:28px;right:28px;z-index:200;
-  width:60px;height:60px;border-radius:50%;background:#25D366;
-  display:flex;align-items:center;justify-content:center;
-  text-decoration:none;color:#fff;
-  box-shadow:0 6px 32px rgba(37,211,102,.45);
-  transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s;
-  animation:waPop .6s 1.5s cubic-bezier(.22,1,.36,1) both;
-}
-.wa-btn:hover{transform:scale(1.1);box-shadow:0 10px 48px rgba(37,211,102,.6)}
-.wa-btn svg{width:28px;height:28px}
-.wa-btn::before{content:'';position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,.4);animation:waPulse 2.5s ease-out 2s infinite}
-@keyframes waPop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
-@keyframes waPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(2);opacity:0}}
-
-/* AURORA */
-.aurora{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.aurora span{position:absolute;border-radius:50%;filter:blur(100px);opacity:.12}
-.aurora span:nth-child(1){width:60vw;height:60vw;top:-20%;left:-10%;background:var(--purple-mid);animation:ab1 16s ease-in-out infinite alternate}
-.aurora span:nth-child(2){width:40vw;height:40vw;top:10%;right:-5%;background:var(--purple-bright);animation:ab2 20s ease-in-out infinite alternate}
-.aurora span:nth-child(3){width:35vw;height:35vw;bottom:-10%;left:30%;background:var(--purple-deep);animation:ab3 12s ease-in-out infinite alternate}
-@keyframes ab1{to{transform:translate(50px,40px) scale(1.1)}}
-@keyframes ab2{to{transform:translate(-40px,60px) scale(.9)}}
-@keyframes ab3{to{transform:translate(30px,-40px) scale(1.08)}}
-
-/* REVEAL */
-[data-reveal]{will-change:opacity,transform}
-
-/* MOBILE */
-@media(max-width:1024px){
-  nav{padding:0 24px}
-  section{padding:80px 24px}
-  #hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{padding:120px 24px 60px}
-  .hero-right{height:60vw;min-height:300px}
-  .prob-grid{grid-template-columns:1fr;gap:48px}
-  .prob-visual{display:none}
-  .serv-grid{grid-template-columns:1fr 1fr}
-  .num-grid{grid-template-columns:1fr 1fr}
-  .proc-track{grid-template-columns:1fr 1fr;gap:20px}
-  .proc-track::before{display:none}
-  .pq-grid{grid-template-columns:1fr 1fr}
-  .imov-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .imov-card:nth-child(1){grid-row:auto;min-height:260px}
-  .dep-grid{grid-template-columns:1fr}
-  .cta-box{padding:52px 28px}
-  footer{padding:40px 24px}
-  .footer-inner{flex-direction:column;align-items:flex-start}
-  .nav-links{display:none}
-  .nav-burger{display:flex}
-  .nav-mob{display:block}
-  .hero-stats{flex-direction:column;gap:0}
-  .hstat{border-right:none;border-bottom:1px solid var(--border)}
-  .hstat:last-child{border-bottom:none}
-}
-@media(max-width:640px){
-  .serv-grid{grid-template-columns:1fr}
-  .num-grid{grid-template-columns:1fr 1fr}
-  .proc-track{grid-template-columns:1fr}
-  .pq-grid{grid-template-columns:1fr}
-  .imov-grid{grid-template-columns:1fr}
-  .dep-grid{grid-template-columns:1fr}
-  .hero-left h1{font-size:2.6rem}
-  .wa-btn{bottom:20px;right:20px}
-  #cta{padding:80px 20px}
-  .cta-trust{gap:16px}
-}
-  /* ÚLTIMO CSS QUE VOCÊ JÁ TEM */
-
-
-/* MLX MEANING */
-
-#mlx-meaning{
-position:relative;
-background:var(--bg);
-padding:130px 60px;
-overflow:hidden;
-}
-
-.mlx-glow{
-position:absolute;
-inset:0;
-background:
-radial-gradient(circle at 20% 30%, rgba(178,102,255,.22), transparent 35%),
-radial-gradient(circle at 80% 60%, rgba(201,168,76,.12), transparent 32%);
-filter:blur(20px);
-pointer-events:none;
-}
-
-.mlx-meaning-inner{
-position:relative;
-z-index:2;
-text-align:center;
-}
-
-.mlx-letters{
-margin-top:70px;
-display:grid;
-grid-template-columns:1fr 90px 1fr 90px 1fr;
-align-items:center;
-gap:0;
-}
-
-.mlx-letter-card{
-position:relative;
-min-height:330px;
-padding:42px 28px;
-border:1px solid rgba(178,102,255,.22);
-border-radius:24px;
-background:linear-gradient(
-180deg,
-rgba(30,0,46,.72),
-rgba(14,0,24,.72)
-);
-
-backdrop-filter:blur(18px);
-
-box-shadow:0 20px 80px rgba(123,47,190,.18);
-
-overflow:hidden;
-
-transition:.35s ease;
-}
-
-.mlx-letter-card::before{
-content:'';
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-135deg,
-rgba(178,102,255,.15),
-transparent 45%,
-rgba(201,168,76,.08)
-);
-
-opacity:0;
-transition:.4s;
-}
-
-.mlx-letter-card:hover::before{
-opacity:1;
-}
-
-.mlx-letter-card:hover{
-
-transform:
-translateY(-15px)
-scale(1.03);
-
-border-color:
-rgba(178,102,255,.8);
-
-box-shadow:
-0 0 60px rgba(178,102,255,.35),
-0 20px 80px rgba(123,47,190,.35);
-
-}
-
-  .big-letter{
-transition:.4s;
-}
-
-.mlx-letter-card:hover .big-letter{
-
-transform:scale(1.15);
-
-filter:drop-shadow(
-0 0 25px rgba(178,102,255,.7)
-);
-
-}
-
-.big-letter{
-
-  text-shadow:
-0 0 15px rgba(178,102,255,.4),
-0 0 35px rgba(178,102,255,.4);
-
-font-family:var(--font-head);
-
-font-size:8rem;
-
-font-weight:700;
-
-line-height:1;
-
-background:
-linear-gradient(
-135deg,
-var(--white),
-var(--purple-bright),
-var(--gold-light)
-);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-
-margin-bottom:15px;
-}
-
-.mlx-letter-card h3{
-
-font-family:var(--font-head);
-
-font-size:1.7rem;
-
-margin-bottom:10px;
-}
-
-.mlx-letter-card p{
-color:var(--muted);
-line-height:1.7;
-}
-
-.mlx-line{
-
-height:2px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-var(--purple-bright),
-var(--gold),
-var(--purple-bright),
-transparent
-);
-
-animation:mlxPulse 2s infinite;
-}
-
-@keyframes mlxPulse{
-
-0%,100%{
-opacity:.4;
-transform:scaleX(.7);
-}
-
-50%{
-opacity:1;
-transform:scaleX(1);
-}
-
-}
-
-.mlx-final-phrase{
-
-margin:60px auto 0;
-
-max-width:850px;
-
-padding:30px;
-
-border-radius:18px;
-
-background:rgba(30,0,46,.5);
-
-border:1px solid rgba(178,102,255,.2);
-
-line-height:1.9;
-}
-
-.mlx-final-phrase strong{
-color:var(--purple-light);
-}
-
-
-@media(max-width:900px){
-
-.mlx-letters{
-grid-template-columns:1fr;
-gap:20px;
-}
-
-.mlx-line{
-
-width:2px;
-
-height:40px;
-
-margin:auto;
-}
-
-}
-
-  #dashboard-mlx{
-  background:var(--bg2);
-  padding:120px 60px;
-  position:relative;
-  overflow:hidden;
-}
-
-#dashboard-mlx::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:
-  radial-gradient(circle at 25% 30%, rgba(178,102,255,.20), transparent 35%),
-  radial-gradient(circle at 80% 70%, rgba(201,168,76,.10), transparent 32%);
-  pointer-events:none;
-}
-
-.dash-header{
-  text-align:center;
-  margin-bottom:60px;
-  position:relative;
-  z-index:2;
-}
-
-.dash-header .section-sub{
-  margin:0 auto;
-}
-
-.dash-wrap{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:28px;
-  align-items:stretch;
-}
-
-.dash-main,
-.dash-feed{
-  border:1px solid rgba(178,102,255,.18);
-  border-radius:28px;
-  background:rgba(30,0,46,.48);
-  backdrop-filter:blur(18px);
-  box-shadow:0 30px 100px rgba(123,47,190,.18);
-}
-
-.dash-main{
-  padding:34px;
-  overflow:hidden;
-}
-
-.dash-top{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:28px;
-}
-
-.dash-top span{
-  font-size:.68rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--gold);
-  font-weight:800;
-}
-
-.dash-top h3{
-  font-family:var(--font-head);
-  font-size:2.2rem;
-  margin-top:6px;
-}
-
-.dash-live{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 14px;
-  border-radius:100px;
-  border:1px solid rgba(37,211,102,.3);
-  color:#6dff9f;
-  font-size:.72rem;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-}
-
-.dash-live span{
-  width:8px;
-  height:8px;
-  background:#25D366;
-  border-radius:50%;
-  animation:dashPulse 1.4s infinite;
-}
-
-@keyframes dashPulse{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:.35;transform:scale(1.8)}
-}
-
-.dash-metrics{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-bottom:34px;
-}
-
-.dash-metric{
-  padding:20px 16px;
-  border-radius:18px;
-  background:rgba(14,0,24,.65);
-  border:1px solid rgba(178,102,255,.14);
-}
-
-.dash-metric small{
-  display:block;
-  color:var(--muted);
-  font-size:.72rem;
-  margin-bottom:8px;
-}
-
-.dash-metric strong{
-  font-family:var(--font-head);
-  font-size:2rem;
-  color:var(--white);
-}
-
-.dash-chart{
-  height:230px;
-  display:flex;
-  align-items:end;
-  gap:14px;
-  padding:24px;
-  border-radius:22px;
-  background:
-  linear-gradient(180deg,rgba(14,0,24,.35),rgba(14,0,24,.7));
-  border:1px solid rgba(178,102,255,.14);
-  overflow:hidden;
-}
-
-.bar{
-  flex:1;
-  border-radius:12px 12px 0 0;
-  background:linear-gradient(180deg,var(--purple-bright),var(--purple-mid));
-  box-shadow:0 0 28px rgba(178,102,255,.35);
-  animation:barGrow 1.8s ease both;
-}
-
-.bar:nth-child(2){animation-delay:.1s}
-.bar:nth-child(3){animation-delay:.2s}
-.bar:nth-child(4){animation-delay:.3s}
-.bar:nth-child(5){animation-delay:.4s}
-.bar:nth-child(6){animation-delay:.5s}
-.bar:nth-child(7){animation-delay:.6s}
-
-@keyframes barGrow{
-  from{height:0;opacity:.3}
-}
-
-.dash-bottom{
-  margin-top:24px;
-  padding:18px 20px;
-  border-radius:18px;
-  background:rgba(178,102,255,.08);
-  border:1px solid rgba(178,102,255,.14);
-}
-
-.dash-bottom span{
-  display:block;
-  color:var(--gold-light);
-  font-size:.68rem;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-weight:800;
-  margin-bottom:6px;
-}
-
-.dash-bottom strong{
-  font-size:.95rem;
-}
-
-.dash-feed{
-  padding:24px;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-
-.lead-card{
-  padding:22px;
-  border-radius:20px;
-  background:rgba(14,0,24,.65);
-  border:1px solid rgba(178,102,255,.14);
-  transition:.3s ease;
-}
-
-.lead-card.active,
-.lead-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(178,102,255,.45);
-  box-shadow:0 0 45px rgba(178,102,255,.18);
-}
-
-.lead-card span{
-  display:block;
-  color:var(--gold-light);
-  font-size:.72rem;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:10px;
-}
-
-.lead-card h4{
-  font-family:var(--font-head);
-  font-size:1.35rem;
-  margin-bottom:4px;
-}
-
-.lead-card p{
-  color:var(--muted);
-  font-size:.86rem;
-  line-height:1.6;
-  margin-bottom:12px;
-}
-
-.lead-card small{
-  color:var(--purple-light);
-  font-size:.75rem;
-}
-
-@media(max-width:900px){
-  #dashboard-mlx{
-    padding:90px 24px;
-  }
-
-  .dash-wrap{
-    grid-template-columns:1fr;
-  }
-
-  .dash-metrics{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .dash-chart{
-    height:190px;
-    gap:9px;
-    padding:18px;
-  }
-
-  .dash-main{
-    padding:24px;
-  }
-
-  .dash-top{
-    flex-direction:column;
-  }
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --void: #060612;
+  --deep: #09091a;
+  --surface: #0d0d20;
+  --panel: #11112a;
+  --border: rgba(255,255,255,0.06);
+  --border-glow: rgba(155,48,255,0.3);
+  --text: #eeeaff;
+  --muted: #8886a6;
+  --faint: #36345a;
+  --accent: #8b1fff;
+  --accent-mid: #9b30ff;
+  --accent-bright: #b060ff;
+  --accent-light: #cc90ff;
+  --accent-soft: rgba(139,31,255,0.09);
+  --accent-glow: rgba(139,31,255,0.18);
+  --green: #4ade80;
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--faint); border-radius: 2px; }
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.02; pointer-events: none; z-index: 9999;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+@media (max-width: 600px) { .container { padding: 0 18px; } }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 14px 0;
+  background: rgba(6,6,18,0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+
+/* LOGO */
+.logo {
+  display: flex; align-items: center; gap: 11px;
+  text-decoration: none; color: var(--text);
+  font-family: var(--font-display); font-size: 15px; font-weight: 800; letter-spacing: -0.02em;
+}
+.logo-bars {
+  display: flex; flex-direction: column; gap: 3px; flex-shrink: 0;
+}
+.logo-bar {
+  height: 5px; border-radius: 1px;
+  background: var(--accent-mid);
+}
+.logo-bar:nth-child(1) { width: 22px; transform: skewX(-12deg); }
+.logo-bar:nth-child(2) { width: 22px; transform: skewX(-12deg) translateX(2px); }
+.logo-bar:nth-child(3) { width: 22px; transform: skewX(-12deg); }
+
+.nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
+.nav-links a { color: var(--muted); text-decoration: none; font-family: var(--font-body); font-size: 14px; font-weight: 600; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--accent-mid) !important; color: #fff !important;
+  padding: 8px 18px; border-radius: 7px;
+  font-weight: 700 !important; font-size: 13px !important;
+  transition: all 0.2s !important; letter-spacing: 0 !important;
+}
+.nav-cta:hover { background: var(--accent-bright) !important; box-shadow: 0 0 20px rgba(155,48,255,0.45) !important; transform: translateY(-1px); }
+.nav-mob {
+  display: none; background: none; border: 1px solid var(--border);
+  color: var(--muted); padding: 7px 11px; border-radius: 6px;
+  cursor: pointer; font-size: 15px; line-height: 1; transition: all 0.2s;
+}
+.nav-mob:hover { border-color: var(--accent-mid); color: var(--accent-mid); }
+
+.nav-mobile-menu {
+  display: none; position: fixed; top: 57px; left: 0; right: 0; z-index: 199;
+  background: rgba(9,9,26,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 28px 24px; flex-direction: column; gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  color: var(--muted); text-decoration: none; font-size: 16px; font-weight: 600;
+  padding: 11px 0; border-bottom: 1px solid var(--border); transition: color 0.2s;
+  font-family: var(--font-body);
+}
+.nav-mobile-menu a:last-child { border-bottom: none; }
+.nav-mobile-menu a:hover { color: var(--text); }
+.nav-mobile-menu .mob-cta {
+  margin-top: 8px; background: var(--accent-mid); color: #fff !important;
+  padding: 12px 20px; border-radius: 8px; text-align: center; font-weight: 700; border-bottom: none !important;
+}
+
+@media (max-width: 780px) {
+  .nav-links { display: none; }
+  .nav-mob { display: flex; }
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-mid); color: #fff;
+  padding: 13px 26px; border-radius: 9px;
+  font-weight: 700; font-size: 15px; text-decoration: none;
+  border: none; cursor: pointer; font-family: var(--font-body);
+  box-shadow: 0 4px 24px rgba(155,48,255,0.32);
+  transition: all 0.22s ease;
+}
+.btn-primary:hover { background: var(--accent-bright); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(155,48,255,0.48); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text);
+  padding: 13px 26px; border-radius: 9px;
+  font-weight: 600; font-size: 15px; text-decoration: none;
+  border: 1px solid var(--border); cursor: pointer; font-family: var(--font-body);
+  transition: all 0.22s ease;
+}
+.btn-secondary:hover { border-color: var(--accent-bright); color: var(--accent-bright); background: var(--accent-soft); }
+.btn-icon { width: 17px; height: 17px; flex-shrink: 0; }
+.btn-purple {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--accent-bright);
+  padding: 13px 26px; border-radius: 9px;
+  font-weight: 700; font-size: 15px; text-decoration: none;
+  border: 1px solid var(--border-glow); cursor: pointer; font-family: var(--font-body);
+  transition: all 0.22s ease;
+}
+.btn-purple:hover { background: var(--accent-soft); border-color: var(--accent-bright); }
+
+.slabel {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; color: var(--accent-bright);
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px;
+  font-family: var(--font-body);
+}
+.slabel::before { content: ''; width: 18px; height: 1px; background: var(--accent-bright); }
+.stitle { font-size: clamp(28px, 3.8vw, 48px); font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -0.025em; }
+.ssub { font-size: 16px; color: var(--muted); font-weight: 400; max-width: 540px; line-height: 1.72; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100svh;
+  display: flex; align-items: center;
+  padding: 110px 0 90px;
+  position: relative; overflow: hidden;
+}
+.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.orb1 {
+  position: absolute; top: -10%; left: -6%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(139,31,255,0.12) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.orb2 {
+  position: absolute; bottom: -20%; right: -5%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(100,0,200,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.grid-lines {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(139,31,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,31,255,0.04) 1px,transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 50%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 50%, black, transparent);
+}
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-soft); border: 1px solid var(--border-glow);
+  border-radius: 100px; padding: 5px 14px 5px 10px;
+  font-size: 12px; font-weight: 700; color: var(--accent-bright);
+  letter-spacing: 0.04em; margin-bottom: 22px;
+  font-family: var(--font-body);
+}
+.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-bright); animation: pulse-dot 2s infinite; flex-shrink: 0; }
+@keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+
+h1.hero-title {
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 900; color: var(--text); margin-bottom: 22px;
+  line-height: 1.06;
+}
+h1.hero-title .accent {
+  background: linear-gradient(130deg, var(--accent-bright) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub { font-size: 16px; color: var(--muted); max-width: 470px; margin-bottom: 36px; line-height: 1.8; font-weight: 400; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+.hero-niches { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hero-niches-label { font-size: 11px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; font-family: var(--font-body); }
+.niche-pill {
+  font-size: 11px; font-weight: 700; color: var(--muted);
+  padding: 4px 10px; border-radius: 100px;
+  border: 1px solid var(--border); background: transparent;
+  transition: all 0.2s; font-family: var(--font-body); cursor: pointer;
+}
+.niche-pill:hover { border-color: var(--border-glow); color: var(--accent-bright); }
+.niche-pill.active { border-color: var(--border-glow); color: var(--accent-bright); background: var(--accent-soft); }
+
+/* HERO VISUAL */
+.hero-visual { position: relative; }
+.hcard {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px; position: relative; overflow: hidden;
+}
+.hcard::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(155,48,255,0.55), transparent);
+}
+.card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.card-dots { display: flex; gap: 5px; }
+.card-dot { width: 8px; height: 8px; border-radius: 50%; }
+.cd-r{background:#ff5f57} .cd-y{background:#febc2e} .cd-g{background:#28c840}
+.card-label { font-size: 10px; color: var(--faint); font-family: var(--font-display); letter-spacing: 0.1em; text-transform: uppercase; }
+.metric-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; margin-bottom: 18px; }
+.mbox { background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 11px; }
+.mval { font-family: var(--font-display); font-size: 18px; font-weight: 800; line-height: 1; margin-bottom: 3px; }
+.mval.g{color:var(--green)} .mval.p{color:var(--accent-bright)} .mval.v{color:var(--accent-light)}
+.mlbl { font-size: 10px; color: var(--faint); font-family: var(--font-body); }
+.chart-area { height: 68px; margin-bottom: 14px; }
+.chart-area svg { width: 100%; height: 100%; }
+.leads { display: flex; flex-direction: column; gap: 6px; }
+.lead-item {
+  display: flex; align-items: center; gap: 9px; padding: 7px 9px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  transition: border-color 0.2s;
+}
+.lead-item:hover { border-color: var(--border-glow); }
+.lavatar {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  background: var(--accent-soft); border: 1px solid var(--border-glow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800; color: var(--accent-bright); font-family: var(--font-display);
+}
+.linfo { flex: 1; }
+.lname { font-size: 11px; font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 2px; font-family: var(--font-body); }
+.lsrc { font-size: 10px; color: var(--faint); font-family: var(--font-body); }
+.ltag { font-size: 10px; padding: 2px 8px; border-radius: 100px; background: rgba(74,222,128,0.1); color: var(--green); font-weight: 700; font-family: var(--font-body); }
+.ltag.warm { background: rgba(176,96,255,0.15); color: var(--accent-bright); }
+.ltag.hot { background: rgba(204,144,255,0.12); color: var(--accent-light); }
+.float-card {
+  position: absolute; bottom: -18px; right: -16px;
+  background: var(--panel); border: 1px solid var(--border-glow);
+  border-radius: 11px; padding: 12px 16px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+}
+.float-label { font-size: 9px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 2px; font-family: var(--font-body); font-weight: 700; }
+.float-val {
+  font-family: var(--font-display); font-size: 20px; font-weight: 900; letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--accent-bright), var(--accent-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.float-sub { font-size: 10px; color: var(--muted); margin-top: 1px; font-family: var(--font-body); }
+
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+}
+
+/* ── STATS ── */
+#stats {
+  padding: 60px 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  background: var(--deep);
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+.stat-item { padding: 26px 32px; border-right: 1px solid var(--border); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-size: 34px; font-weight: 900; color: var(--text); line-height: 1; margin-bottom: 6px; letter-spacing: -0.04em; }
+.stat-num .hl { color: var(--accent-bright); }
+.stat-desc { font-size: 13px; color: var(--muted); line-height: 1.45; font-family: var(--font-body); }
+@media (max-width: 780px) {
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 20px 18px; }
+  .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .stat-item:last-child { border-bottom: none; }
+}
+
+/* ── NICHOS ── */
+#nichos { padding: 110px 0; }
+.nichos-header { text-align: center; margin-bottom: 64px; }
+.nichos-header .ssub { margin: 0 auto; text-align: center; }
+.nichos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.niche-card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 13px; padding: 24px 22px;
+  position: relative; overflow: hidden;
+  transition: all 0.3s; cursor: default;
+}
+.niche-card:hover { border-color: var(--border-glow); transform: translateY(-3px); background: var(--surface); }
+.niche-card.featured {
+  background: var(--deep); border-color: rgba(155,48,255,0.3);
+  grid-column: span 2; display: flex; gap: 24px; align-items: flex-start;
+}
+.niche-card.featured::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent-mid), var(--accent-light), transparent);
+}
+.niche-card.featured:hover { border-color: rgba(176,96,255,0.5); }
+.niche-icon {
+  width: 40px; height: 40px;
+  background: var(--accent-soft); border: 1px solid var(--border-glow);
+  border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; margin-bottom: 14px; flex-shrink: 0;
+}
+.niche-card.featured .niche-icon { width: 48px; height: 48px; font-size: 22px; }
+.niche-name { font-family: var(--font-display); font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 7px; }
+.niche-card.featured .niche-name { font-size: 17px; }
+.niche-desc { font-size: 13px; color: var(--muted); line-height: 1.55; font-family: var(--font-body); }
+.featured-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--accent-soft); border: 1px solid var(--border-glow);
+  border-radius: 100px; padding: 3px 10px;
+  font-size: 10px; font-weight: 700; color: var(--accent-bright);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;
+  font-family: var(--font-body);
+}
+.niche-stats { display: flex; gap: 20px; margin-top: 14px; }
+.niche-stat-v { font-family: var(--font-display); font-size: 18px; font-weight: 900; color: var(--accent-bright); line-height: 1; margin-bottom: 2px; }
+.niche-stat-l { font-size: 11px; color: var(--faint); font-family: var(--font-body); }
+
+@media (max-width: 900px) {
+  .nichos-grid { grid-template-columns: repeat(2, 1fr); }
+  .niche-card.featured { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .nichos-grid { grid-template-columns: 1fr; }
+  .niche-card.featured { grid-column: span 1; flex-direction: column; gap: 0; }
+}
+
+/* ── SERVICES ── */
+#services { padding: 110px 0; background: var(--deep); border-top: 1px solid var(--border); }
+.svc-header { max-width: 620px; margin-bottom: 56px; }
+.svc-grid {
+  display: grid; grid-template-columns: repeat(2,1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+}
+.svc-card {
+  background: var(--deep); padding: 34px;
+  position: relative; overflow: hidden; transition: background 0.3s;
+}
+.svc-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent-mid), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.svc-card:hover { background: var(--surface); }
+.svc-card:hover::after { opacity: 1; }
+.svc-icon {
+  width: 40px; height: 40px;
+  background: var(--accent-soft); border: 1px solid var(--border-glow);
+  border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; color: var(--accent-bright);
+}
+.svc-icon svg { width: 18px; height: 18px; }
+.svc-name { font-family: var(--font-display); font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 9px; }
+.svc-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; font-family: var(--font-body); }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-size: 11px; padding: 3px 9px; background: var(--accent-soft); border: 1px solid var(--border-glow); border-radius: 100px; color: var(--accent-bright); font-weight: 700; font-family: var(--font-body); }
+.tag-niche { font-size: 10px; padding: 2px 8px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 100px; color: var(--faint); font-weight: 600; font-family: var(--font-body); }
+@media (max-width: 700px) { .svc-grid { grid-template-columns: 1fr; } .svc-card { padding: 24px 20px; } }
+
+/* ── ECOSSISTEMA IMOBILIÁRIO ── */
+#ecosistema {
+  padding: 120px 0;
+  background: var(--void);
+  border-top: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+#ecosistema::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 65% 50%, rgba(139,31,255,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.eco-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; position: relative; z-index: 2;
+}
+.eco-left {}
+.eco-intro { font-size: 13px; font-weight: 700; color: var(--accent-bright); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; font-family: var(--font-body); display: flex; align-items: center; gap: 8px; }
+.eco-intro::before { content: ''; width: 18px; height: 1px; background: var(--accent-bright); }
+.eco-title { font-size: clamp(26px, 3.2vw, 42px); font-weight: 900; color: var(--text); margin-bottom: 18px; line-height: 1.12; }
+.eco-title .hl {
+  background: linear-gradient(130deg, var(--accent-bright) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.eco-body { font-size: 15px; color: var(--muted); line-height: 1.78; margin-bottom: 32px; font-family: var(--font-body); }
+.eco-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.eco-pill {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; color: var(--accent-bright);
+  padding: 5px 12px; border-radius: 100px;
+  border: 1px solid var(--border-glow); background: var(--accent-soft);
+  font-family: var(--font-body);
+}
+.eco-pill-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent-bright); flex-shrink: 0; }
+.eco-cases { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.ecase {
+  background: var(--panel); border: 1px solid var(--border);
+  border-left: 2px solid var(--accent-mid);
+  border-radius: 11px; padding: 18px 20px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.ecase:hover { border-color: var(--border-glow); transform: translateX(4px); }
+.ecase-seg { font-size: 10px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; font-weight: 700; font-family: var(--font-body); }
+.ecase-big { font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; line-height: 1; margin-bottom: 3px; }
+.ecase-big .hl { color: var(--accent-bright); }
+.ecase-lbl { font-size: 12px; color: var(--muted); margin-bottom: 12px; font-family: var(--font-body); }
+.ecase-div { height: 1px; background: var(--border); margin-bottom: 10px; }
+.ecase-rows { display: flex; flex-direction: column; gap: 6px; }
+.ecase-row { display: flex; justify-content: space-between; }
+.ecase-rn { font-size: 11px; color: var(--faint); font-family: var(--font-body); }
+.ecase-rv { font-size: 11px; color: var(--text); font-weight: 700; font-family: var(--font-display); }
+
+/* ORBIT */
+.eco-right {
+  display: flex; align-items: center; justify-content: center;
+  position: relative; padding: 20px;
+}
+.orbit-wrap {
+  position: relative;
+  width: 420px; height: 420px;
+  flex-shrink: 0;
+}
+.orbit-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px; height: 110px;
+  background: var(--panel);
+  border: 2px solid var(--accent-mid);
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 0 40px rgba(139,31,255,0.25), 0 0 80px rgba(139,31,255,0.1);
+  z-index: 10;
+  cursor: default;
+}
+.orbit-center-icon { font-size: 26px; line-height: 1; margin-bottom: 4px; }
+.orbit-center-label { font-size: 9px; font-weight: 800; color: var(--accent-bright); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; font-family: var(--font-display); }
+
+/* Orbit rings */
+.orbit-ring {
+  position: absolute; top: 50%; left: 50%;
+  border-radius: 50%; border: 1px solid rgba(139,31,255,0.12);
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+.orbit-ring-1 { width: 220px; height: 220px; animation-duration: 20s; }
+.orbit-ring-2 { width: 340px; height: 340px; animation-duration: 30s; animation-direction: reverse; }
+.orbit-ring-3 { width: 420px; height: 420px; animation-duration: 40s; }
+
+@keyframes spin { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+/* Orbit nodes */
+.orbit-node {
+  position: absolute;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--panel);
+  border: 1px solid var(--border-glow);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 5;
+}
+.orbit-node:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-bright);
+  box-shadow: 0 0 20px rgba(155,48,255,0.3);
+  transform: scale(1.12);
+  z-index: 20;
+}
+.orbit-node-icon { font-size: 18px; line-height: 1; }
+.orbit-node-label {
+  font-size: 8px; font-weight: 700; color: var(--accent-bright);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px;
+  text-align: center; font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+/* Tooltip */
+.orbit-tooltip {
+  position: absolute;
+  background: var(--panel);
+  border: 1px solid var(--border-glow);
+  border-radius: 10px;
+  padding: 12px 14px;
+  width: 180px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s;
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  left: 50%; top: 50%;
+  transform: translate(-50%, -120%);
+}
+.orbit-node:hover .orbit-tooltip { opacity: 1; }
+.tt-title { font-size: 12px; font-weight: 800; color: var(--text); margin-bottom: 4px; font-family: var(--font-display); }
+.tt-desc { font-size: 11px; color: var(--muted); line-height: 1.5; font-family: var(--font-body); }
+.tt-tag { display: inline-block; margin-top: 6px; font-size: 10px; padding: 2px 7px; background: var(--accent-soft); border-radius: 100px; color: var(--accent-bright); font-weight: 700; font-family: var(--font-body); }
+
+@media (max-width: 900px) {
+  .eco-inner { grid-template-columns: 1fr; gap: 60px; }
+  .orbit-wrap { width: 340px; height: 340px; }
+  .orbit-ring-1 { width: 180px; height: 180px; }
+  .orbit-ring-2 { width: 270px; height: 270px; }
+  .orbit-ring-3 { width: 340px; height: 340px; }
+  .eco-right { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .orbit-wrap { width: 300px; height: 300px; }
+  .orbit-ring-1 { width: 150px; height: 150px; }
+  .orbit-ring-2 { width: 230px; height: 230px; }
+  .orbit-ring-3 { width: 300px; height: 300px; }
+}
+
+/* ── PROBLEMS ── */
+#problems { padding: 110px 0; background: var(--deep); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+#problems::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(139,31,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.prob-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.prob-list { display: flex; flex-direction: column; gap: 12px; }
+.prob-item {
+  display: flex; gap: 14px; padding: 16px 18px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 11px; transition: border-color 0.3s;
+}
+.prob-item:hover { border-color: var(--border-glow); }
+.prob-x {
+  width: 28px; height: 28px; flex-shrink: 0;
+  background: rgba(255,80,80,0.1); border: 1px solid rgba(255,80,80,0.2);
+  border-radius: 7px; display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: #ff5a5a; font-weight: 800; font-family: var(--font-display);
+}
+.prob-text { font-size: 14px; color: var(--text); line-height: 1.5; font-family: var(--font-body); }
+.prob-text strong { display: block; margin-bottom: 3px; font-weight: 700; font-size: 14px; font-family: var(--font-body); }
+.prob-text span { color: var(--muted); font-size: 13px; }
+.prob-quote { font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 30px); font-weight: 800; color: var(--text); line-height: 1.25; margin-bottom: 20px; }
+.prob-quote em { font-style: normal; color: var(--accent-bright); }
+.prob-body { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 30px; font-family: var(--font-body); }
+@media (max-width: 860px) { .prob-grid { grid-template-columns: 1fr; gap: 44px; } }
+
+/* ── PROCESS ── */
+#process { padding: 110px 0; border-top: 1px solid var(--border); }
+.proc-hdr { max-width: 520px; margin-bottom: 60px; }
+.proc-steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; position: relative; }
+.proc-steps::before {
+  content: ''; position: absolute; top: 29px; left: 5%; right: 5%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-mid), var(--accent-bright), var(--accent-mid), transparent);
+  opacity: 0.25;
+}
+.proc-step { padding: 0 12px; text-align: center; }
+.step-n {
+  width: 58px; height: 58px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; font-family: var(--font-display);
+  font-size: 14px; font-weight: 900; color: var(--accent-bright);
+  position: relative; z-index: 1; transition: all 0.3s;
+}
+.proc-step:hover .step-n { background: var(--accent-soft); border-color: var(--accent-mid); box-shadow: 0 0 22px rgba(139,31,255,0.22); }
+.step-name { font-family: var(--font-display); font-size: 12px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+.step-desc { font-size: 11px; color: var(--muted); line-height: 1.5; font-family: var(--font-body); }
+@media (max-width: 700px) {
+  .proc-steps { grid-template-columns: 1fr; gap: 22px; }
+  .proc-steps::before { display: none; }
+  .proc-step { text-align: left; display: flex; align-items: flex-start; gap: 14px; padding: 0; }
+  .step-n { flex-shrink: 0; margin: 0; width: 44px; height: 44px; font-size: 13px; }
+}
+
+/* ── CTA ── */
+#cta { padding: 130px 0; position: relative; overflow: hidden; }
+.cta-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 75% at 50% 50%, rgba(139,31,255,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner { text-align: center; position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.cta-pre { font-size: 11px; color: var(--faint); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700; font-family: var(--font-body); }
+.cta-title { font-size: clamp(26px, 4.5vw, 52px); font-weight: 900; color: var(--text); margin-bottom: 18px; letter-spacing: -0.03em; line-height: 1.1; }
+.cta-title span { background: linear-gradient(130deg, var(--accent-bright) 0%, var(--accent-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.cta-sub { font-size: 16px; color: var(--muted); margin-bottom: 44px; line-height: 1.72; font-family: var(--font-body); }
+.cta-acts { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-note { margin-top: 18px; font-size: 12px; color: var(--faint); font-family: var(--font-body); }
+
+/* ── FOOTER ── */
+footer { border-top: 1px solid var(--border); padding: 44px 0; }
+.foot-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+.foot-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.foot-copy { font-size: 12px; color: var(--faint); margin-top: 6px; font-family: var(--font-body); }
+.foot-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.foot-links a { font-size: 12px; color: var(--faint); text-decoration: none; transition: color 0.2s; font-family: var(--font-body); }
+.foot-links a:hover { color: var(--muted); }
+.foot-insta {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 700; color: var(--accent-bright);
+  text-decoration: none; font-family: var(--font-body);
+  padding: 6px 14px; border-radius: 100px;
+  border: 1px solid var(--border-glow); background: var(--accent-soft);
+  transition: all 0.2s;
+}
+.foot-insta:hover { background: rgba(139,31,255,0.15); border-color: var(--accent-bright); }
+.foot-insta svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── ANIMATIONS ── */
+.fu { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fu.vis { opacity: 1; transform: translateY(0); }
+.d1{transition-delay:0.08s} .d2{transition-delay:0.16s} .d3{transition-delay:0.24s} .d4{transition-delay:0.32s}
 </style>
-
-  
 </head>
 <body>
 
-<div id="sprogress"></div>
-
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-bars"><span></span><span></span><span></span></div>
-    <span class="logo-name">MLX Mind</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#imoveis">Portfólio</a></li>
-    <li><a href="#paraquem">Para quem</a></li>
-    <li><a href="#processo">Como funciona</a></li>
-    <li><a href="#depoimentos">Clientes</a></li>
-    <li><a href="#cta" class="nav-cta">Fale conosco</a></li>
-    <li><a href="#mlx-meaning">Sobre a MLX</a></li>
-  </ul>
-  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+<!-- NAV -->
+<nav id="mainnav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" aria-label="MLX Mind">
+      <div class="logo-bars" aria-hidden="true">
+        <div class="logo-bar"></div>
+        <div class="logo-bar"></div>
+        <div class="logo-bar"></div>
+      </div>
+      MLX Mind
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#nichos">Nichos</a></li>
+      <li><a href="#services">Serviços</a></li>
+      <li><a href="#ecosistema">Imobiliário</a></li>
+      <li><a href="#process">Processo</a></li>
+      <li><a href="#cta" class="nav-cta">Falar com a gente</a></li>
+    </ul>
+    <button class="nav-mob" aria-label="Menu" id="navMob">☰</button>
+  </div>
 </nav>
 
-<div class="nav-mob" id="navMob">
-  <a href="#servicos">Serviços</a>
-  <a href="#imoveis">Portfólio</a>
-  <a href="#paraquem">Para quem</a>
-  <a href="#processo">Como funciona</a>
-  <a href="#depoimentos">Clientes</a>
-  <a href="#cta" class="mob-cta">Fale conosco</a>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#nichos">Nichos</a>
+  <a href="#services">Serviços</a>
+  <a href="#ecosistema">Imobiliário</a>
+  <a href="#process">Processo</a>
+  <a href="#cta" class="mob-cta">Falar com a gente</a>
 </div>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="aurora"><span></span><span></span><span></span></div>
-  <div class="hero-left">
-    <div class="hero-tag"><span class="tag-dot"></span>Especialistas em Marketing Imobiliário</div>
-    <h1>
-      <strong>Marketing que vende</strong>
-      <em>imóveis de verdade.</em>
-    </h1>
-    <p class="hero-sub">Assessoria completa para corretores e imobiliárias que querem escalar — mais leads qualificados, mais visibilidade e mais negócios fechados todo mês.</p>
-    <div class="hero-actions">
-      <a href="#cta" class="btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Quero uma assessoria
-      </a>
-      <a href="#servicos" class="btn-ghost">Ver serviços</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat"><span class="hstat-num" data-count="200" data-suffix="+">200+</span><span class="hstat-label">Clientes atendidos</span></div>
-      <div class="hstat"><span class="hstat-num" data-count="4" data-suffix="×">4×</span><span class="hstat-label">ROI médio em tráfego</span></div>
-      <div class="hstat"><span class="hstat-num" data-count="98" data-suffix="%">98%</span><span class="hstat-label">Satisfação</span></div>
-    </div>
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="orb1"></div>
+    <div class="orb2"></div>
+    <div class="grid-lines"></div>
   </div>
-  <div class="hero-right">
-<div class="hero-img-grid">
-
-  <!-- imagem principal -->
-  <div class="img-block">
-    <img src="./images/img1.png" alt="Dashboard de campanhas MLX">
-
-    <div class="imov-info" style="z-index:3">
-      <div class="imov-tipo">Performance Real</div>
-      <div class="imov-nome">Campanhas em Escala</div>
-      <div class="imov-local">Meta Ads • Google Ads</div>
-      <div class="imov-cta-tag">Campanha ativa</div>
-    </div>
-  </div>
-
-  <!-- imagem 2 -->
-  <div class="img-block">
-    <img src="./images/img2.png" alt="Reunião comercial">
-
-    <div class="imov-info" style="z-index:3">
-      <div class="imov-tipo">Relacionamento</div>
-      <div class="imov-nome">Fechamentos Reais</div>
-      <div class="imov-local">Corretores parceiros</div>
-    </div>
-  </div>
-
-  <!-- imagem 3 -->
-  <div class="img-block">
-    <img src="./images/img3.png" alt="Leads no WhatsApp">
-
-    <div class="imov-info" style="z-index:3">
-      <div class="imov-tipo">Conversão</div>
-      <div class="imov-nome">Leads Qualificados</div>
-      <div class="imov-local">WhatsApp • CRM</div>
-    </div>
-  </div>
-
-</div>
-</section>
-
-  <section id="mlx-meaning">
-  <div class="mlx-glow"></div>
-
-  <div class="container mlx-meaning-inner">
-    <span class="section-tag">Por trás da marca</span>
-    <h2 class="section-title">O significado da <em>MLX Mind</em></h2>
-
-    <div class="mlx-letters">
-      <div class="mlx-letter-card">
-        <div class="big-letter">M</div>
-        <h3>Marketing</h3>
-<p>Estratégia que transforma atenção em crescimento real.</p>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow fu">
+          <span class="hero-eyebrow-dot"></span>
+          Performance digital para todos os nichos
+        </div>
+        <h1 class="hero-title fu d1" id="hero-title">
+          Crescimento digital <span class="accent">para qualquer mercado.</span>
+        </h1>
+        <p class="hero-sub fu d2">
+          Da clínica ao escritório de advocacia, do e-commerce à incorporadora — geramos leads qualificados, construímos autoridade e escalamos resultados com estratégia e dados.
+        </p>
+        <div class="hero-actions fu d3">
+          <a href="#cta" class="btn-primary">
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Diagnóstico Gratuito
+          </a>
+          <a href="tel:+551152540490" class="btn-secondary">
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            (11) 5254-0490
+          </a>
+        </div>
+        <div class="hero-niches fu d4">
+          <span class="hero-niches-label">Nichos:</span>
+          <span class="niche-pill active">🏠 Imobiliário</span>
+          <span class="niche-pill">🏥 Saúde</span>
+          <span class="niche-pill">⚖️ Jurídico</span>
+          <span class="niche-pill">🛍️ E-commerce</span>
+          <span class="niche-pill">🎓 Educação</span>
+        </div>
       </div>
 
-      <div class="mlx-line"></div>
-
-      <div class="mlx-letter-card">
-        <div class="big-letter">L</div>
-        <h3>Leads</h3>
-        <p>Oportunidades qualificadas chegando direto para o seu negócio.</p>
-      </div>
-
-      <div class="mlx-line"></div>
-
-      <div class="mlx-letter-card">
-        <div class="big-letter">X</div>
-        <h3>eXecution</h3>
-        <p>Transformamos estratégia em ações que geram resultados reais.</p>
+      <div class="hero-visual fu d2" aria-hidden="true">
+        <div class="hcard">
+          <div class="card-header">
+            <div class="card-dots">
+              <div class="card-dot cd-r"></div>
+              <div class="card-dot cd-y"></div>
+              <div class="card-dot cd-g"></div>
+            </div>
+            <span class="card-label">Painel de Performance</span>
+          </div>
+          <div class="metric-row">
+            <div class="mbox"><div class="mval g">+312%</div><div class="mlbl">ROI Médio</div></div>
+            <div class="mbox"><div class="mval p">847</div><div class="mlbl">Leads / mês</div></div>
+            <div class="mbox"><div class="mval v">R$14</div><div class="mlbl">Custo / Lead</div></div>
+          </div>
+          <div class="chart-area">
+            <svg viewBox="0 0 400 72" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(139,31,255,0.3)"/>
+                  <stop offset="100%" stop-color="rgba(139,31,255,0)"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#cg)" d="M0,65 L40,58 L80,52 L120,44 L160,38 L200,30 L240,26 L280,18 L320,13 L360,9 L400,5 L400,72 L0,72 Z"/>
+              <path fill="none" stroke="#9b30ff" stroke-width="2" d="M0,65 L40,58 L80,52 L120,44 L160,38 L200,30 L240,26 L280,18 L320,13 L360,9 L400,5"/>
+            </svg>
+          </div>
+          <div class="leads">
+            <div class="lead-item">
+              <div class="lavatar">MA</div>
+              <div class="linfo"><div class="lname">Marcos Alves</div><div class="lsrc">Meta Ads · Imobiliário · 2min</div></div>
+              <span class="ltag">Novo</span>
+            </div>
+            <div class="lead-item">
+              <div class="lavatar">CP</div>
+              <div class="linfo"><div class="lname">Carla Pinto</div><div class="lsrc">Google Ads · Clínica · 8min</div></div>
+              <span class="ltag warm">Quente</span>
+            </div>
+            <div class="lead-item">
+              <div class="lavatar">RS</div>
+              <div class="linfo"><div class="lname">Rafael Souza</div><div class="lsrc">Instagram · E-commerce · 15min</div></div>
+              <span class="ltag hot">VIP</span>
+            </div>
+          </div>
+        </div>
+        <div class="float-card">
+          <div class="float-label">Resultado acumulado</div>
+          <div class="float-val">R$15M+</div>
+          <div class="float-sub">em VGV imobiliário gerado</div>
+        </div>
       </div>
     </div>
-
-    <p class="mlx-final-phrase">
-      A MLX Mind nasceu da união entre <strong>Marketing Leads eXecution</strong> — combinando estratégia, criatividade e execução para transformar presença digital em oportunidades reais.
-    </p>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-band">
-  <div class="marquee-track">
-    <div class="marquee-content">
-      <span>Tráfego Pago Imobiliário</span><span class="marquee-dot">✦</span>
-      <span>Landing Pages de Imóveis</span><span class="marquee-dot">✦</span>
-      <span>Meta Ads para Corretores</span><span class="marquee-dot">✦</span>
-      <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
-      <span>Google Ads Imobiliário</span><span class="marquee-dot">✦</span>
-      <span>Automação WhatsApp</span><span class="marquee-dot">✦</span>
-      <span>Gestão de Redes Sociais</span><span class="marquee-dot">✦</span>
-      <span>Criativos que Convertem</span><span class="marquee-dot">✦</span>
-    </div>
-    <div class="marquee-content" aria-hidden="true">
-      <span>Tráfego Pago Imobiliário</span><span class="marquee-dot">✦</span>
-      <span>Landing Pages de Imóveis</span><span class="marquee-dot">✦</span>
-      <span>Meta Ads para Corretores</span><span class="marquee-dot">✦</span>
-      <span>Leads Qualificados</span><span class="marquee-dot">✦</span>
-      <span>Google Ads Imobiliário</span><span class="marquee-dot">✦</span>
-      <span>Automação WhatsApp</span><span class="marquee-dot">✦</span>
-      <span>Gestão de Redes Sociais</span><span class="marquee-dot">✦</span>
-      <span>Criativos que Convertem</span><span class="marquee-dot">✦</span>
+<!-- STATS -->
+<section id="stats" aria-label="Números da MLX Mind">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fu">
+        <div class="stat-num"><span class="cnum hl" data-t="15">0</span>M+</div>
+        <div class="stat-desc">Em VGV imobiliário gerado nos últimos 2 anos</div>
+      </div>
+      <div class="stat-item fu d1">
+        <div class="stat-num"><span class="cnum hl" data-t="200">0</span>+</div>
+        <div class="stat-desc">Projetos gerenciados em múltiplos nichos no Brasil</div>
+      </div>
+      <div class="stat-item fu d2">
+        <div class="stat-num"><span class="cnum" data-t="8">0</span> nichos</div>
+        <div class="stat-desc">Mercados atendidos com estratégias e dados específicos</div>
+      </div>
+      <div class="stat-item fu d3">
+        <div class="stat-num"><span class="cnum" data-t="94">0</span><span class="hl">%</span></div>
+        <div class="stat-desc">Taxa de retenção de clientes ativos na carteira</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- PROBLEMA -->
-<section id="problema">
+<!-- NICHOS -->
+<section id="nichos" aria-labelledby="nichos-title">
+  <div class="container">
+    <div class="nichos-header fu">
+      <div class="slabel">Para quem trabalhamos</div>
+      <h2 class="stitle" id="nichos-title">Uma agência, múltiplos mercados.</h2>
+      <p class="ssub">Cada nicho tem suas particularidades. Desenvolvemos estratégias específicas para cada mercado — sem receita de bolo.</p>
+    </div>
+    <div class="nichos-grid">
+      <div class="niche-card featured fu">
+        <div><div class="niche-icon">🏠</div></div>
+        <div>
+          <div class="featured-badge">★ Especialidade principal</div>
+          <div class="niche-name">Mercado Imobiliário</div>
+          <p class="niche-desc">Nossa origem e principal expertise. Corretores, imobiliárias e incorporadoras — do tráfego ao lançamento, com resultados que poucos alcançam.</p>
+          <div class="niche-stats">
+            <div><div class="niche-stat-v">R$15M+</div><div class="niche-stat-l">em VGV gerado</div></div>
+            <div><div class="niche-stat-v">120+</div><div class="niche-stat-l">projetos imob.</div></div>
+            <div><div class="niche-stat-v">R$14</div><div class="niche-stat-l">custo/lead médio</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="niche-card fu d1">
+        <div class="niche-icon">🏥</div>
+        <div class="niche-name">Saúde & Clínicas</div>
+        <p class="niche-desc">Clínicas, dentistas e médicos. Captação de pacientes com compliance e autoridade.</p>
+      </div>
+      <div class="niche-card fu d2">
+        <div class="niche-icon">⚖️</div>
+        <div class="niche-name">Jurídico</div>
+        <p class="niche-desc">Escritórios e advogados. Posicionamento de autoridade e captação ética de clientes.</p>
+      </div>
+      <div class="niche-card fu d3">
+        <div class="niche-icon">🛍️</div>
+        <div class="niche-name">E-commerce</div>
+        <p class="niche-desc">Lojas online em escala. Tráfego pago orientado a ROAS e retargeting avançado.</p>
+      </div>
+      <div class="niche-card fu d1">
+        <div class="niche-icon">🎓</div>
+        <div class="niche-name">Educação</div>
+        <p class="niche-desc">Instituições e infoprodutores. Lançamentos, matrículas e captação de alunos.</p>
+      </div>
+      <div class="niche-card fu d2">
+        <div class="niche-icon">🍽️</div>
+        <div class="niche-name">Gastronomia</div>
+        <p class="niche-desc">Restaurantes e franquias. Geração de demanda local e fidelização de clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="svc-title">
+  <div class="container">
+    <div class="svc-header fu">
+      <div class="slabel">O que entregamos</div>
+      <h2 class="stitle" id="svc-title">Serviços que funcionam em qualquer nicho.</h2>
+      <p class="ssub">Metodologia testada em centenas de projetos, com adaptações específicas para cada mercado.</p>
+    </div>
+    <div class="svc-grid fu">
+      <div class="svc-card">
+        <div class="svc-icon" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <div class="svc-name">Tráfego Pago</div>
+        <p class="svc-desc">Meta Ads e Google Ads com segmentação precisa por intenção, localização, perfil e comportamento de compra.</p>
+        <div class="tags"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Retargeting</span></div>
+        <div class="tags" style="margin-top:8px;"><span class="tag-niche">Imobiliário</span><span class="tag-niche">Saúde</span><span class="tag-niche">E-commerce</span><span class="tag-niche">+5</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div class="svc-name">Landing Pages de Alta Conversão</div>
+        <p class="svc-desc">Páginas focadas em conversão, otimizadas para velocidade e SEO. Taxa média acima de 18%.</p>
+        <div class="tags"><span class="tag">CRO</span><span class="tag">A/B Testing</span><span class="tag">SEO</span></div>
+        <div class="tags" style="margin-top:8px;"><span class="tag-niche">Todos os nichos</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+        </div>
+        <div class="svc-name">Gestão de Redes Sociais</div>
+        <p class="svc-desc">Conteúdo estratégico para Instagram, Facebook e YouTube com foco em autoridade e geração de demanda.</p>
+        <div class="tags"><span class="tag">Instagram</span><span class="tag">YouTube</span><span class="tag">Branding</span></div>
+        <div class="tags" style="margin-top:8px;"><span class="tag-niche">Jurídico</span><span class="tag-niche">Saúde</span><span class="tag-niche">Educação</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="svc-name">Estratégia & Lançamentos</div>
+        <p class="svc-desc">Planejamento completo — do diagnóstico à escala, com metas, funil e dados definidos para cada projeto.</p>
+        <div class="tags"><span class="tag">Pré-lançamento</span><span class="tag">Funil</span><span class="tag">Escala</span></div>
+        <div class="tags" style="margin-top:8px;"><span class="tag-niche">Imobiliário</span><span class="tag-niche">Educação</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSSISTEMA IMOBILIÁRIO -->
+<section id="ecosistema" aria-labelledby="eco-title">
+  <div class="container">
+    <div class="eco-inner">
+
+      <div class="eco-left fu">
+        <div class="eco-intro">Especialidade comprovada</div>
+        <h2 class="eco-title" id="eco-title">
+          Entenda o <span class="hl">ecossistema imobiliário</span> que atendemos.
+        </h2>
+        <p class="eco-body">
+          O mercado imobiliário é onde a MLX Mind foi forjada. São mais de 2 anos, 120 projetos e R$15M em VGV — um laboratório de dados que nenhuma agência generalista possui. Cada player desse ecossistema tem uma jornada diferente, e a gente conhece todas elas de dentro pra fora.
+        </p>
+        <div class="eco-pills">
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Corretores autônomos</span>
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Imobiliárias</span>
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Incorporadoras</span>
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Lançamentos</span>
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Arquitetos</span>
+          <span class="eco-pill"><span class="eco-pill-dot"></span>Engenheiros</span>
+        </div>
+        <div class="eco-cases">
+          <article class="ecase">
+            <div class="ecase-seg">Imobiliária · Ribeirão Preto / SP</div>
+            <div class="ecase-big">R$<span class="hl">4,2</span>M</div>
+            <div class="ecase-lbl">em VGV em 90 dias de campanha</div>
+            <div class="ecase-div"></div>
+            <div class="ecase-rows">
+              <div class="ecase-row"><span class="ecase-rn">Leads gerados</span><span class="ecase-rv">1.240</span></div>
+              <div class="ecase-row"><span class="ecase-rn">Custo por lead</span><span class="ecase-rv">R$ 11,40</span></div>
+              <div class="ecase-row"><span class="ecase-rn">Taxa de conversão</span><span class="ecase-rv">21,4%</span></div>
+            </div>
+          </article>
+          <article class="ecase">
+            <div class="ecase-seg">Incorporadora · Lançamento Residencial</div>
+            <div class="ecase-big"><span class="hl">312</span> unidades</div>
+            <div class="ecase-lbl">vendidas no dia de lançamento</div>
+            <div class="ecase-div"></div>
+            <div class="ecase-rows">
+              <div class="ecase-row"><span class="ecase-rn">Lista pré-lançamento</span><span class="ecase-rv">2.800 leads</span></div>
+              <div class="ecase-row"><span class="ecase-rn">ROI da campanha</span><span class="ecase-rv">+480%</span></div>
+            </div>
+          </article>
+          <article class="ecase">
+            <div class="ecase-seg">Corretor Autônomo · São Paulo / SP</div>
+            <div class="ecase-big"><span class="hl">+1.075%</span></div>
+            <div class="ecase-lbl">de crescimento em leads em 28 dias</div>
+            <div class="ecase-div"></div>
+            <div class="ecase-rows">
+              <div class="ecase-row"><span class="ecase-rn">Antes: 8 leads/mês</span><span class="ecase-rv">→ 94 leads/mês</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ORBIT -->
+      <div class="eco-right fu d2">
+        <div class="orbit-wrap" id="orbitWrap">
+
+          <!-- Rings -->
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+          <div class="orbit-ring orbit-ring-3"></div>
+
+          <!-- Center -->
+          <div class="orbit-center">
+            <div class="orbit-center-icon">🏠</div>
+            <div class="orbit-center-label">Mercado<br>Imobiliário</div>
+          </div>
+
+          <!-- Nodes: posicionados via JS abaixo -->
+          <div class="orbit-node" data-angle="0" data-radius="110">
+            <div class="orbit-node-icon">🏢</div>
+            <div class="orbit-node-label">Incorpor.</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Incorporadoras</div>
+              <div class="tt-desc">Estratégia completa para lançamentos: aquecimento de lista, evento e pós-venda.</div>
+              <span class="tt-tag">Lançamentos</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="51" data-radius="110">
+            <div class="orbit-node-icon">🤝</div>
+            <div class="orbit-node-label">Corretor</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Corretores</div>
+              <div class="tt-desc">Canal próprio de captação de leads qualificados sem depender de portais.</div>
+              <span class="tt-tag">Independência</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="102" data-radius="110">
+            <div class="orbit-node-icon">🏬</div>
+            <div class="orbit-node-label">Imobiliária</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Imobiliárias</div>
+              <div class="tt-desc">Geração previsível de leads e posicionamento de marca no digital.</div>
+              <span class="tt-tag">Escala</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="153" data-radius="110">
+            <div class="orbit-node-icon">📐</div>
+            <div class="orbit-node-label">Arquiteto</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Arquitetos</div>
+              <div class="tt-desc">Autoridade digital e geração de projetos via Instagram e Google.</div>
+              <span class="tt-tag">Autoridade</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="204" data-radius="110">
+            <div class="orbit-node-icon">🔧</div>
+            <div class="orbit-node-label">Engenheiro</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Engenheiros</div>
+              <div class="tt-desc">Captação de clientes para obras, reformas e projetos estruturais.</div>
+              <span class="tt-tag">Captação</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="255" data-radius="110">
+            <div class="orbit-node-icon">🛋️</div>
+            <div class="orbit-node-label">Designer</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Design de Interiores</div>
+              <div class="tt-desc">Portfólio que converte e campanhas focadas em projetos de alto padrão.</div>
+              <span class="tt-tag">Alto padrão</span>
+            </div>
+          </div>
+
+          <div class="orbit-node" data-angle="306" data-radius="110">
+            <div class="orbit-node-icon">🏗️</div>
+            <div class="orbit-node-label">Construtora</div>
+            <div class="orbit-tooltip">
+              <div class="tt-title">Construtoras</div>
+              <div class="tt-desc">Marketing B2B e B2C para obras residenciais e comerciais.</div>
+              <span class="tt-tag">B2B + B2C</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section id="problems" aria-labelledby="prob-title">
   <div class="container">
     <div class="prob-grid">
-      <div class="prob-visual">
-        <div class="prob-card-stack">
-          <div class="prob-card">
-            <span class="red-tag">❌ Problema comum</span>
-            <div class="prob-card-icon">📱</div>
-            <h4>Posts sem resultado</h4>
-            <p>Postar todo dia no Instagram sem estratégia não gera leads — apenas consome tempo sem retorno.</p>
-          </div>
-          <div class="prob-card">
-            <span class="red-tag">❌ Problema comum</span>
-            <div class="prob-card-icon">💸</div>
-            <h4>Verba de anúncio jogada fora</h4>
-            <p>Anúncios sem segmentação correta atingem o público errado e desperdiçam todo o investimento.</p>
-          </div>
-          <div class="prob-card">
-            <span class="red-tag">❌ Problema comum</span>
-            <div class="prob-card-icon">🔇</div>
-            <h4>Leads que somem no WhatsApp</h4>
-            <p>Sem automação e follow-up estruturado, os leads esfriam antes de virar uma visita ou proposta.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <span class="section-tag">O problema real</span>
-        <h2 class="section-title">Corretores perdem negócios<br>por falta de <em>estratégia digital</em></h2>
-        <p class="section-sub">O mercado imobiliário é disputado. Quem não domina o digital perde clientes para quem domina — todos os dias.</p>
+      <div class="fu">
+        <div class="slabel">O diagnóstico</div>
+        <h2 class="stitle" id="prob-title" style="margin-bottom:32px;">Por que a maioria das empresas não cresce no digital.</h2>
         <div class="prob-list">
           <div class="prob-item">
-            <div class="prob-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <h4>Campanhas segmentadas por imóvel e região</h4>
-              <p>Cada empreendimento tem seu público. Criamos campanhas específicas para cada produto, maximizando o aproveitamento da verba.</p>
+            <div class="prob-x" aria-hidden="true">✕</div>
+            <div class="prob-text">
+              <strong>Estratégia genérica, resultado medíocre</strong>
+              <span>Agências que atendem todo mundo sem especialidade real. Você paga por experiência que não existe.</span>
             </div>
           </div>
           <div class="prob-item">
-            <div class="prob-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <h4>Landing pages que convertem visitas em leads</h4>
-              <p>Páginas criadas para o mercado imobiliário — com formulário, WhatsApp e apresentação do imóvel que geram contatos reais.</p>
+            <div class="prob-x" aria-hidden="true">✕</div>
+            <div class="prob-text">
+              <strong>Ausência de posicionamento de marca</strong>
+              <span>Sem identidade clara, você compete por preço. Com autoridade construída, clientes te procuram.</span>
             </div>
           </div>
           <div class="prob-item">
-            <div class="prob-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <h4>Automação para não perder nenhum lead</h4>
-              <p>Respostas automáticas no WhatsApp e follow-up estruturado garantem que nenhuma oportunidade seja desperdiçada.</p>
+            <div class="prob-x" aria-hidden="true">✕</div>
+            <div class="prob-text">
+              <strong>Impulsionamento não é tráfego pago</strong>
+              <span>Campanha sem estrutura queima verba sem resultado. Performance exige método e análise constante.</span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVIÇOS -->
-<section id="servicos">
-  <div class="container">
-    <div class="serv-header">
-      <span class="section-tag">O que fazemos</span>
-      <h2 class="section-title">Assessoria <em>completa</em> para<br><strong>o mercado imobiliário</strong></h2>
-      <p class="section-sub">Do primeiro anúncio até o lead qualificado chegando no seu WhatsApp — cuidamos de cada etapa.</p>
-    </div>
-    <div class="serv-grid">
-      <div class="serv-card">
-        <span class="serv-num">01</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        </div>
-        <h3>Tráfego Pago Imobiliário</h3>
-        <p>Campanhas no Meta e Google especialmente calibradas para o mercado imobiliário. Segmentação por renda, localização, comportamento de busca e perfil de comprador.</p>
-        <div class="serv-tags"><span class="stag">Meta Ads</span><span class="stag">Google Ads</span><span class="stag">Retargeting</span><span class="stag">Lookalike</span></div>
-      </div>
-      <div class="serv-card">
-        <span class="serv-num">02</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/><line x1="2" y1="7" x2="22" y2="7"/></svg>
-        </div>
-        <h3>Landing Pages de Imóveis</h3>
-        <p>Páginas de alta conversão para cada empreendimento — com galeria, planta, localização, formulário de interesse e botão direto para WhatsApp.</p>
-        <div class="serv-tags"><span class="stag">Alta Conversão</span><span class="stag">Mobile First</span><span class="stag">SEO</span></div>
-      </div>
-      <div class="serv-card">
-        <span class="serv-num">03</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-        </div>
-        <h3>Social Media Imobiliária</h3>
-        <p>Gestão profissional das redes sociais com conteúdo especializado em imóveis — construindo autoridade, engajamento e reconhecimento da sua marca no mercado local.</p>
-        <div class="serv-tags"><span class="stag">Instagram</span><span class="stag">Facebook</span><span class="stag">Reels</span><span class="stag">Stories</span></div>
-      </div>
-      <div class="serv-card">
-        <span class="serv-num">04</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <h3>Automação de WhatsApp</h3>
-        <p>Resposta automática para leads recém-captados, sequência de mensagens de follow-up e qualificação automatizada — sem perder nenhuma oportunidade.</p>
-        <div class="serv-tags"><span class="stag">Automação</span><span class="stag">Follow-up</span><span class="stag">Qualificação</span></div>
-      </div>
-      <div class="serv-card">
-        <span class="serv-num">05</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6s4-2 11-2 11 2 11 2v6a15 15 0 0 1-11 5 15 15 0 0 1-11-5z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h3>Criativos para Imóveis</h3>
-        <p>Anúncios visuais e vídeos criados especificamente para cada empreendimento — com fotos profissionais, renders e copy focada em despertar desejo e urgência.</p>
-        <div class="serv-tags"><span class="stag">Vídeos</span><span class="stag">Carrossel</span><span class="stag">Copy</span></div>
-      </div>
-      <div class="serv-card">
-        <span class="serv-num">06</span>
-        <div class="serv-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </div>
-        <h3>Relatório & Estratégia</h3>
-        <p>Acompanhamento mensal com dados em linguagem de negócio — quantos leads chegaram, custo por lead, qual imóvel performa melhor e onde otimizar a verba.</p>
-        <div class="serv-tags"><span class="stag">Dashboard</span><span class="stag">Mensal</span><span class="stag">Decisões claras</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- DASHBOARD MLX -->
-<section id="dashboard-mlx">
-  <div class="container">
-    <div class="dash-header">
-      <span class="section-tag">Performance em tempo real</span>
-      <h2 class="section-title">O que acontece quando<br><em>a estratégia entra em ação</em></h2>
-      <p class="section-sub">Um painel visual para mostrar o que todo corretor quer ver: leads chegando, campanhas rodando e oportunidades sendo geradas.</p>
-    </div>
-
-    <div class="dash-wrap">
-      <div class="dash-main">
-        <div class="dash-top">
-          <div>
-            <span>Dashboard MLX</span>
-            <h3>Campanhas imobiliárias</h3>
-          </div>
-          <div class="dash-live"><span></span> Ao vivo</div>
-        </div>
-
-        <div class="dash-metrics">
-          <div class="dash-metric">
-            <small>Leads hoje</small>
-            <strong>+24</strong>
-          </div>
-          <div class="dash-metric">
-            <small>CPL médio</small>
-            <strong>R$6,32</strong>
-          </div>
-          <div class="dash-metric">
-            <small>Conversão</small>
-            <strong>18%</strong>
-          </div>
-          <div class="dash-metric">
-            <small>ROI médio</small>
-            <strong>4.2x</strong>
+          <div class="prob-item">
+            <div class="prob-x" aria-hidden="true">✕</div>
+            <div class="prob-text">
+              <strong>Marketing reativo e sem funil</strong>
+              <span>Um mês funciona, no outro zero. Sem dados, sem escala, sem previsibilidade.</span>
+            </div>
           </div>
         </div>
-
-        <div class="dash-chart">
-          <div class="bar" style="height:38%"></div>
-          <div class="bar" style="height:52%"></div>
-          <div class="bar" style="height:45%"></div>
-          <div class="bar" style="height:68%"></div>
-          <div class="bar" style="height:76%"></div>
-          <div class="bar" style="height:62%"></div>
-          <div class="bar" style="height:88%"></div>
-        </div>
-
-        <div class="dash-bottom">
-          <span>Campanha ativa</span>
-          <strong>Apartamentos em lançamento • Ribeirão Preto/SP</strong>
-        </div>
       </div>
-
-      <div class="dash-feed">
-        <div class="lead-card active">
-          <span>🔔 Novo lead recebido</span>
-          <h4>Maria Silva</h4>
-          <p>Apartamento 2 quartos • Ribeirão Preto/SP</p>
-          <small>há 12 segundos</small>
-        </div>
-
-        <div class="lead-card">
-          <span>🔔 Novo lead recebido</span>
-          <h4>Pedro Oliveira</h4>
-          <p>Casa em condomínio • Florianópolis/SC</p>
-          <small>há 38 segundos</small>
-        </div>
-
-        <div class="lead-card">
-          <span>🔔 Novo lead recebido</span>
-          <h4>Ana Martins</h4>
-          <p>Cobertura frente mar • Ingleses/SC</p>
-          <small>há 1 minuto</small>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESSO -->
-<section id="processo">
-  <div class="container">
-    <div class="proc-header">
-      <span class="section-tag">Como funciona</span>
-      <h2 class="section-title">Do briefing aos<br><em>leads chegando</em></h2>
-    </div>
-    <div class="proc-track">
-      <div class="proc-step">
-        <div class="proc-bubble">
-          <div class="proc-num">01</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <h4>Diagnóstico</h4>
-        <p>Mapeamos seus imóveis, região de atuação, público-alvo e objetivos de venda.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-bubble">
-          <div class="proc-num">02</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-        </div>
-        <h4>Estratégia</h4>
-        <p>Criamos o plano de campanhas, criativos e segmentação específica por empreendimento.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-bubble">
-          <div class="proc-num">03</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-        </div>
-        <h4>Produção</h4>
-        <p>Desenvolvemos a landing page, os criativos e configuramos as campanhas nos canais.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-bubble">
-          <div class="proc-num">04</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 0 21 12"/></svg>
-        </div>
-        <h4>Ativação</h4>
-        <p>Subimos as campanhas e ativamos a automação de WhatsApp para capturar leads imediatamente.</p>
-      </div>
-      <div class="proc-step">
-        <div class="proc-bubble">
-          <div class="proc-num">05</div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
-        </div>
-        <h4>Resultados</h4>
-        <p>Otimização contínua, relatório mensal e leads qualificados chegando no seu WhatsApp.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PARA QUEM -->
-<section id="paraquem">
-  <div class="container">
-    <div class="pq-header">
-      <span class="section-tag">Para quem é</span>
-      <h2 class="section-title">Feito para quem vive<br><em>do mercado imobiliário</em></h2>
-      <p class="section-sub">Se você vende imóveis e precisa de mais leads, a MLX Mind tem a estratégia certa para você.</p>
-    </div>
-    <div class="pq-grid">
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h3>Corretor Autônomo</h3>
-        <p>Profissional independente que precisa de presença digital sólida e um fluxo constante de leads qualificados para fechar mais negócios sem depender só de indicação.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Marketing pessoal + captação de leads</div>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Imobiliária Regional</h3>
-        <p>Empresa com carteira de imóveis ativa que quer escalar a captação digital, aumentar a visibilidade da marca e gerar um volume previsível de contatos mensais.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Volume de leads + branding local</div>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        </div>
-        <h3>Incorporadora</h3>
-        <p>Empresa com lançamentos e empreendimentos em construção que precisa gerar interesse antes, durante e após o lançamento — com campanha de topo ao fundo de funil.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lançamentos + tráfego qualificado</div>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Equipe de Vendas</h3>
-        <p>Time de corretores vinculados a uma imobiliária que precisa de suporte de marketing centralizado — com criativos, campanhas e landing pages para cada produto.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Suporte de marketing para o time</div>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        </div>
-        <h3>Lançamentos & VGV Alto</h3>
-        <p>Projetos de alto valor que precisam de estratégia premium — do teaser ao pós-lançamento, com anúncios, vídeos, landing page e remarketing para fechar mais unidades.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estratégia full-funnel de lançamento</div>
-      </div>
-      <div class="pq-card">
-        <div class="pq-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Mercado de Aluguel</h3>
-        <p>Imobiliárias e corretores focados em locação que precisam de anúncios segmentados para atrair locatários qualificados e reduzir o tempo de vacância dos imóveis.</p>
-        <div class="pq-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Captação de locatários qualificados</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section id="depoimentos">
-  <div class="container">
-    <div class="dep-header">
-      <span class="section-tag">O que dizem</span>
-      <h2 class="section-title">Clientes que <em>já estão</em><br><strong>vendendo mais</strong></h2>
-      <p class="section-sub">Resultados reais de corretores e imobiliárias que confiaram na MLX Mind.</p>
-    </div>
-    <div class="dep-grid">
-      <div class="dep-card">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Ótima empresa, entrega o que promete! Profissionalismo 10!"</p>
-        <div class="dep-author">
-          <div class="dep-avatar">G</div>
-          <div><div class="dep-name">Imobiliária Gilberto Pinheiros</div><div class="dep-role">Imobiliária · Guarapari/ES</div></div>
-        </div>
-      </div>
-      <div class="dep-card">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Melhor escolha que eu fiz!"</p>
-        <div class="dep-author">
-          <div class="dep-avatar">V</div>
-          <div><div class="dep-name">Valério</div><div class="dep-role">Corretor da Lopes ONE - SP</div></div>
-        </div>
-      </div>
-      <div class="dep-card">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-quote">"Excelente atendimento, equipe super profissional e cumprem o que prometem. Super recomendo!"</p>
-        <div class="dep-author">
-          <div class="dep-avatar">C</div>
-          <div><div class="dep-name">Imobiliária Casa Verde</div><div class="dep-role">Imobiliária · Ribeirão Preto</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-box">
-      <span class="section-tag">Pronto para vender mais?</span>
-      <h2 class="section-title">Comece hoje.<br><em>Sem complicação.</em></h2>
-      <p class="cta-sub">Fale com a gente agora. Entendemos o seu mercado e já montamos a estratégia ideal para começar a gerar leads qualificados para seus imóveis.</p>
-      <div class="cta-actions">
-        <a href="https://wa.me/551152540490" class="cta-wa" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Falar no WhatsApp
+      <div class="fu d2">
+        <p class="prob-quote">Resultado digital não vem de ferramenta. Vem de <em>estratégia + execução</em> com quem entende o seu mercado.</p>
+        <p class="prob-body">Enquanto concorrentes dependem de indicação e tentativas aleatórias, nossos clientes constroem canais próprios de geração de demanda — previsíveis, escaláveis e independentes.</p>
+        <a href="#cta" class="btn-primary">
+          Quero construir meu canal próprio
+          <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="#servicos" class="btn-ghost">Ver serviços</a>
-      </div>
-      <div class="cta-trust">
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sem contrato de fidelidade</div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Especialistas em imobiliário</div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Resultado em 7 a 14 dias</div>
       </div>
     </div>
   </div>
 </section>
 
-<a href="https://wa.me/551152540490" class="wa-btn" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-left">
-      <div class="nav-logo">
-        <div class="logo-bars"><span></span><span></span><span></span></div>
-        <span class="logo-name">MLX Mind</span>
-      </div>
-      <p class="footer-copy">© 2025 MLX Mind — Marketing Experience. Todos os direitos reservados.<br>Especialistas em marketing para corretores e imobiliárias.</p>
+<!-- PROCESS -->
+<section id="process" aria-labelledby="proc-title">
+  <div class="container">
+    <div class="proc-hdr fu">
+      <div class="slabel">Como trabalhamos</div>
+      <h2 class="stitle" id="proc-title">Método MLX. Do diagnóstico à escala.</h2>
+      <p class="ssub">Processo testado em mais de 200 projetos para resultados previsíveis desde a primeira semana.</p>
     </div>
-    <ul class="footer-links">
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#imoveis">Portfólio</a></li>
-      <li><a href="#paraquem">Para quem</a></li>
-      <li><a href="#depoimentos">Clientes</a></li>
-      <li><a href="https://instagram.com/mlxmindofc" target="_blank" class="footer-social">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    <div class="proc-steps fu">
+      <div class="proc-step">
+        <div class="step-n">01</div>
+        <div>
+          <div class="step-name">Diagnóstico</div>
+          <p class="step-desc">Análise da presença digital, concorrência e oportunidades do seu nicho.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-n">02</div>
+        <div>
+          <div class="step-name">Planejamento</div>
+          <p class="step-desc">Estratégia personalizada com metas, canais e orçamento por dados.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-n">03</div>
+        <div>
+          <div class="step-name">Implementação</div>
+          <p class="step-desc">Criação de campanhas, landing pages e conteúdo com execução impecável.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-n">04</div>
+        <div>
+          <div class="step-name">Otimização</div>
+          <p class="step-desc">Análise contínua e ajustes semanais para reduzir custo e converter mais.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-n">05</div>
+        <div>
+          <div class="step-name">Escala</div>
+          <p class="step-desc">Com o que funciona validado, aumentamos verba com risco controlado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta" aria-labelledby="cta-title">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cta-inner fu">
+      <p class="cta-pre">Pronto para crescer?</p>
+      <h2 class="cta-title" id="cta-title">
+        Seu próximo cliente já está<br>procurando por você.<br>
+        <span>A questão é: ele vai te encontrar?</span>
+      </h2>
+      <p class="cta-sub">Faça um diagnóstico gratuito com nosso time. Em 30 minutos você entende exatamente onde está perdendo leads — e como corrigir isso.</p>
+      <div class="cta-acts">
+        <a href="tel:+551152540490" class="btn-primary">
+          <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Agendar Reunião Gratuita
+        </a>
+        <a href="tel:+551152540490" class="btn-secondary">
+          <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          (11) 5254-0490
+        </a>
+      </div>
+      <p class="cta-note">Sem compromisso · Diagnóstico 100% gratuito · Resposta em até 2 horas</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-inner">
+    <div class="foot-logo">
+      <a href="#" class="logo" aria-label="MLX Mind">
+        <div class="logo-bars" aria-hidden="true">
+          <div class="logo-bar"></div>
+          <div class="logo-bar"></div>
+          <div class="logo-bar"></div>
+        </div>
+        MLX Mind
+      </a>
+      <p class="foot-copy">© 2025 MLX Mind. Todos os direitos reservados.</p>
+    </div>
+    <div class="foot-right">
+      <a href="https://instagram.com/mlxmindofc" target="_blank" rel="noopener" class="foot-insta">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>
         @mlxmindofc
-      </a></li>
-      <li><a href="https://wa.me/551152540490" target="_blank" class="footer-social">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.115 1.522 5.847L0 24l6.335-1.501A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.88 0-3.652-.488-5.2-1.344l-.375-.214-3.763.891.923-3.664-.232-.383A9.933 9.933 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        WhatsApp
-      </a></li>
-    </ul>
+      </a>
+      <nav class="foot-links" aria-label="Links do rodapé">
+        <a href="#nichos">Nichos</a>
+        <a href="#services">Serviços</a>
+        <a href="#ecosistema">Imobiliário</a>
+        <a href="#process">Processo</a>
+        <a href="tel:+551152540490">(11) 5254-0490</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
 <script>
-// SCROLL PROGRESS
-const sp = document.getElementById('sprogress');
+// ── SCROLL ANIMATIONS ──
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+requestAnimationFrame(() => {
+  document.querySelectorAll('#hero .fu').forEach(el => el.classList.add('vis'));
+});
+
+// ── COUNTER ──
+function counter(el, target) {
+  const d = 1600, s = performance.now();
+  const tick = now => {
+    const p = Math.min((now - s) / d, 1);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+const cobs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { counter(e.target, +e.target.dataset.t); cobs.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.cnum').forEach(el => cobs.observe(el));
+
+// ── NAV ──
+const nav = document.getElementById('mainnav');
 window.addEventListener('scroll', () => {
-  const d = document.documentElement;
-  sp.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
-}, {passive: true});
+  nav.style.background = window.scrollY > 60 ? 'rgba(6,6,18,0.96)' : 'rgba(6,6,18,0.6)';
+}, { passive: true });
 
-// MOBILE MENU
-const burger = document.getElementById('burger');
-const navMob = document.getElementById('navMob');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  navMob.classList.toggle('open');
+// ── MOBILE MENU ──
+const mobBtn = document.getElementById('navMob');
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+mobBtn.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  mobBtn.textContent = menuOpen ? '✕' : '☰';
 });
-navMob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  burger.classList.remove('open');
-  navMob.classList.remove('open');
-}));
+document.querySelectorAll('.nav-mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuOpen = false; mobileMenu.classList.remove('open'); mobBtn.textContent = '☰';
+  });
+});
 
-// COUNTER ANIMATION
-function animCount(el, target, suffix, dur = 1400) {
-  const start = performance.now();
-  const step = now => {
-    const p = Math.min((now - start) / dur, 1);
-    const ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-    const val = Math.round(ease * target);
-    if (suffix === '×') el.textContent = val + '×';
-    else if (suffix === '+') el.textContent = '+' + val;
-    else el.textContent = val + suffix;
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
+// ── NICHE PILLS ──
+document.querySelectorAll('.niche-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.niche-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  });
+});
 
-const counters = document.querySelectorAll('[data-count]');
-let counted = false;
-const countObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting && !counted) {
-      counted = true;
-      counters.forEach((el, i) => {
-        setTimeout(() => animCount(el, +el.dataset.count, el.dataset.suffix), i * 100);
-      });
-      countObs.disconnect();
+// ── ORBIT POSITIONING ──
+(function positionOrbitNodes() {
+  const wrap = document.getElementById('orbitWrap');
+  if (!wrap) return;
+
+  const nodes = wrap.querySelectorAll('.orbit-node');
+  const cx = wrap.offsetWidth / 2;
+  const cy = wrap.offsetHeight / 2;
+
+  nodes.forEach(node => {
+    const angleDeg = parseFloat(node.dataset.angle);
+    const radius   = parseFloat(node.dataset.radius);
+    const rad = (angleDeg - 90) * Math.PI / 180;
+    const x = cx + radius * Math.cos(rad);
+    const y = cy + radius * Math.sin(rad);
+    node.style.left = (x - 28) + 'px';
+    node.style.top  = (y - 28) + 'px';
+
+    // Adjust tooltip direction based on position
+    const tt = node.querySelector('.orbit-tooltip');
+    if (tt) {
+      if (y > cy + 40) {
+        tt.style.top = 'auto';
+        tt.style.bottom = '120%';
+        tt.style.transform = 'translate(-50%, 0)';
+      } else if (y < cy - 40) {
+        tt.style.top = '120%';
+        tt.style.bottom = 'auto';
+        tt.style.transform = 'translate(-50%, 0)';
+      }
+      if (x < 60) {
+        tt.style.left = '0';
+        tt.style.transform = 'translate(0, -120%)';
+      } else if (x > wrap.offsetWidth - 60) {
+        tt.style.left = 'auto';
+        tt.style.right = '0';
+        tt.style.transform = 'translate(0, -120%)';
+      }
     }
   });
-}, {threshold: 0.5});
-if (counters[0]) countObs.observe(counters[0].closest('section') || counters[0]);
 
-// SCROLL REVEAL
-const revealInit = () => {
-  document.querySelectorAll('.serv-card, .dep-card, .pq-card, .proc-step, .num-card, .prob-item, .prob-card, .imov-card').forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(32px)';
-    el.style.transition = 'none';
-    el.dataset.ri = i;
-  });
-  document.querySelectorAll('.serv-header, .num-inner, .proc-header, .pq-header, .dep-header, .imov-header, .cta-box').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'none';
-  });
-};
-
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const delay = (parseInt(e.target.dataset.ri || 0) % 6) * 70;
-      setTimeout(() => {
-        e.target.style.transition = 'opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1)';
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'none';
-      }, delay);
-      revealObs.unobserve(e.target);
-    }
-  });
-}, {threshold: 0.07});
-
-revealInit();
-document.querySelectorAll('.serv-card, .dep-card, .pq-card, .proc-step, .num-card, .prob-item, .prob-card, .imov-card, .serv-header, .num-inner, .proc-header, .pq-header, .dep-header, .imov-header, .cta-box').forEach(el => revealObs.observe(el));
-
-// PROB CARDS - problem stack hover
-document.querySelectorAll('.prob-card').forEach((card, i) => {
-  card.addEventListener('mouseenter', () => {
-    document.querySelectorAll('.prob-card').forEach((c, j) => {
-      if (j !== i) { c.style.opacity = '0.4'; c.style.transform += ' scale(0.97)'; }
-    });
-  });
-  card.addEventListener('mouseleave', () => {
-    document.querySelectorAll('.prob-card').forEach(c => {
-      c.style.opacity = '';
-      const t = c.style.transform.replace(/ scale\(0\.97\)/, '');
-      c.style.transform = t;
-    });
-  });
-});
-
-// TILT on cards (desktop only)
-if (!('ontouchstart' in window)) {
-  document.querySelectorAll('.serv-card, .dep-card, .pq-card').forEach(card => {
-    let spotlight = document.createElement('div');
-    spotlight.style.cssText = 'position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--sx,50%) var(--sy,50%),rgba(178,102,255,.1) 0%,transparent 60%)';
-    card.style.position = 'relative';
-    card.appendChild(spotlight);
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const xp = (e.clientX - r.left) / r.width;
-      const yp = (e.clientY - r.top) / r.height;
-      card.style.setProperty('--sx', (xp * 100).toFixed(1) + '%');
-      card.style.setProperty('--sy', (yp * 100).toFixed(1) + '%');
-      spotlight.style.opacity = '1';
-      card.style.transform = `perspective(600px) rotateX(${-(yp - .5) * 8}deg) rotateY(${(xp - .5) * 8}deg) translateZ(4px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      spotlight.style.opacity = '0';
-      card.style.transform = '';
-    });
-  });
-}
-
-// smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({behavior: 'smooth'}); }
-  });
-});
+  // Reposition on resize
+  window.addEventListener('resize', positionOrbitNodes, { passive: true });
+})();
 </script>
-
-  <script>
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach((entry)=>{
-if(entry.isIntersecting){
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
-}
-});
-});
-
-document.querySelectorAll(".mlx-letter-card").forEach((el)=>{
-el.style.opacity="0";
-el.style.transform="translateY(50px)";
-el.style.transition="all .8s ease";
-
-observer.observe(el);
-});
-</script>
-<script>
-const estados = document.querySelectorAll('.estado-pin');
-const estadoNome = document.getElementById('estadoNome');
-const estadoLeads = document.getElementById('estadoLeads');
-const estadoDesc = document.getElementById('estadoDesc');
-
-estados.forEach((estado)=>{
-  const ativarEstado = () => {
-    estados.forEach(e => e.classList.remove('ativo'));
-    estado.classList.add('ativo');
-
-    estadoNome.textContent = estado.dataset.estado;
-    estadoLeads.textContent = estado.dataset.leads + ' leads gerados';
-    estadoDesc.textContent = estado.dataset.desc;
-  };
-
-  estado.addEventListener('mouseenter', ativarEstado);
-  estado.addEventListener('click', ativarEstado);
-  estado.addEventListener('touchstart', ativarEstado);
-});
-</script>
-
-  <script>
-const leads = [
-
-{
-nome:"João Pedro",
-imovel:"Apartamento 2 quartos • Ribeirão Preto/SP",
-tempo:"há 4 segundos"
-},
-
-{
-nome:"Maria Oliveira",
-imovel:"Cobertura • Florianópolis/SC",
-tempo:"há 11 segundos"
-},
-
-{
-nome:"Carlos Silva",
-imovel:"Casa em condomínio • São Paulo/SP",
-tempo:"há 23 segundos"
-},
-
-{
-nome:"Ana Martins",
-imovel:"Apartamento frente mar • SC",
-tempo:"há 39 segundos"
-},
-
-{
-nome:"Ricardo Souza",
-imovel:"Lançamento MRV • Ribeirão Preto/SP",
-tempo:"há 52 segundos"
-}
-
-];
-
-const cards=document.querySelectorAll(".lead-card");
-
-function atualizarLead(){
-
-cards.forEach(card=>{
-
-const lead=
-leads[
-Math.floor(
-Math.random()*leads.length
-)
-];
-
-card.querySelector("h4").textContent=
-lead.nome;
-
-card.querySelector("p").textContent=
-lead.imovel;
-
-card.querySelector("small").textContent=
-lead.tempo;
-
-});
-
-}
-
-setInterval(
-atualizarLead,
-3000
-);
-
-</script>
- 
 </body>
 </html>
