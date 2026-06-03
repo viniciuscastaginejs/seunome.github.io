@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MLX Mind — Performance Digital para Todos os Nichos</title>
+<title>MLX Mind — Crescimento Digital para Qualquer Mercado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -37,14 +37,14 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--text);
-  font-family:'DM Sans',sans-serif;
+  font-family:'Archivo',sans-serif;
   font-size:16px;
   line-height:1.6;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
 
-h1,h2,h3,h4,h5{font-family:'Syne',sans-serif;line-height:1.15;letter-spacing:-0.02em}
+h1,h2,h3,h4,h5{font-family:'Archivo Black',sans-serif;line-height:1.15;letter-spacing:-0.02em}
 
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar{width:4px}
@@ -63,7 +63,7 @@ nav{
   transition:background .3s;
 }
 .nav-logo{
-  font-family:'Syne',sans-serif;
+  font-family:'Archivo Black',sans-serif;
   font-size:1.3rem;font-weight:800;
   color:var(--white);
   text-decoration:none;
@@ -96,7 +96,7 @@ nav{
   flex-direction:column;gap:1.5rem;
 }
 .mobile-menu.open{display:flex}
-.mobile-menu a{color:var(--text);font-size:1.2rem;font-family:'Syne',sans-serif;text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.mobile-menu a{color:var(--text);font-size:1.2rem;font-family:'Archivo Black',sans-serif;text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--border)}
 .mobile-menu .nav-cta{margin-top:1rem;text-align:center;display:block}
 
 /* ─── HERO ─── */
@@ -107,24 +107,44 @@ nav{
   position:relative;overflow:hidden;
 }
 .hero-grid{
-  position:absolute;inset:0;
+  position:absolute;inset:0;overflow:hidden;
+}
+.hero-grid::before{
+  content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(var(--border) 1px,transparent 1px),
-    linear-gradient(90deg,var(--border) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 30%,transparent 100%);
+    linear-gradient(rgba(124,92,252,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(124,92,252,0.07) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 100% 80% at 25% 35%,black 10%,transparent 70%);
+}
+.hero-grid::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 15%, rgba(124,92,252,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 55% at 10% 85%, rgba(90,63,216,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 25% 30% at 90% 75%, rgba(155,127,254,0.12) 0%, transparent 50%);
 }
 .hero-glow{
-  position:absolute;top:-20%;left:50%;transform:translateX(-50%);
-  width:800px;height:800px;
-  background:radial-gradient(circle,rgba(124,92,252,.18) 0%,transparent 65%);
+  position:absolute;top:-10%;left:-5%;
+  width:900px;height:900px;
+  background:conic-gradient(from 210deg at 45% 55%,
+    transparent 0deg,
+    rgba(124,92,252,.2) 60deg,
+    rgba(90,63,216,.15) 120deg,
+    transparent 180deg);
   pointer-events:none;
+  animation:rotateSlow 30s linear infinite;
+  transform-origin:center center;
 }
 .hero-glow2{
-  position:absolute;bottom:-10%;right:-10%;
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(124,92,252,.08) 0%,transparent 65%);
+  position:absolute;bottom:-15%;right:-5%;
+  width:650px;height:650px;
+  background:conic-gradient(from 30deg at 55% 45%,
+    transparent 0deg,
+    rgba(155,127,254,.14) 70deg,
+    transparent 140deg);
   pointer-events:none;
+  animation:rotateSlow 40s linear infinite reverse;
 }
 .hero-inner{max-width:900px;position:relative}
 .hero-badge{
@@ -207,7 +227,7 @@ nav{
 }
 .num-item{text-align:center}
 .num-value{
-  font-family:'Syne',sans-serif;
+  font-family:'Archivo Black',sans-serif;
   font-size:clamp(2rem,4vw,3rem);font-weight:800;
   color:var(--white);
   display:block;
@@ -272,7 +292,7 @@ section{padding:6rem 5%}
 .nichos-section{background:var(--bg2)}
 .nichos-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(4,1fr);
   gap:1rem;
   margin-top:3rem;
 }
@@ -324,7 +344,7 @@ section{padding:6rem 5%}
   padding:1.25rem;
 }
 .imob-metric .val{
-  font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--purple2);
+  font-family:'Archivo Black',sans-serif;font-size:1.6rem;font-weight:800;color:var(--purple2);
   display:block;
 }
 .imob-metric .lbl{color:var(--text3);font-size:.8rem;margin-top:.2rem;display:block}
@@ -341,7 +361,7 @@ section{padding:6rem 5%}
 .case-tag{font-size:.75rem;color:var(--purple2);margin-bottom:.5rem;display:block}
 .case-card h4{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:.75rem}
 .case-numbers{display:flex;gap:2rem}
-.case-num .n{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);display:block}
+.case-num .n{font-family:'Archivo Black',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);display:block}
 .case-num .l{font-size:.75rem;color:var(--text3);display:block}
 
 /* ─── MÉTODO ─── */
@@ -366,7 +386,7 @@ section{padding:6rem 5%}
   background:var(--bg);
   border:1px solid var(--border2);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;
+  font-family:'Archivo Black',sans-serif;font-size:.85rem;font-weight:700;
   color:var(--text3);margin-bottom:1rem;
   transition:border-color .2s,color .2s,background .2s;
 }
@@ -417,7 +437,7 @@ section{padding:6rem 5%}
   border-radius:var(--radius);
   padding:.75rem 1rem;
   color:var(--text);
-  font-family:'DM Sans',sans-serif;
+  font-family:'Archivo',sans-serif;
   font-size:.9rem;
   transition:border-color .2s;
   outline:none;
@@ -432,7 +452,7 @@ section{padding:6rem 5%}
   background:var(--purple);color:#fff;
   border:none;cursor:pointer;
   padding:1rem;border-radius:100px;
-  font-family:'Syne',sans-serif;font-size:1rem;font-weight:600;
+  font-family:'Archivo Black',sans-serif;font-size:1rem;font-weight:600;
   transition:background .2s,transform .15s;
   display:flex;align-items:center;justify-content:center;gap:.5rem;
   margin-top:.5rem;
@@ -481,7 +501,7 @@ footer{
   margin-bottom:2rem;
 }
 .footer-brand .logo{
-  font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;
+  font-family:'Archivo Black',sans-serif;font-size:1.3rem;font-weight:800;
   color:var(--white);text-decoration:none;
 }
 .footer-brand .logo span{color:var(--purple2)}
@@ -507,6 +527,7 @@ footer{
 
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rotateSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 
 .reveal{
   opacity:0;transform:translateY(24px);
@@ -517,6 +538,7 @@ footer{
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px){
   .numbers-inner{grid-template-columns:repeat(2,1fr)}
+  .nichos-grid{grid-template-columns:repeat(2,1fr)}
   .imob-inner{grid-template-columns:1fr;gap:3rem}
   .imob-right{order:-1}
   .metodo-steps{
@@ -542,6 +564,7 @@ footer{
   footer{padding:3rem 1.25rem 2rem}
   .numbers-inner{grid-template-columns:repeat(2,1fr);gap:1.5rem}
   .services-grid{grid-template-columns:1fr}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center;padding:.9rem 1.5rem}
   .nichos-grid{grid-template-columns:1fr 1fr}
   .imob-metrics{grid-template-columns:1fr 1fr}
   .case-numbers{gap:1rem}
@@ -587,10 +610,6 @@ footer{
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-inner">
-    <div class="hero-badge">
-      <i class="fa-solid fa-signal"></i>
-      Performance Digital para Todos os Nichos
-    </div>
     <h1>Crescimento digital<br>para qualquer <span class="accent">mercado.</span></h1>
     <p class="hero-sub">Da clínica ao escritório de advocacia, do e-commerce à incorporadora — geramos leads qualificados, construímos autoridade e escalamos resultados com estratégia e dados.</p>
     <div class="hero-actions">
@@ -603,14 +622,6 @@ footer{
         (11) 5254-0490
       </a>
     </div>
-    <div class="hero-nichos">
-      <span>Atendemos:</span>
-      <div class="nicho-tag">Imobiliário</div>
-      <div class="nicho-tag">Saúde</div>
-      <div class="nicho-tag">Jurídico</div>
-      <div class="nicho-tag">E-commerce</div>
-      <div class="nicho-tag">Educação</div>
-      <div class="nicho-tag">Gastronomia</div>
     </div>
   </div>
 </section>
@@ -749,6 +760,16 @@ footer{
         <i class="fa-solid fa-utensils nicho-icon"></i>
         <h3>Gastronomia</h3>
         <p>Restaurantes e franquias. Geração de demanda local e fidelização de clientes.</p>
+      </div>
+      <div class="nicho-card reveal">
+        <i class="fa-solid fa-scissors nicho-icon"></i>
+        <h3>Estética & Beleza</h3>
+        <p>Salões, barbearias e clínicas estéticas. Agendamentos recorrentes e fidelização com autoridade digital.</p>
+      </div>
+      <div class="nicho-card reveal">
+        <i class="fa-solid fa-solar-panel nicho-icon"></i>
+        <h3>Energia Solar</h3>
+        <p>Instaladores e integradores. Leads qualificados para projetos residenciais e comerciais com custo por aquisição controlado.</p>
       </div>
     </div>
   </div>
