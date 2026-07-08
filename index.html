@@ -193,13 +193,21 @@ nav.scrolled{background:rgba(7,4,11,.9);border-bottom-color:var(--line)}
   transition:transform .15s,box-shadow .2s,background .2s;
 }
 .nav-cta:hover{background:var(--violet-hi);transform:translateY(-1px);box-shadow:0 10px 34px rgba(168,28,255,.45)}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.nav-hamburger span{width:24px;height:2px;background:var(--frost);border-radius:2px;transition:.3s}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;background:none;border:none}
+.nav-hamburger span{width:24px;height:2px;background:var(--frost);border-radius:2px;transition:transform .3s,opacity .2s}
+.nav-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.active span:nth-child(2){opacity:0}
+.nav-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{
-  display:none;position:fixed;inset:74px 0 0;background:var(--ink);z-index:99;
+  display:flex;position:fixed;inset:74px 0 0;z-index:99;
+  background:rgba(13,7,22,.97);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   padding:2rem max(5%,1.25rem);flex-direction:column;gap:1.25rem;
+  opacity:0;visibility:hidden;transform:translateY(-10px);pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease,visibility .25s;
 }
-.mobile-menu.open{display:flex}
+.mobile-menu.open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+body.menu-open{overflow:hidden}
 .mobile-menu a{color:var(--frost);font-size:1.25rem;font-family:'Archivo Black',sans-serif;text-decoration:none;padding:.6rem 0;border-bottom:1px solid var(--line)}
 .mobile-menu .nav-cta{margin-top:1rem;text-align:center;display:block;border-bottom:none}
 
@@ -219,11 +227,7 @@ nav.scrolled{background:rgba(7,4,11,.9);border-bottom-color:var(--line)}
   color:var(--violet-hi);font-weight:600;margin-bottom:1.5rem;
   opacity:0;animation:rise .7s .05s ease forwards;
 }
-.hero-eyebrow .bars{display:inline-flex;flex-direction:column;gap:2px}
-.hero-eyebrow .bars i{display:block;height:2px;border-radius:2px;background:var(--violet);transform:skewX(var(--slant))}
-.hero-eyebrow .bars i:nth-child(1){width:14px}
-.hero-eyebrow .bars i:nth-child(2){width:18px;opacity:.7}
-.hero-eyebrow .bars i:nth-child(3){width:11px;opacity:.45}
+.hero-eyebrow .dash{display:inline-block;width:26px;height:2px;border-radius:2px;background:var(--violet);transform:skewX(var(--slant));flex-shrink:0}
 .hero h1{
   font-size:clamp(2.7rem,6.4vw,5.2rem);color:var(--white);
   margin-bottom:1.4rem;opacity:0;animation:rise .7s .12s ease forwards;
@@ -262,50 +266,58 @@ nav.scrolled{background:rgba(7,4,11,.9);border-bottom-color:var(--line)}
 }
 .btn-secondary:hover{color:var(--white);border-color:var(--violet);background:rgba(168,28,255,.08);transform:translateY(-2px)}
 
-/* hero logo stage */
+/* hero results panel — prova no lugar de decoração */
 .hero-stage{position:relative;z-index:2;display:flex;align-items:center;justify-content:center}
-/* clean 3-bar mark — no wordmark, no circle, no bevel */
-.logo-mark{
-  --bw:clamp(150px,24vw,250px);     /* bar width  */
-  --bh:calc(var(--bw)*0.282);       /* bar height (logo ratio) */
-  --bg-gap:calc(var(--bh)*0.46);    /* gap between bars */
-  position:relative;
-  display:flex;flex-direction:column;gap:var(--bg-gap);
-  filter:drop-shadow(0 14px 40px rgba(168,28,255,.45));
+.lead-panel{
+  width:min(420px,100%);
+  background:linear-gradient(170deg,var(--card-hi),var(--card));
+  border:1px solid var(--line2);border-radius:var(--radius-xl);
+  padding:1.6rem 1.6rem 1.4rem;position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.5),0 10px 44px rgba(168,28,255,.16);
   opacity:0;animation:rise .9s .35s ease forwards;
 }
-.logo-mark .bar-row{position:relative;width:var(--bw)}
-.bar{
-  display:block;width:100%;height:var(--bh);position:relative;overflow:hidden;
-  clip-path:polygon(21% 0,100% 0,79% 100%,0 100%);
-  transition:filter .25s,transform .25s;
-  will-change:transform;
+.lead-panel::before{ /* traço inclinado da marca na borda do card */
+  content:'';position:absolute;top:-1px;left:28px;width:58px;height:3px;
+  background:linear-gradient(90deg,var(--violet-hi),var(--magenta));
+  transform:skewX(var(--slant));border-radius:2px;
 }
-.bar::after{ /* subtle glossy top edge, not a heavy bevel */
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,0) 42%);
-  pointer-events:none;
+.lp-head{
+  display:flex;align-items:center;gap:.55rem;margin-bottom:1.2rem;
+  font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);font-weight:600;
 }
-.bar-row:nth-child(1) .bar{background:linear-gradient(180deg,#D87CFF,#9A2BF0)}
-.bar-row:nth-child(2) .bar{background:linear-gradient(180deg,#C24FFF,#7E18CC)}
-.bar-row:nth-child(3) .bar{background:linear-gradient(180deg,#A81CFF,#6E12B8)}
-.bar-tip{
-  display:none;position:absolute;left:calc(100% + 22px);top:50%;
-  transform:translate(-8px,-50%);white-space:nowrap;
-  font-family:'Archivo Black',sans-serif;letter-spacing:-.01em;
-  font-size:clamp(1rem,1.5vw,1.35rem);color:var(--white);
-  opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;
+.lp-dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex-shrink:0;animation:lpPulse 2s infinite}
+.lp-pill{
+  margin-left:auto;font-size:.72rem;letter-spacing:0;text-transform:none;
+  color:var(--violet-hi);background:rgba(168,28,255,.1);
+  border:1px solid var(--line);padding:.18rem .6rem;border-radius:100px;white-space:nowrap;
 }
-.bar-tip::before{
-  content:'';position:absolute;left:-15px;top:50%;width:9px;height:2px;
-  background:var(--violet);transform:translateY(-50%);border-radius:2px;
+.lp-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1rem}
+.lp-kpi{background:rgba(7,4,11,.55);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem .45rem;text-align:center}
+.lp-kpi .k{display:block;font-family:'Archivo Black',sans-serif;font-size:1.02rem;color:var(--white);letter-spacing:-.01em}
+.lp-kpi:first-child .k{
+  background:linear-gradient(120deg,var(--violet-hi),var(--magenta));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-/* hover labels are a pointer-only enhancement — never on touch/mobile */
-@media (hover:hover) and (pointer:fine){
-  .bar-tip{display:block}
-  .bar:hover{filter:brightness(1.14) saturate(1.08);transform:translateX(4px)}
-  .bar:hover + .bar-tip{opacity:1;transform:translate(0,-50%)}
+.lp-kpi .l{display:block;font-size:.64rem;color:var(--dim);margin-top:.18rem;line-height:1.3}
+.lp-spark{width:100%;height:54px;display:block;margin-bottom:1rem}
+.lp-feed{display:flex;flex-direction:column;gap:.55rem;height:186px;overflow:hidden}
+.lp-item{
+  display:flex;align-items:center;gap:.75rem;flex-shrink:0;
+  background:rgba(7,4,11,.55);border:1px solid var(--line);
+  border-radius:var(--radius);padding:.62rem .8rem;
 }
+.lp-item.new{animation:feedIn .45s ease}
+.lp-item .ic{
+  width:34px;height:34px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--violet-hi);font-size:.85rem;
+  background:linear-gradient(135deg,rgba(168,28,255,.22),rgba(110,18,184,.08));
+  border:1px solid var(--line2);
+}
+.lp-item .t{font-size:.82rem;color:var(--frost);font-weight:500;line-height:1.3;display:block}
+.lp-item .m{font-size:.7rem;color:var(--dim);display:block;margin-top:.1rem}
+@keyframes feedIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+@keyframes lpPulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.45)}70%{box-shadow:0 0 0 9px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
 .scroll-hint{
   position:absolute;left:max(5%,1.25rem);bottom:30px;z-index:3;
   display:flex;align-items:center;gap:.6rem;color:var(--dim);font-size:.75rem;
@@ -501,8 +513,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
   .hero-eyebrow,.label{justify-content:center}
   .hero-sub{margin-left:auto;margin-right:auto}
   .hero-actions{justify-content:center}
-  .hero-stage{order:-1}
-  .logo-mark{--bw:clamp(140px,42vw,210px)}
+  .lead-panel{margin:0 auto}
   .scroll-hint{display:none}
   .imob-inner,.diag-inner{grid-template-columns:1fr;gap:3rem}
   .imob-right{order:-1}
@@ -516,29 +527,53 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
   .num-item:not(:last-child)::after{display:none}
 }
 @media(max-width:680px){
+  nav{height:64px}
   nav .nav-links,nav .nav-cta{display:none}
   .nav-hamburger{display:flex}
-  .hero{padding-top:100px;gap:1.6rem}
-  .logo-mark{--bw:min(190px,52vw)}
+  .mobile-menu{inset:64px 0 0}
+  .hero{padding:96px 1.25rem 64px;gap:2.2rem}
+  .hero h1{font-size:clamp(2.15rem,9.5vw,2.8rem)}
+  .lead-panel{padding:1.3rem 1.15rem 1.15rem}
   .sec{padding:4.2rem 1.25rem}
   .numbers{padding:2.6rem 1.25rem}
   .numbers-inner{grid-template-columns:1fr 1fr;gap:1.6rem}
   .services-grid{grid-template-columns:1fr}
   .imob-metrics{grid-template-columns:1fr 1fr}
   .btn-primary,.btn-secondary{width:100%;justify-content:center}
+  .diag{padding:4.2rem 1.25rem}
+  .diag-form{padding:1.8rem 1.35rem}
+  .fg input,.fg select,.fg textarea{font-size:16px} /* evita zoom automático no iOS */
+  .cta{padding:5rem 1.25rem}
   .footer-top{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{justify-content:center;text-align:center}
   .divider{height:56px}
+  .wa-float{width:52px;height:52px;right:14px;bottom:14px}
 }
 @media(max-width:420px){
   .nichos-grid{grid-template-columns:1fr}
   .case-nums{gap:1.2rem}
+  .lp-kpi .k{font-size:.92rem}
+  .cta-meta{gap:.8rem;flex-direction:column;align-items:center}
 }
+
+/* ─────────────────────────────────────────── WHATSAPP FLUTUANTE */
+.wa-float{
+  position:fixed;right:20px;bottom:20px;z-index:98;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;font-size:1.7rem;
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 10px 30px rgba(37,211,102,.4);
+  transition:transform .2s,box-shadow .2s;
+}
+.wa-float:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 38px rgba(37,211,102,.55)}
+
+/* estado de erro do formulário */
+.fg input.err,.fg select.err,.fg textarea.err{border-color:#ff5b7a;box-shadow:0 0 0 3px rgba(255,91,122,.14)}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
-  .hero-eyebrow,.hero h1,.hero-sub,.hero-actions,.logo-mark{opacity:1!important}
+  .hero-eyebrow,.hero h1,.hero-sub,.hero-actions,.lead-panel{opacity:1!important}
 }
 </style>
 </head>
@@ -567,7 +602,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
     <li><a href="#diagnostico">Diagnóstico</a></li>
   </ul>
   <a href="#diagnostico" class="nav-cta">Diagnóstico Gratuito</a>
-  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -603,7 +638,7 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
   </svg>
 
   <div class="hero-inner">
-    <span class="hero-eyebrow"><span class="bars"><i></i><i></i><i></i></span> Agência de performance digital</span>
+    <span class="hero-eyebrow"><span class="dash"></span> Agência de performance digital</span>
     <h1>Crescimento digital<br>para qualquer <span class="accent">mercado.</span></h1>
     <p class="hero-sub">Da clínica ao escritório de advocacia, do e-commerce à incorporadora — geramos leads qualificados, construímos autoridade e escalamos resultados com estratégia e dados.</p>
     <div class="hero-actions">
@@ -613,10 +648,22 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
   </div>
 
   <div class="hero-stage">
-    <div class="logo-mark" aria-label="MLX Mind">
-      <div class="bar-row"><span class="bar"></span><span class="bar-tip">Marketing</span></div>
-      <div class="bar-row"><span class="bar"></span><span class="bar-tip">Leads</span></div>
-      <div class="bar-row"><span class="bar"></span><span class="bar-tip">Experience</span></div>
+    <div class="lead-panel" aria-hidden="true">
+      <div class="lp-head"><span class="lp-dot"></span> Campanhas ativas <span class="lp-pill">+312% ROI médio</span></div>
+      <div class="lp-kpis">
+        <div class="lp-kpi"><span class="k" id="lpLeads">1.240</span><span class="l">leads gerados</span></div>
+        <div class="lp-kpi"><span class="k">R$14</span><span class="l">custo por lead</span></div>
+        <div class="lp-kpi"><span class="k">21,4%</span><span class="l">conversão</span></div>
+      </div>
+      <svg class="lp-spark" viewBox="0 0 320 54" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lpline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6E12B8"/><stop offset="1" stop-color="#C95CFF"/></linearGradient>
+          <linearGradient id="lpfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A81CFF" stop-opacity=".3"/><stop offset="1" stop-color="#A81CFF" stop-opacity="0"/></linearGradient>
+        </defs>
+        <path d="M0,48 C40,46 70,40 110,34 C150,28 190,26 230,17 C260,11 290,8 320,4 L320,54 L0,54 Z" fill="url(#lpfill)"/>
+        <path d="M0,48 C40,46 70,40 110,34 C150,28 190,26 230,17 C260,11 290,8 320,4" fill="none" stroke="url(#lpline)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div class="lp-feed" id="lpFeed"></div>
     </div>
   </div>
 
@@ -829,17 +876,17 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
       <div class="diag-form">
         <h3>Diagnóstico Gratuito</h3>
         <p>Em 30 minutos você entende onde está perdendo leads — e como corrigir isso.</p>
-        <div class="fg"><label>Nome completo</label><input type="text" placeholder="Seu nome"></div>
-        <div class="fg"><label>WhatsApp</label><input type="tel" placeholder="(11) 99999-9999"></div>
-        <div class="fg"><label>E-mail</label><input type="email" placeholder="seu@email.com"></div>
-        <div class="fg"><label>Segmento</label>
-          <select>
+        <div class="fg"><label for="fNome">Nome completo</label><input id="fNome" type="text" placeholder="Seu nome" autocomplete="name"></div>
+        <div class="fg"><label for="fZap">WhatsApp</label><input id="fZap" type="tel" placeholder="(11) 99999-9999" autocomplete="tel" inputmode="tel"></div>
+        <div class="fg"><label for="fMail">E-mail</label><input id="fMail" type="email" placeholder="seu@email.com" autocomplete="email"></div>
+        <div class="fg"><label for="fSeg">Segmento</label>
+          <select id="fSeg">
             <option value="" disabled selected>Selecione seu nicho</option>
             <option>Mercado Imobiliário</option><option>Saúde &amp; Clínicas</option><option>Jurídico</option>
             <option>E-commerce</option><option>Educação</option><option>Gastronomia</option><option>Outro</option>
           </select>
         </div>
-        <div class="fg"><label>Qual seu principal desafio?</label><textarea placeholder="Conte brevemente sobre sua situação atual..."></textarea></div>
+        <div class="fg"><label for="fMsg">Qual seu principal desafio?</label><textarea id="fMsg" placeholder="Conte brevemente sobre sua situação atual..."></textarea></div>
         <button class="form-submit" onclick="submitForm()"><i class="fa-solid fa-paper-plane"></i> Agendar Diagnóstico Gratuito</button>
         <p class="form-note">Sem compromisso · Resposta em até 2 horas</p>
       </div>
@@ -919,18 +966,88 @@ footer{background:var(--ink);border-top:1px solid var(--line);padding:3.8rem max
   </div>
 </footer>
 
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/551152540490?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20MLX%20Mind." class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
 <script>
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function toggleMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.getElementById('navHamburger');
+  const open=menu.classList.toggle('open');
+  btn.classList.toggle('active',open);
+  btn.setAttribute('aria-expanded',open);
+  btn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+  document.body.classList.toggle('menu-open',open);
+}
 
+/* envio real: valida e abre o WhatsApp da MLX com os dados preenchidos */
 function submitForm(){
+  const nome=document.getElementById('fNome');
+  const zap=document.getElementById('fZap');
+  const mail=document.getElementById('fMail');
+  const seg=document.getElementById('fSeg');
+  const msg=document.getElementById('fMsg');
+
+  let ok=true;
+  if(nome.value.trim().length<2){nome.classList.add('err');ok=false}
+  if(zap.value.replace(/\D/g,'').length<10){zap.classList.add('err');ok=false}
+  if(!ok){(nome.classList.contains('err')?nome:zap).focus();return}
+
+  const linhas=[
+    'Olá! Quero agendar um *Diagnóstico Gratuito* com a MLX Mind.',
+    '',
+    '*Nome:* '+nome.value.trim(),
+    '*WhatsApp:* '+zap.value.trim(),
+    mail.value.trim()?'*E-mail:* '+mail.value.trim():'',
+    seg.value?'*Segmento:* '+seg.value:'',
+    msg.value.trim()?'*Principal desafio:* '+msg.value.trim():''
+  ].filter(Boolean).join('\n');
+
+  window.open('https://wa.me/551152540490?text='+encodeURIComponent(linhas),'_blank','noopener');
+
   const btn=document.querySelector('.form-submit');
   const original=btn.innerHTML;
-  btn.innerHTML='<i class="fa-solid fa-check"></i> Solicitação enviada!';
+  btn.innerHTML='<i class="fa-solid fa-check"></i> Abrindo seu WhatsApp...';
   btn.style.background='#1f9d57';
-  setTimeout(()=>{btn.innerHTML=original;btn.style.background='';},3000);
+  setTimeout(()=>{btn.innerHTML=original;btn.style.background='';},3500);
 }
+/* limpa o erro assim que a pessoa digita */
+['fNome','fZap'].forEach(id=>{
+  const el=document.getElementById(id);
+  el&&el.addEventListener('input',()=>el.classList.remove('err'));
+});
+
+/* ── painel de leads ao vivo (hero) ── */
+(function liveFeed(){
+  const feed=document.getElementById('lpFeed');
+  if(!feed) return;
+  const items=[
+    {i:'fa-building',t:'Novo lead qualificado',m:'Mercado Imobiliário · agora'},
+    {i:'fa-heart-pulse',t:'Reunião agendada',m:'Clínica Odontológica · há 2 min'},
+    {i:'fa-bag-shopping',t:'Venda atribuída à campanha',m:'E-commerce · há 5 min'},
+    {i:'fa-scale-balanced',t:'Novo lead qualificado',m:'Escritório Jurídico · há 9 min'},
+    {i:'fa-solar-panel',t:'Orçamento solicitado',m:'Energia Solar · há 12 min'},
+    {i:'fa-utensils',t:'Reserva confirmada',m:'Gastronomia · há 15 min'}
+  ];
+  function make(d,isNew){
+    const el=document.createElement('div');
+    el.className='lp-item'+(isNew?' new':'');
+    el.innerHTML='<span class="ic"><i class="fa-solid '+d.i+'"></i></span><span><span class="t">'+d.t+'</span><span class="m">'+d.m+'</span></span>';
+    return el;
+  }
+  for(let k=0;k<3;k++)feed.appendChild(make(items[k],false));
+  if(reduce) return;
+  let idx=3, leads=1240;
+  const counter=document.getElementById('lpLeads');
+  setInterval(()=>{
+    feed.prepend(make(items[idx%items.length],true));
+    if(feed.children.length>3)feed.removeChild(feed.lastElementChild);
+    idx++; leads++;
+    if(counter)counter.textContent=leads.toLocaleString('pt-BR');
+  },3800);
+})();
 
 /* nav background on scroll */
 const nav=document.getElementById('nav');
